@@ -1,0 +1,93 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON word-sense-contexts.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Contexts and Word Senses</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/cyc-ball-sm.gif border=0></a>Contexts and Word Senses</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy 1996, 1997, 1998 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/contexts-basic-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/contexts-basic-module.html>Contexts in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/useful-kinds-contexts.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/useful-kinds-contexts.html>Useful Kinds of Context in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/later-contexts.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/later-contexts.html>Advanced Context Topics Covered Later On</a></td></tr></table>
+<hr>
+
+<BLOCKQUOTE><strong>[Fritz:</strong>  I think the whole (following) <strong>actor slot sense</strong> thing is a kludge -- it is a substitute for a more complicated (but correct) system of the ``level'' of representation in any system of represented artificial entities.  This applies not only to whether the individual, the office, the corporation, or the industry is deemed the ``seller'', but also whether the main work, the edition, the version, the original-language text, or the physical copy is contsidered ``the book'', also whether the algorithm or the actual code or the source code is considered ``the program'', similarly for assigning legal blame, etc.  These all involve artificial interrelated composite entities -- it's not just a matter of ActorSlot senses.  In addition, maybe this refinement could be omitted entirely from the basic course?]</BLOCKQUOTE>
+<p>
+Let's say a woman went out and bought a car.
+<p>
+If someone is asked from whom she bought her car, her answer may depend
+upon the context of the conversation.  She might use the term ``seller''
+to denote the dealership the car was bought from, the company the car
+was bought from, the salesman, etc.  A word is called <em>polysemous</em> if it
+has many similar but distinct meanings; we may call these the different
+<em>senses</em> of the term.  The context mechanism can be used to insulate
+different meanings of the same term from each other and for translating
+from one to the other.
+<p>
+Why not simply introduce distinct predicates for each denotation, rather
+than allow the same predicate to have different denotations in different
+contexts?  There are at least two reasons.  First, when we deal with
+natural language, we often want to allow assertions to retain some of
+the assumptions made by the context of the utterance.  This is
+especially true since we might not be able to state explicitly all the
+assumptions that a particular discourse context makes.  Therefore, we
+need a mechanism that lets a symbol in a discourse context denote
+something other than what it might usually denote.
+<p>
+Second, representations of particular domains often retain certain
+properties of the natural language sentences used in formulating them.
+As a result, the same predicate symbol will often be used with different
+meanings in different theories.  Instead of rewriting the theories
+completely, we want to provide a way of translating between them.
+<p>
+The participants in an <a href=/cycdoc/vocab/time-vocab.html#TemporalThing>#$TemporalThing</a> are related to it in CYC&reg; by various <a href=/cycdoc/vocab/actor-vocab.html#ActorSlot>#$ActorSlot</a> relationships.  But there are also  several ``standard'' kinds of <a href=/cycdoc/vocab/actor-vocab.html#ActorSlot>#$ActorSlot</a> participant senses, in that almost
+any <a href=/cycdoc/vocab/actor-vocab.html#ActorSlot>#$ActorSlot</a> can be used in any of these senses:
+<ul>
+<li>1. #$ActualPerformerSense: e.g. the person at the McDonald's counter,
+actually doing the selling.
+
+<li>2. #$LegalEntitySense: e.g., McDonald's Corporation, the corporation doing
+the selling.
+
+<li>3. #$ControllingAgentSense: e.g., the McDonald's manager, under whose
+immediate direction the action is taking place.
+</ul>
+To state that a context uses a term in a certain sense, the predicate
+#$wordSense(Context Term WordSenseType) is used: e.g.,
+<p>
+#$wordSense(#$IndividualHumanActivitiesMt <a href=/cycdoc/vocab/actor-vocab-complete.html#performedBy>#$performedBy</a> #$ActualPerformerSense)
+<p>
+means that the #$IndividualHumanActivitiesMt uses the predicate 
+<a href=/cycdoc/vocab/actor-vocab-complete.html#performedBy>#$performedBy</a> in the #$ActualPerformerSense.
+<p>
+Sometimes, no distinction of meanings needs to be made--for example, if
+one wants to know if a buyer knows of the existence of the seller.  In
+such cases, the sense of <em>seller</em> is governed by the disjunction
+(ActualPerformerSense v LegalEntitySense v ControllingAgentSense).  In
+other words, one can answer the question without ever disambiguating
+<em>seller</em>, since the answer is the same for all meanings.  In such
+contexts the distinction of word senses is irrelevant and need not be
+made.
+<p>
+How does the system determine the sense in which
+ a Problem Solving Context uses an <a href=/cycdoc/vocab/actor-vocab.html#ActorSlot>#$ActorSlot</a>?
+The system assumes that if the slot is in the vocabulary of the
+PSC, it must be used in one of the senses it recognizes.  The different
+senses in which an actor slot may be used impose certain constraints; if
+these are violated, the system knows that the PSC cannot use the slot in
+that sense.  For instance, if <em> seller</em> is used with a shop or company,
+the sense must be #$LegalEntitySense, since both #$ActualPerformerSense and
+#$ControllingAgentSense require the seller to be a person.  The system
+checks the #$makesSenseFor, #$entryIsA, and a few other such constraints
+imposed by the different WordSenseTypes, and keeps an updated list of
+possible candidate senses for each <a href=/cycdoc/vocab/actor-vocab.html#ActorSlot>#$ActorSlot</a> in each PSC.<hr>
+<a href=/cycdoc/course/contexts-basic-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/useful-kinds-contexts.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/later-contexts.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 10/26/1998 11:40:51<br>
+</html>

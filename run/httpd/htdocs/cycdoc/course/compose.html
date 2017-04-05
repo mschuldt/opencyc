@@ -1,0 +1,90 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON compose.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>The Compose Interface</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo.gif border=0 alt="OpenCyc.org Homepage"></a>The Compose Interface</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/ke-text-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/ke-text-module.html>Entering Assertions in KE Text Format</a></td></tr><tr><td><a href=/cycdoc/course/ke-text-direction.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/ke-text-direction.html>Overriding the Default Direction</a></td></tr><tr><td><a href=/cycdoc/course/ke-file.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/ke-file.html>Loading A KE File</a></td></tr></table>
+<hr>
+Prerequisites:
+<a href=login.html>Logging In</a><br>
+
+<a href=managing-operations.html>Managing CYC&reg; Operations</a><br>
+
+
+<hr>
+
+On the CYC&reg; Navigator page, click <b><tt>[Compose KE Text]</tt></b> to go to the page for the
+Compose facility.
+
+On the Compose page, you can enter KE Text expressions in a large
+input pane. Clicking the "Eval" button submits the completed
+expressions to the KE Text processor.<p> 
+
+<b>Note:</b>
+<blockquote>
+Before you can modify the KB, you must be logged in to the CYC&reg; Server.
+See <a href="../course/login.html">CYC&reg; Login</a> to learn how.
+Furthermore, you should be sure that you will not be interfering with 
+other users (if any) of the CYC&reg; Server Machine and that your operations
+are recorded to the appropriate transcript (if any).  See <a
+href="../course/managing-operations.html">Managing CYC&reg; Operations</a>
+for details. Be sure that you are in the right mode for doing exercises
+before proceeding.
+</blockquote>
+
+The KE Text processor will parse your KE Text and display its results 
+on a new web page before making any changes to the KB.<p>
+
+If it finds syntactic errors in your expressions, these will be
+reported. You can go back to the Compose page to correct them and try
+again.<p>
+
+If it finds that you have referred to constants which 
+do not yet exist, it will display a page which lists the proposed 
+new constants.  If you do <b>not</b> want to create some of the new
+constants (for example, any due to typing errors), return to the
+Compose page to edit the KE text. If you want to create them, click
+"create", and constant creation operations will be queued.<p>
+
+The KE Text processor displays a "waiting page" after it queues the
+operations. The waiting page is an unfortunate consequence of the
+basic CGI protocol used by the CYC&reg; Web Interface: the server can only
+respond to the client's requests, so it can't take the initiative to
+keep you informed of the status of the operations.  Instead, you have
+to wait a little and then request an update.<a href="#note">*</a><p>
+
+If the constants have not yet been created, you will get the wait page
+again (but with updated status information). If the constants have
+been created, then the KE text processor will display the next page,
+showing the sequence of proposed operations derived from the input
+text.<p>
+
+When the KE Text expressions parse without error and all the new
+constants (if any) have been created, it will display a new page
+showing the proposed changes as a sequence of FI operations.  If you click "Eval Forms", the operations will be queued for
+processing on the CYC&reg; Server Machine, and a notification page will
+confirm that the forms were evaluated.
+
+<hr>
+
+<a name="note">*</a> At some point, the interface may be upgraded to
+take advantage of applet protocols such as Java.  Cycorp policy,
+however, is to remain focused on core CYC&reg; development and not allow
+the work on interfaces to become an end in itself.
+
+<hr>
+<a href=/cycdoc/course/ke-text-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/ke-text-direction.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/ke-file.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 03/28/2002<br>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON collections-and-individuals.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Sets and Individuals</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo.gif border=0 alt="OpenCyc.org Homepage"></a>Sets and Individuals</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/collections-module.html>Sets and Individuals in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/predicates.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/predicates.html>CYC&reg; Predicates</a></td></tr></table>
+<hr>
+
+
+The CYC&reg; KB is a set of assertions about the world.  Those
+assertions may be stated as expressions in CycL, the CYC&reg;
+representation language. The terms of CycL expressions can be
+variables, certain kinds of objects native to the computational
+substrate (such as strings or integers), or CYC&reg; constants.  CYC&reg
+contains objects in the KB which are created to denote
+particular concepts.  They have unique names and are written with the
+prefix "#$".<p>
+
+CYC&reg; constants can either denote sets, like "the set of all people",
+or individuals, like "the Eiffel Tower".  Every term in CYC&reg;
+is an element of <a href=/cycdoc/vocab/fundamental-vocab.html#Thing>#$Thing</a>, the universal set.  <a href=/cycdoc/vocab/fundamental-vocab.html#Thing>#$Thing</a> is partitioned
+into <a href=/cycdoc/vocab/fundamental-vocab.html#Individual>#$Individual</a> and <a href=/cycdoc/vocab/math-vocab.html#SetOrCollection>#$SetOrCollection</a>. <p>
+
+<a href=/cycdoc/vocab/fundamental-vocab.html#Individual>#$Individual</a> denotes the set of all things which are not sets.
+Individuals in the CYC&reg; KB include constants such as
+#$CityOfSanFrancisco and #$JimmyCarter.<p>
+
+<a href=/cycdoc/vocab/math-vocab.html#SetOrCollection>#$SetOrCollection</a> is partitioned into <a href=/cycdoc/vocab/math-vocab.html#Set-Mathematical>#$Set-Mathematical</a> and
+<a href=/cycdoc/vocab/fundamental-vocab.html#Collection>#$Collection</a>.  The distinction between mathematical sets and
+collections in CYC&reg; is an important one.  Both sets and collections can have
+elements.  Thus, they can both enter into set-theoretic relations like
+"subset" and "superset". <p>
+
+The difference between <a href=/cycdoc/vocab/fundamental-vocab.html#Collection>#$Collection</a> and <a href=/cycdoc/vocab/math-vocab.html#Set-Mathematical>#$Set-Mathematical</a> is that
+sets, in the mathematical sense, are defined
+<strong>extensionally</strong> -- that is, by their members.  Two sets
+that have the same members are equivalent.  CYC&reg; collections, on the
+other hand, are defined <strong>intensionally</strong>, by their
+<i>criteria</i> for membership.  So in CYC&reg;,
+#$USPresidentsNamedRoosevelt,
+#$USPresidentsWhoWereEachOthersFifthCousins, and
+#$TheFirstTwoUSPresidentsWhoseLastNamesBeginWithR would all be
+different <a href=/cycdoc/vocab/fundamental-vocab.html#Collection>#$Collection</a>s, even though they are all comprised of exactly
+the same elements as the mathematical set {Theodore Roosevelt,
+Franklin Delano Roosevelt}. <p>
+
+In CYC&reg;, collections are much more important, and much more commonly
+used, than sets.  The criteria for membership in a <a href=/cycdoc/vocab/fundamental-vocab.html#Collection>#$Collection</a> need
+not be stated explicitly in the KB.  Collections in the CYC&reg; KB include
+<a href=/cycdoc/vocab/biology-vocab.html#Dog>#$Dog</a> (the collection of all dogs), <a href=/cycdoc/vocab/math-vocab.html#RealNumber>#$RealNumber</a> (the collection of
+all real numbers), and <a href=/cycdoc/vocab/financial-vocab.html#Buying>#$Buying</a> (the collection of all buying
+events).<p>
+
+Membership in a collection is typically expressed as "instance of"
+or "element of" or "is a", as in "Fred is an instance of the
+collection <a href=/cycdoc/vocab/biology-vocab.html#Person>#$Person</a>," or "Fred is an element of <a href=/cycdoc/vocab/biology-vocab.html#Person>#$Person</a>," or
+"Fred is a <a href=/cycdoc/vocab/biology-vocab.html#Person>#$Person</a>." If the terms "subset" and "superset" are
+used with reference to collections, they typically are intended to
+mean "more specific collection" and "more general collection",
+respectively.<p>
+
+<hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/predicates.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 03/28/2002<br>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON predicates.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>CYC&reg; Predicates</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/cyc-ball-sm.gif border=0></a>CYC&reg; Predicates</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy 1996, 1997, 1998 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/collections-module.html>Sets and Individuals in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/collections-and-individuals.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/collections-and-individuals.html>Sets and Individuals</a></td></tr><tr><td><a href=/cycdoc/course/genls-and-instanceof.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/genls-and-instanceof.html>Uses of #$genls and #$isa</a></td></tr></table>
+<hr>
+
+
+<a href=/cycdoc/vocab/fundamental-vocab.html#Predicate>#$Predicate</a> is the collection of all CYC&reg; predicates.  In CycL,
+predicates are simply another type of constant, albeit one with many
+special properties.<p>
+
+The fundamental type of CycL expression is the "atomic formula",
+where a predicate is applied to one or more terms to indicate some
+relationship between the things denoted by the terms:<p>
+
+<pre>
+     (&lt;predicate&gt; &lt;term1&gt; &lt;term2&gt; ...)
+</pre><p>
+
+If there are no variables in the expression, all the terms are said to
+be "ground", and so the expression is referred to as a "ground
+atomic formula", or "GAF".<p>
+
+The predicate <a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> is used to indicate that one collection is more
+general than another, that it is a "superset". For example,<p>
+
+<pre>
+    (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> <a href=/cycdoc/vocab/biology-vocab.html#Dog>#$Dog</a> <a href=/cycdoc/vocab/biology-vocab.html#Animal>#$Animal</a>)
+</pre><p>
+
+indicates that the collection of animals is a superset of the 
+collection of dogs.<p>
+
+The predicate <a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> is used to indicate that a thing is an
+instance of (element of) a collection, as in<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> #$Sparky <a href=/cycdoc/vocab/biology-vocab.html#Dog>#$Dog</a>)
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> <a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> <a href=/cycdoc/vocab/fundamental-vocab.html#Predicate>#$Predicate</a>)
+</pre><p>
+
+where #$Sparky is stated to be an instance of the collection of dogs,
+and <a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> as a instance of the collection of CYC&reg; predicates.<p>
+
+The predicates <a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> and <a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> are strongly supported by the CYC&reg;
+system code.  There are special datastructures and special code
+routines inside CYC&reg; which allow rapid, efficient reasoning about
+collection-membership and collection-supersethood using <a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> and
+<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a>.<p>
+
+The set-theoretic predicates <a href=/cycdoc/vocab/math-vocab.html#subsetOf>#$subsetOf</a> and <a href=/cycdoc/vocab/math-vocab.html#elementOf>#$elementOf</a> also exist in
+CYC&reg;.  They are applicable to any <a href=/cycdoc/vocab/math-vocab.html#SetOrCollection>#$SetOrCollection</a>.  However,
+inferencing with <a href=/cycdoc/vocab/math-vocab.html#subsetOf>#$subsetOf</a> and <a href=/cycdoc/vocab/math-vocab.html#elementOf>#$elementOf</a> is not as strongly
+supported as that with <a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> and <a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> is.  These predicates are not
+used nearly as often as <a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> and <a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a>, which are specifically
+defined for <a href=/cycdoc/vocab/fundamental-vocab.html#Collection>#$Collection</a>s.
+
+<hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/collections-and-individuals.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/genls-and-instanceof.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 10/26/1998 11:41:22<br>
+</html>

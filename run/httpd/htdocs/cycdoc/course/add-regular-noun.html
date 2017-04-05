@@ -1,0 +1,110 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON add-regular-noun.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Adding Regular Nouns</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo.gif border=0 alt="OpenCyc.org Homepage"></a>Adding Regular Nouns</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/add-to-lex-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/add-to-lex-module.html>Adding to the CYC&reg; Lexicon using WALES</a></td></tr><tr><td><a href=/cycdoc/course/add-irregular-noun.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/add-irregular-noun.html>Adding Irregular Nouns</a></td></tr></table>
+<hr>
+
+
+Each English word constant in the KB is named by a "root form".
+This convention follows the structure of standard dictionaries which
+group morphologically similar strings together. Because of this
+convention, the same word constant is used to represent strings which
+have many part-of-speech forms, as well as strings whose different
+part-of-speech forms are morphologically similar. This grouping is
+simply a matter of convenience and is not a claim for the derivational
+morphology of any of the strings represented.<p>
+
+For each morphological variant string associated with an instance of
+<a href=/cycdoc/vocab/linguistic-vocab.html#EnglishWord>#$EnglishWord</a>, there will be at least one assertion specifying a
+denotation in the KB, i.e.  its semantic interpretation(s). <p>
+
+Let's begin by adding a fictitious new word to the lexicon, "bliik",
+a synonym for "parakeet".  To create a new word in the lexicon,
+enter its root form in the box labeled: "Enter word".  For simple
+nouns, the root form is <a href="../vocab/lexicon-vocab.html#singular">singular</a>.  In our
+example, "bliik" is the root form.<p>
+
+Next, select the "Add regular strings to lexicon" button and press
+"Add Info".  Recall that a noun is  regular if its plural is formed by
+adding an "s" or an "es" to its stem.<p>
+
+Since no constant for the word "bliik" previously existed in CYC&reg;,
+WALES displays the "Create New Word Unit" page.  If "bliik" was
+already in the lexicon, then WALES would ask whether you wanted to add
+information to the existing word unit, or to create a new one .<p>
+
+To create the new constant, press the "Create" button on the "Create
+New Word Unit" page.  You can modify the name of the word unit, if
+necessary, by first editing the word unit that is in the "Unit name:"
+box and then by pressing the "Create" button.  If you make a mistake,
+the "Reset" button will reset the word unit in the box to its original
+form. After pressing the "Create" button, WALES will display the "Add
+Part of Speech Forms" page.<p> 
+
+At the "Noun Form sing" box, enter the <a
+href="../vocab/lexicon-vocab.html#singular">singular</a> form. You
+need only to fill out this box, as the parser recognizes plural forms of
+regular strings.  If there are other part-of-speech forms that you want
+to link to this constant, you may enter those at this time.  Click on
+the "Update Lexicon" button and then "Do It".<p> 
+
+At this point, WALES returns you to the original "Add to CYC&reg; Lexicon"
+page.  The root string of the word you just created will remain in the
+box so that you can easily move to a page to add its denotation with
+minimal typing.  You will also notice that throughout this process, the
+word unit that you created will be present on the pages as a clickable
+link to its representation in the KB.  As soon as your operations are
+processed, you should see all of your word unit assertions represented
+in the KB. <p>
+
+After your string assertions are made, you will need to add denotations
+for your strings.  First, click on the  "Add Other Lexical
+Information" button and then "Add Info".  Using WALES, denotation
+assertions may only be added to one part of speech at a time.  In this
+example, since there is only one part of speech already specified for
+the word constant, WALES will display the "Denotation Entry" page.  Had
+more than one part of speech been specified for "Bliik-TheWord", then
+the user would be prompted to which part of speech s/he intends to use.<p>
+
+On the "Denotation Entry" page you will see boxes which contain the
+denotations for various word senses.  Since our example is a newly
+created word, all boxes should be blank. For general guidelines on
+selecting an appropriate denotation, see the "WALES User's Guide".
+In this case, we want "bliik" to denote the CYC&reg; constant Parakeet,
+so enter "Parakeet" into a denotation box.<p>
+
+After you have typed your denotations in the appropriate boxes, click
+on the "Update Lexicon" button.  If you make a mistake, you can
+always click on the "Restore Values" button, which will restore the
+information in the boxes to their original values.<p>
+
+The CYC&reg; NL system requires that all word senses have <i>some</i>
+denotation which reflects their meaning, even in cases where a more
+complicated semantic translation rule will be needed to fully express
+the meaning. In such cases, the denotation of a word sense will be a
+CYC&reg; constant which is close in meaning to the word, or which captures
+some aspect of that word's meaning. The actual word meaning is
+specified with a semantic translation rule. For example, the noun form
+of "anchorwoman" denotes #$Anchorperson. The fact that an anchorwoman
+is an anchorperson who is also female is captured with a
+<a href=/cycdoc/vocab/lexicon-vocab.html#nounSemTrans>#$nounSemTrans</a> rule.<p>
+
+
+
+
+<hr>
+<a href=/cycdoc/course/add-to-lex-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/add-irregular-noun.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 03/28/2002<br>
+</html>

@@ -1,0 +1,984 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/WD-html-in-xml/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Predicate Types</title></head>
+    <body>
+        <h2>
+            <a href="http://www.opencyc.org"><img alt="OpenCyc Homepage"
+                    border="0"
+            src="/cycdoc/img/opencyc-logo.gif" /></a>Predicate
+        Types</h2>E-Mail Comments to: <a
+        href="mailto:opencyc-doc@cyc.com">opencyc-doc@cyc.com</a><br />Last
+        Update: 4/5/02<br />
+        <i>Copyright&copy; 1996-2002.  All rights reserved.</i>  See <a
+            href="/cycdoc/legal-terms.html">Terms of Usage.</a><br />
+        <hr />
+        <a href="/cycdoc/toc.html"><img border="0" src="/cycdoc/img/cyc-ball-sm.gif" /></a>
+        <a href="/cycdoc/toc.html">Return to Documentation Contents</a>
+        <br />
+        <a href="/cycdoc/vocab/vocab-toc.html"><img border="0" src="/cycdoc/img/cyc-ball-sm.gif" /></a>
+        <a href="/cycdoc/vocab/vocab-toc.html">Return to Vocabulary Contents</a>
+        <br />
+        <hr />
+        <br />
+        <font size="+1">
+            <a
+                    name="NoteAboutPredicateCategories">#$NoteAboutPredicateCategories<i>&nbsp;&nbsp;&nbsp;note
+                    about predicate categories</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> Predicates in Cyc are organized into collections.
+            While some, like #$BinaryPredicate, are logically
+            well-founded and are referenced in axioms and in the code
+            which implements Cyc, others, though based on some
+            intuitively plausible criteria, are involved in few (if any)
+            axioms and are therefore not integral to Cyc's ontology.
+            Collections which fall into the latter class are generally
+            under review at this time and are flagged with this <a href="./doc-vocab.html#sharedNotes">#$sharedNotes.</a><br />
+            <b>guid: </b>bf8a0b3b-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a href="./fundamental-vocab.html#Individual">#$Individual</a></blockquote>
+        <font size="+1">
+            <a
+                    name="RelationshipType">#$RelationshipType<i>&nbsp;&nbsp;&nbsp;types
+                    of relationship</i></a></font>
+        <blockquote> A collection of collections. Each instance of <a
+            href="./predicate-type-vocab.html#RelationshipType">#$RelationshipType</a>
+            is a collection of <a
+            href="./fundamental-vocab.html#Relation">#$Relations.</a>
+            The relations in a given relationship-type represented in
+            the Knowledge Base are typically those sharing some common
+            feature(s) -- often having to do with what kinds of things
+            the relations relate (see e.g. #$argIsa and #$argGenls) --
+            considered significant enough that the collection of all
+            such relations is useful to reify. Although what constitutes
+            a significant common feature is difficult to specify
+            precisely, there are many clear-cut cases. Examples include
+            #$UnaryFunction, <a
+            href="./math-vocab.html#LogicalConnective">#$LogicalConnective,</a>
+                <a
+            href="./fundamental-vocab.html#IndividualDenotingFunction">#$IndividualDenotingFunction,</a>
+            #$GenericTimePredicate, and #$LanguageDescribingPredicate.
+            Two important specializations of <a
+            href="./predicate-type-vocab.html#RelationshipType">#$RelationshipType</a>
+            are <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>
+            and #$FunctionCategory.<br />
+            <b>guid: </b>bd58dab6-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>#$SecondOrderCollection  <br />
+            <b>direct specialization of: </b>#$FirstOrderCollection&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>#$FunctionCategory
+            #$RelationshipTypeByArity  <a
+            href="./quantity-vocab.html#InterconvertibleUnitType">#$InterconvertibleUnitType</a>
+                <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="PredicateCategory">#$PredicateCategory<i>&nbsp;&nbsp;&nbsp;predicate category</i></a></font>
+        <blockquote> A collection of collections, and a specialization
+            of <a
+            href="./predicate-type-vocab.html#RelationshipType">#$RelationshipType.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>
+            is a collection of <a
+            href="./fundamental-vocab.html#Predicate">#$Predicates.</a>
+            The predicates in a given predicate category represented in
+            the Knowledge Base are typically those sharing some common
+            feature(s) considered significant enough that the collection
+            of all such predicates is useful to reify. Although what
+            constitutes a significant common feature is difficult to
+            specify precisely, there are many clear-cut cases. Instances
+            of <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>
+            include <a
+            href="./predicate-type-vocab.html#TemporalPartSlot">#$TemporalPartSlot,</a>
+                <a
+            href="./quantity-vocab.html#IntervalBasedQuantitySlot">#$IntervalBasedQuantitySlot,</a>
+                <a
+            href="./fundamental-vocab.html#FunctionalSlot">#$FunctionalSlot,</a>
+                <a
+            href="./predicate-type-vocab.html#InterActorSlot">#$InterActorSlot,</a>
+            #$TransitiveBinaryPredicate, and <a
+            href="./attitude-vocab.html#PropositionalAttitudeSlot">#$PropositionalAttitudeSlot.</a>
+            See also the comment on <a href="./fundamental-vocab.html#Predicate">#$Predicate.</a><br />
+            <b>guid: </b>bd5888fe-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>#$SecondOrderCollection  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#RelationshipType">#$RelationshipType</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="ObjectPredicate">#$ObjectPredicate<i>&nbsp;&nbsp;&nbsp;extensional
+                    representation predicates</i></a></font>
+        <blockquote> A collection of predicates that are used to ascribe
+            characteristics or properties (taken in a very broad sense)
+            to individual objects. As such, each instance of <a
+            href="./predicate-type-vocab.html#ObjectPredicate">#$ObjectPredicate</a>
+            has an <a href="./fundamental-vocab.html#arity">#$arity</a>
+            of 2 or greater and has at least one argument place (often
+            including the first) constrained (see #$argIsa) to instances
+            of <a
+            href="./fundamental-vocab.html#Individual">#$Individual</a>
+            or some subcollection thereof. Examples include <a
+            href="./social-vocab.html#likesAsFriend">#$likesAsFriend,</a>
+                <a
+            href="./spatial-vocab.html#connectedTo">#$connectedTo,</a>
+            and <a
+            href="./fundamental-vocab.html#arg3Isa">#$arg3Isa.</a> See
+            also <a href="./predicate-type-vocab.html#CollectionPredicate">#$CollectionPredicate.</a><br />
+            <b>guid: </b>bd5883cd-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./fundamental-vocab.html#Predicate">#$Predicate</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./predicate-type-vocab.html#PhysicalAttributeDescriptionSlot">#$PhysicalAttributeDescriptionSlot</a>
+                <a
+            href="./predicate-type-vocab.html#InterActorSlot">#$InterActorSlot</a>
+                <a
+            href="./predicate-type-vocab.html#InterExistingObjectSlot">#$InterExistingObjectSlot</a>
+                <a
+            href="./time-vocab.html#TemporalRelation">#$TemporalRelation</a>
+                <a
+            href="./part-vocab.html#PartPredicate">#$PartPredicate</a>
+                <a
+            href="./predicate-type-vocab.html#ShapeDescribingPredicate">#$ShapeDescribingPredicate</a>
+            #$AgentPredicate  #$BinaryRolePredicate  <a
+            href="./time-vocab.html#CotemporalPredicate">#$CotemporalPredicate</a>
+                <a
+            href="./predicate-type-vocab.html#TangibleObjectPredicate">#$TangibleObjectPredicate</a>
+                <a
+            href="./predicate-type-vocab.html#IntangibleObjectPredicate">#$IntangibleObjectPredicate</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="CollectionPredicate">#$CollectionPredicate<i>&nbsp;&nbsp;&nbsp;intensional
+                    representation predicate</i></a></font>
+        <blockquote> A collection of predicates used to relate
+            collections to other things and thereby ascribe
+            characteristics or properties (taken in a broad sense)
+            either to the collections themselves or to each of the
+            instances of those collections. As such, each instance of <a
+            href="./predicate-type-vocab.html#CollectionPredicate">#$CollectionPredicate</a>
+            has an <a href="./fundamental-vocab.html#arity">#$arity</a>
+            (q.v.) of 2 or greater and has at least one argument place
+            (often including the first, or arg1 , place) constrained to
+            instances (see #$argIsa) of either <a
+            href="./fundamental-vocab.html#Collection">#$Collection</a>
+            or some specialization of <a
+            href="./fundamental-vocab.html#Collection">#$Collection.</a>
+            For example, <a
+            href="./organization-vocab.html#hasDepartmentTypes">#$hasDepartmentTypes</a>
+            is a collection-predicate that relates a given organization
+            to a type (i.e. collection) of departments such that the
+            former has an instance of the latter as a suborganization;
+            the relevant argument constraint here is <a
+            href="./fundamental-vocab.html#arg2Isa">(#$arg2Isa</a> <a
+            href="./organization-vocab.html#hasDepartmentTypes">#$hasDepartmentTypes</a>
+                <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType),</a>
+            and <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>
+            is a specialization of <a
+            href="./fundamental-vocab.html#Collection">#$Collection.</a>
+            Other instances of <a
+            href="./predicate-type-vocab.html#CollectionPredicate">#$CollectionPredicate</a>
+            include <a
+            href="./top-vocab.html#granuleOfTemporalStuff">#$granuleOfTemporalStuff,</a>
+            #$objectTypeTransported, and <a
+            href="./emotion-vocab.html#contraryFeelings">#$contraryFeelings.</a>
+            See also <a href="./predicate-type-vocab.html#ObjectPredicate">#$ObjectPredicate.</a><br />
+            <b>guid: </b>bd58b54a-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./fundamental-vocab.html#Predicate">#$Predicate</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="BookkeepingPredicate">#$BookkeepingPredicate<i>&nbsp;&nbsp;&nbsp;bookkeeping predicates</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of predicates used to make assertions
+            about the creation and internal representation of particular
+            CycL constants in the Cyc system. Bookkeeping predicates
+            neither specify nor constrain the semantics of CycL
+            constants. Examples include <a
+            href="./doc-vocab.html#myCreator">#$myCreator,</a> <a
+            href="./doc-vocab.html#myCreationTime">#$myCreationTime,</a>
+                <a
+            href="./fundamental-vocab.html#termOfUnit">#$termOfUnit,</a>
+                <a
+            href="./quantity-vocab.html#multiplicationUnits">#$multiplicationUnits,</a>
+            and <a href="./fundamental-vocab.html#defnSufficient">#$defnSufficient.</a><br />
+            <b>guid: </b>bd5880ef-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./fundamental-vocab.html#Predicate">#$Predicate</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./predicate-type-vocab.html#InferenceRelatedBookkeepingPredicate">#$InferenceRelatedBookkeepingPredicate</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="InferenceRelatedBookkeepingPredicate">#$InferenceRelatedBookkeepingPredicate<i>&nbsp;&nbsp;&nbsp;inference
+                    related bookkeeping predicate</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of predicates. Each instance of <a
+            href="./predicate-type-vocab.html#InferenceRelatedBookkeepingPredicate">#$InferenceRelatedBookkeepingPredicate</a>
+            is a predicate involved in assertions used by the Cyc
+            application to direct inferencing. Examples: <a
+            href="./fundamental-vocab.html#defnIff">#$defnIff,</a> <a
+            href="./fundamental-vocab.html#defnSufficient">#$defnSufficient,</a>
+                <a
+            href="./fundamental-vocab.html#termOfUnit">#$termOfUnit,</a> #$afterAdding.<br />
+            <b>guid: </b>bd58d107-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#BookkeepingPredicate">#$BookkeepingPredicate</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="MetaRelation">#$MetaRelation<i>&nbsp;&nbsp;&nbsp;meta relation</i></a></font>
+        <blockquote> A subcollection of <a
+            href="./fundamental-vocab.html#Predicate">#$Predicate.</a>
+            Instances of <a
+            href="./predicate-type-vocab.html#MetaRelation">#$MetaRelation</a>
+            are used to make definitional (e.g. arity or
+            argument-constraint) assertions about relations. As such,
+            each instance of <a
+            href="./predicate-type-vocab.html#MetaRelation">#$MetaRelation</a>
+            has (at least) one of its own argument-places (usually, but
+            not always, the first or arg1 ) type-constrained to
+            instances of <a
+            href="./fundamental-vocab.html#Relation">#$Relation</a> (or
+            some subcollection thereof). Note that all meta-relations
+            are themselves _predicates_ (as opposed to functions or
+            other non-predicate relations); the collection <a
+            href="./predicate-type-vocab.html#MetaRelation">#$MetaRelation</a>
+            is so-named because its instances (unlike those of its
+            specialization <a
+            href="./predicate-type-vocab.html#MetaPredicate">#$MetaPredicate)</a>
+            may admit non-predicate relations as arguments.<br />
+            <b>guid: </b>bf4f46aa-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#IntangibleObjectPredicate">#$IntangibleObjectPredicate</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>#$ArgConstraintPredicate
+                <a
+            href="./predicate-type-vocab.html#MetaPredicate">#$MetaPredicate</a>  </blockquote>
+        <font size="+1">
+            <a name="MetaPredicate">#$MetaPredicate<i>&nbsp;&nbsp;&nbsp;meta-predicates</i></a></font>
+        <blockquote> A subcollection of <a
+            href="./predicate-type-vocab.html#MetaRelation">#$MetaRelation</a>
+            (q.v.). Instances of <a
+            href="./predicate-type-vocab.html#MetaPredicate">#$MetaPredicate</a>
+            are used to make definitional (e.g. argument-type constraint
+            or generalization) assertions about predicates (and only
+            predicates). As such, instances of <a
+            href="./predicate-type-vocab.html#MetaPredicate">#$MetaPredicate</a>
+            have (at least) one of their own argument-places (usually,
+            but not always, the first or arg1 ) constrained to be
+            instances of <a
+            href="./fundamental-vocab.html#Predicate">#$Predicate</a>
+            (or some subcollection thereof).<br />
+            <b>guid: </b>c0d662dc-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#MetaRelation">#$MetaRelation</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>#$TransitiveViaArgPredicate
+            #$ArgFormatPredicate  <a
+            href="./predicate-type-vocab.html#TaxonomicSlotForPredicates">#$TaxonomicSlotForPredicates</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="MetaKnowledgePredicate">#$MetaKnowledgePredicate<i>&nbsp;&nbsp;&nbsp;metaknowledge predicates</i></a></font>
+        <blockquote> A collection of predicates, each instance of which
+            is used to state things about the Cyc system or the CycL
+            language itself -- usually about a particular reified
+            constant or assertion in the Knowledge Base. Examples
+            include <a
+            href="./doc-vocab.html#myCreator">#$myCreator,</a> <a
+            href="./doc-vocab.html#cyclistNotes">#$cyclistNotes,</a> <a
+            href="./doc-vocab.html#sharedNotes">#$sharedNotes,</a> <a
+            href="./doc-vocab.html#salientAssertions">#$salientAssertions,</a>
+            and #$assertionConclusionActionType.<br />
+            <b>guid: </b>bd588097-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>#$PossibleDefinitionalPredicate&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>#$MetaLanguagePredicate
+            #$ExceptionRelation  #$DistributingMetaKnowledgePredicate
+            #$KEFacilitationPredicate  </blockquote>
+        <font size="+1">
+            <a
+                    name="TypePredicate">#$TypePredicate<i>&nbsp;&nbsp;&nbsp;type predicate</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of predicates. Each instance of <a
+            href="./predicate-type-vocab.html#TypePredicate">#$TypePredicate</a>
+            is a predicate used in asserting relations between <a
+            href="./fundamental-vocab.html#Collection">#$Collections,</a>
+            or between <a
+            href="./fundamental-vocab.html#Individual">#$Individuals</a>
+            and <a
+            href="./fundamental-vocab.html#Collection">#$Collections,</a>
+            which in turn imply further assertions involving instances
+            of the <a
+            href="./fundamental-vocab.html#Collection">#$Collections.</a>
+            Example instances: #$primaryActivityType,
+            #$insuredEventTypes, <a
+            href="./physiology-vocab.html#anatomicalPartTypeAffected">#$anatomicalPartTypeAffected,</a>
+                <a
+            href="./time-vocab.html#frequencyOfActionType">#$frequencyOfActionType,</a> #$objectTypesCollected.<br />
+            <b>guid: </b>bd58a9e4-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./fundamental-vocab.html#Predicate">#$Predicate</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="DefaultMonotonicPredicate">#$DefaultMonotonicPredicate<i>&nbsp;&nbsp;&nbsp;default
+                    monotonic predicate</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of predicates. Each instance of <a
+            href="./predicate-type-vocab.html#DefaultMonotonicPredicate">#$DefaultMonotonicPredicate</a>
+            is a predicate whose use as the predicate of a locally
+            asserted ground formula causes that formula to be entered,
+            by default, as :MONOTONIC. Examples: <a
+            href="./fundamental-vocab.html#isa">#$isa,</a> <a
+            href="./fundamental-vocab.html#genls">#$genls,</a> <a
+            href="./fundamental-vocab.html#disjointWith">#$disjointWith,</a>
+                <a href="./fundamental-vocab.html#equals">#$equals,</a>
+                <a href="./fundamental-vocab.html#arity">#$arity,</a> <a href="./fundamental-vocab.html#arg1Isa">#$arg1Isa.</a><br />
+            <b>guid: </b>c10c3008-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./fundamental-vocab.html#Predicate">#$Predicate</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="ConnectionPredicate">#$ConnectionPredicate<i>&nbsp;&nbsp;&nbsp;connection predicate</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of predicates. Each instance of <a
+            href="./predicate-type-vocab.html#ConnectionPredicate">#$ConnectionPredicate</a>
+            is a predicate that specifies physical connections between
+            objects. Examples: #$nailedTo, #$rivetedTo, <a
+            href="./spatial-vocab.html#connectedTo-Rigidly">#$connectedTo-Rigidly,</a>
+                <a
+            href="./spatial-vocab.html#rotationallyConnectedTo">#$rotationallyConnectedTo,</a>
+                <a
+            href="./spatial-vocab.html#hangsFrom">#$hangsFrom,</a> and
+                <a href="./spatial-vocab.html#in-Embedded">#$in-Embedded.</a><br />
+            <b>guid: </b>bd60da90-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./time-vocab.html#CotemporalPredicate">#$CotemporalPredicate</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="ProcessPredicate">#$ProcessPredicate<i>&nbsp;&nbsp;&nbsp;process predicate</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of predicates. Each element of <a
+            href="./predicate-type-vocab.html#ProcessPredicate">#$ProcessPredicate</a>
+            is a predicate used in assertions that describe processes.
+            For example, #$amountOfEnergyUsed, #$signalState, <a
+            href="./poss-transfer-vocab.html#toPossessor">#$toPossessor,</a>
+            #$primaryActivityType, #$exports, <a href="./quantity-vocab.html#monetaryValue">#$monetaryValue.</a><br />
+            <b>guid: </b>bd58e6c3-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#ObjectPredicate">#$ObjectPredicate</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="InterExistingObjectSlot">#$InterExistingObjectSlot<i>&nbsp;&nbsp;&nbsp;inter
+                    existing object slot</i></a></font>
+        <blockquote> A specialization of both #$BinaryPredicate and <a
+            href="./predicate-type-vocab.html#ObjectPredicate">#$ObjectPredicate.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#InterExistingObjectSlot">#$InterExistingObjectSlot</a>
+            is a binary predicate used in assertions that relate two
+            instances of <a
+            href="./time-vocab.html#SomethingExisting">#$SomethingExisting;</a>
+            consequently, both the <a
+            href="./fundamental-vocab.html#arg1Isa">#$arg1Isa</a> and
+            the <a href="./fundamental-vocab.html#arg2Isa">#$arg2Isa</a>
+            of an instance of <a
+            href="./predicate-type-vocab.html#InterExistingObjectSlot">#$InterExistingObjectSlot</a>
+            must be specializations of <a
+            href="./time-vocab.html#SomethingExisting">#$SomethingExisting.</a>
+            Instances of <a
+            href="./predicate-type-vocab.html#InterExistingObjectSlot">#$InterExistingObjectSlot</a>
+            include <a
+            href="./material-vocab.html#derivedFrom">#$derivedFrom,</a>
+                <a
+            href="./social-vocab.html#cohabitants">#$cohabitants,</a> <a
+            href="./geography-vocab.html#capitalCity">#$capitalCity,</a>
+            and #$electricallyConnectedTo.<br />
+            <b>guid: </b>bd58d517-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of:
+                </b>#$BinaryPredicate&nbsp;&nbsp;<a href="./predicate-type-vocab.html#ObjectPredicate">#$ObjectPredicate</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./predicate-type-vocab.html#InterPersonalRelationSlot">#$InterPersonalRelationSlot</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="InterActorSlot">#$InterActorSlot<i>&nbsp;&nbsp;&nbsp;inter
+                    actor slot</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A specialization of #$BinaryPredicate. Each
+            instance of <a
+            href="./predicate-type-vocab.html#InterActorSlot">#$InterActorSlot</a>
+            is a binary predicate that relates two individuals who are
+            participants in some particular event. For example,
+            #$authorOfPublication-IBT is an instance of <a
+            href="./predicate-type-vocab.html#InterActorSlot">#$InterActorSlot,</a>
+            since (#$authorOfPublication-IBT X Y) implies the existence
+            of a <a href="./info-vocab.html#Writing">#$Writing</a> event
+            in which X is the author and Y is the book written. Other
+            examples of <a
+            href="./predicate-type-vocab.html#InterActorSlot">#$InterActorSlot</a>
+            are <a
+            href="./agreement-vocab.html#agreeingAgents">#$agreeingAgents,</a>
+            #$artisticWorksCreated, <a
+            href="./social-vocab.html#spouse">#$spouse,</a> and <a href="./clothing-vocab.html#wornOn">#$wornOn.</a><br />
+            <b>guid: </b>bd58f091-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#ObjectPredicate">#$ObjectPredicate</a>&nbsp;&nbsp;#$BinaryPredicate&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="TemporalPartSlot">#$TemporalPartSlot<i>&nbsp;&nbsp;&nbsp;temporal
+                    part slots</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of predicates that are used to relate
+            an instance of <a
+            href="./time-vocab.html#TemporalThing">#$TemporalThing</a>
+            (q.v.) to its temporal parts or components. Each instance of
+                <a
+            href="./predicate-type-vocab.html#TemporalPartSlot">#$TemporalPartSlot</a>
+            has an arity of 2, and both argument places are constrained
+            (see #$argIsa) to instances of <a
+            href="./time-vocab.html#TemporalThing">#$TemporalThing,</a>
+            or some subcollection thereof. Each instance of <a
+            href="./predicate-type-vocab.html#TemporalPartSlot">#$TemporalPartSlot</a>
+            is a specialization of the predicate <a
+            href="./time-vocab.html#temporallySubsumes">#$temporallySubsumes</a>
+            (q.v.); consequently, for each instance PRED of <a
+            href="./predicate-type-vocab.html#TemporalPartSlot">#$TemporalPartSlot,</a>
+            either (#$genlPreds PRED <a
+            href="./time-vocab.html#temporallySubsumes">#$temporallySubsumes)</a>
+            or (#$genlInverse PRED <a
+            href="./time-vocab.html#temporallySubsumes">#$temporallySubsumes)</a> holds.<br />
+            <b>guid: </b>bd58834a-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./part-vocab.html#NonPhysicalPartPredicate">#$NonPhysicalPartPredicate</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./predicate-type-vocab.html#SubEventSlot">#$SubEventSlot</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="IntangibleObjectPredicate">#$IntangibleObjectPredicate<i>&nbsp;&nbsp;&nbsp;intangible
+                    object predicate</i></a></font>
+        <blockquote> A collection of predicates used to ascribe
+            properties to intangible objects. As such, each instance of
+                <a
+            href="./predicate-type-vocab.html#IntangibleObjectPredicate">#$IntangibleObjectPredicate</a>
+            has at least one argument place (quite often including the
+            first) constrained to accept only instances of <a
+            href="./top-vocab.html#IntangibleIndividual">#$IntangibleIndividual</a>
+            or some subcollection thereof. Examples include <a
+            href="./fundamental-vocab.html#arg3Isa">#$arg3Isa</a> and #$religionOfRule.<br />
+            <b>guid: </b>bd58ecf0-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#ObjectPredicate">#$ObjectPredicate</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./predicate-type-vocab.html#IntangibleObjectRelatingPredicate">#$IntangibleObjectRelatingPredicate</a>
+                <a
+            href="./part-vocab.html#NonPhysicalPartPredicate">#$NonPhysicalPartPredicate</a>
+                <a
+            href="./predicate-type-vocab.html#MetaRelation">#$MetaRelation</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="TangibleObjectPredicate">#$TangibleObjectPredicate<i>&nbsp;&nbsp;&nbsp;tangible
+                    object predicate</i></a></font>
+        <blockquote> A collection of predicates that are used to ascribe
+            characteristics or properties (taken in a very broad sense)
+            to tangible objects. As such, each instance of <a
+            href="./predicate-type-vocab.html#TangibleObjectPredicate">#$TangibleObjectPredicate</a>
+            has an <a href="./fundamental-vocab.html#arity">#$arity</a>
+            of 2 or greater and has at least one argument place (often
+            including the first) constrained (see #$argIsa) to instances
+            of <a
+            href="./top-vocab.html#PartiallyTangible">#$PartiallyTangible</a>
+            or some subcollection thereof. Examples include <a
+            href="./material-vocab.html#viscosityOfSubstance">#$viscosityOfSubstance,</a>
+                <a
+            href="./material-vocab.html#objectHasColor">#$objectHasColor,</a>
+                <a
+            href="./material-vocab.html#porosityOfObject">#$porosityOfObject,</a>
+            and #$physicalBuild.<br />
+            <b>guid: </b>bd58e681-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#ObjectPredicate">#$ObjectPredicate</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./predicate-type-vocab.html#TangibleSubstancePredicate">#$TangibleSubstancePredicate</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="TangibleSubstancePredicate">#$TangibleSubstancePredicate<i>&nbsp;&nbsp;&nbsp;tangible
+                    substance predicate</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A specialization of <a
+            href="./predicate-type-vocab.html#TangibleObjectPredicate">#$TangibleObjectPredicate.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#TangibleSubstancePredicate">#$TangibleSubstancePredicate</a>
+            is a predicate that is used to specify or describe the
+            properties (usually physical properties) of tangible
+            substances. Instances of <a
+            href="./predicate-type-vocab.html#TangibleSubstancePredicate">#$TangibleSubstancePredicate</a>
+            include <a
+            href="./material-vocab.html#stateOfMatter">#$stateOfMatter,</a>
+                <a
+            href="./state-change-vocab.html#freezingPoint">#$freezingPoint,</a>
+                <a
+            href="./material-vocab.html#physicalStructuralIntegrity">#$physicalStructuralIntegrity,</a>
+            and <a href="./material-vocab.html#solubleIn">#$solubleIn.</a><br />
+            <b>guid: </b>bd58d7fc-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#TangibleObjectPredicate">#$TangibleObjectPredicate</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="PhysicalAmountSlot">#$PhysicalAmountSlot<i>&nbsp;&nbsp;&nbsp;measures
+                    (physical attribute description slot)</i></a></font>
+        <blockquote> An instance of <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory,</a>
+            and a specialization of <a
+            href="./quantity-vocab.html#IntervalBasedQuantitySlot">#$IntervalBasedQuantitySlot.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#PhysicalAmountSlot">#$PhysicalAmountSlot</a>
+            is a binary predicate used to relate a spatial thing (i.e.,
+            an instance of some specialization of <a
+            href="./spatial-vocab.html#SpatialThing">#$SpatialThing)</a>
+            to one of its quantifiable physical attributes (such as its
+            length, mass, or volume). Instances of <a
+            href="./predicate-type-vocab.html#PhysicalAmountSlot">#$PhysicalAmountSlot</a>
+            include <a
+            href="./material-vocab.html#lengthOfObject">#$lengthOfObject,</a>
+                <a
+            href="./material-vocab.html#volumeOfObject">#$volumeOfObject,</a>
+                <a
+            href="./material-vocab.html#massOfObject">#$massOfObject,</a>
+            and #$depthOfObject.<br />
+            <b>guid: </b>bd58ee60-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a
+                href="./predicate-type-vocab.html#PhysicalAttributeDescriptionSlot">#$PhysicalAttributeDescriptionSlot</a>&nbsp;&nbsp;<a href="./quantity-vocab.html#IntervalBasedQuantitySlot">#$IntervalBasedQuantitySlot</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="PhysicalFeatureDescribingPredicate">#$PhysicalFeatureDescribingPredicate<i>&nbsp;&nbsp;&nbsp;physical
+                    feature describing predicate</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> An instance of <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#PhysicalFeatureDescribingPredicate">#$PhysicalFeatureDescribingPredicate</a>
+            is a predicate relating a spatial thing to one or more of
+            its physical properties (see, for example, the
+            specialization <a
+            href="./predicate-type-vocab.html#PhysicalAttributeDescriptionSlot">#$PhysicalAttributeDescriptionSlot),</a>
+            or to other spatial things to which it bears certain
+            spatio-physical relations (see, for example, the
+            specialization #$MechanicalConnectionSlot). Instances of <a
+            href="./predicate-type-vocab.html#PhysicalFeatureDescribingPredicate">#$PhysicalFeatureDescribingPredicate</a>
+            include <a
+            href="./spatial-vocab.html#above-Directly">#$above-Directly,</a>
+            #$physicallyContains, <a
+            href="./spatial-vocab.html#touchesDirectly">#$touchesDirectly,</a>
+                <a
+            href="./state-change-vocab.html#temperatureOfObject">#$temperatureOfObject,</a>
+            and #$spans-Bridgelike.<br />
+            <b>guid: </b>bd58b982-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./fundamental-vocab.html#Predicate">#$Predicate</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./predicate-type-vocab.html#PhysicalAttributeDescriptionSlot">#$PhysicalAttributeDescriptionSlot</a>
+                <a
+            href="./predicate-type-vocab.html#ShapeDescribingPredicate">#$ShapeDescribingPredicate</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="PhysicalAttributeDescriptionSlot">#$PhysicalAttributeDescriptionSlot<i>&nbsp;&nbsp;&nbsp;physical
+                    attribute description slot</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A specialization of both #$BinaryPredicate and <a
+            href="./predicate-type-vocab.html#PhysicalFeatureDescribingPredicate">#$PhysicalFeatureDescribingPredicate.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#PhysicalAttributeDescriptionSlot">#$PhysicalAttributeDescriptionSlot</a>
+            relates some spatial thing to an instance of <a
+            href="./material-vocab.html#PhysicalAttribute">#$PhysicalAttribute</a>
+            which characterizes that thing. The attribute may or may not
+            be a quantifiable property. Examples of <a
+            href="./predicate-type-vocab.html#PhysicalAttributeDescriptionSlot">#$PhysicalAttributeDescriptionSlot:</a>
+            #$objectEmitsOdor, <a
+            href="./material-vocab.html#viscosityOfSubstance">#$viscosityOfSubstance,</a>
+            #$diameterOfObject, <a
+            href="./material-vocab.html#shapeOfObject">#$shapeOfObject,</a>
+            and #$xzCrossSectionShapeType.<br />
+            <b>guid: </b>bd58b9c4-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a
+                href="./predicate-type-vocab.html#PhysicalFeatureDescribingPredicate">#$PhysicalFeatureDescribingPredicate</a>&nbsp;&nbsp;#$BinaryPredicate&nbsp;&nbsp;<a href="./predicate-type-vocab.html#ObjectPredicate">#$ObjectPredicate</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./predicate-type-vocab.html#PhysicalAmountSlot">#$PhysicalAmountSlot</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="ShapeDescribingPredicate">#$ShapeDescribingPredicate<i>&nbsp;&nbsp;&nbsp;shape-describing predicates</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A specialization of <a
+            href="./predicate-type-vocab.html#PhysicalFeatureDescribingPredicate">#$PhysicalFeatureDescribingPredicate.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#ShapeDescribingPredicate">#$ShapeDescribingPredicate</a>
+            is a predicate used in assertions about abstract shapes and
+            shape-like configurations, such as posture. Examples: <a
+            href="./material-vocab.html#shapeOfObject">#$shapeOfObject,</a>
+            #$xyCrossSectionShape, #$yzCrossSectionShapeType, <a
+            href="./spatial-vocab.html#continuouslyConnectedTo">#$continuouslyConnectedTo,</a>
+                <a href="./physiology-vocab.html#postureOfAnimal">#$postureOfAnimal.</a><br />
+            <b>guid: </b>bd58c1b7-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a
+                href="./predicate-type-vocab.html#ObjectPredicate">#$ObjectPredicate</a>&nbsp;&nbsp;<a href="./predicate-type-vocab.html#PhysicalFeatureDescribingPredicate">#$PhysicalFeatureDescribingPredicate</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="TaxonomicSlot">#$TaxonomicSlot<i>&nbsp;&nbsp;&nbsp;taxonomic slots</i></a></font>
+        <blockquote> A subcollection of <a
+            href="./fundamental-vocab.html#Predicate">#$Predicate.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#TaxonomicSlot">#$TaxonomicSlot</a>
+            is a binary predicate used to help specify the position of a
+            thing within one of the major taxonomies or hierarchies in
+            the Cyc ontology. For example, <a
+            href="./fundamental-vocab.html#genls">#$genls</a> orders the
+            instances of <a
+            href="./fundamental-vocab.html#Collection">#$Collection</a>
+            into a hierarchy. Other examples of <a
+            href="./predicate-type-vocab.html#TaxonomicSlot">#$TaxonomicSlots</a>
+            are <a href="./fundamental-vocab.html#isa">#$isa,</a> <a
+            href="./fundamental-vocab.html#partitionedInto">#$partitionedInto,</a>
+            #$coExtensional, and <a href="./fundamental-vocab.html#disjointWith">#$disjointWith.</a><br />
+            <b>guid: </b>bd5880ca-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>#$BinaryPredicate&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./predicate-type-vocab.html#TaxonomicSlotForPredicates">#$TaxonomicSlotForPredicates</a>
+                <a
+            href="./predicate-type-vocab.html#TaxonomicSlotForAnyThing">#$TaxonomicSlotForAnyThing</a>
+            #$TaxonomicSlotForCollections  </blockquote>
+        <font size="+1">
+            <a
+                    name="TaxonomicSlotForAnyThing">#$TaxonomicSlotForAnyThing<i>&nbsp;&nbsp;&nbsp;taxonomic
+                    slot for any unit</i></a></font>
+        <blockquote> A subcollection of <a
+            href="./predicate-type-vocab.html#TaxonomicSlot">#$TaxonomicSlot</a>
+            (q.v.). Each instance of <a
+            href="./predicate-type-vocab.html#TaxonomicSlotForAnyThing">#$TaxonomicSlotForAnyThing</a>
+            is a taxonomic slot that can in principle be used to help
+            specify the location of anything whatsoever within some
+            taxononmy; hence at least one of its argument-places must be
+            constrained to instances (see #$argIsa) of <a
+            href="./fundamental-vocab.html#Thing">#$Thing</a> (and to
+            nothing more specific than <a
+            href="./fundamental-vocab.html#Thing">#$Thing).</a> Examples
+            include <a href="./fundamental-vocab.html#isa">#$isa</a> and #$generalizations.<br />
+            <b>guid: </b>bd589fea-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#TaxonomicSlot">#$TaxonomicSlot</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="TaxonomicSlotForPredicates">#$TaxonomicSlotForPredicates<i>&nbsp;&nbsp;&nbsp;taxonomic
+                    slot for collections</i></a></font>
+        <blockquote> A specialization of both <a
+            href="./predicate-type-vocab.html#TaxonomicSlot">#$TaxonomicSlot</a>
+            and <a
+            href="./predicate-type-vocab.html#MetaPredicate">#$MetaPredicate.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#TaxonomicSlotForPredicates">#$TaxonomicSlotForPredicates</a>
+            is a binary predicate used to help define the taxonomy of <a
+            href="./fundamental-vocab.html#Predicate">#$Predicates</a>
+            by specifying relations between various predicates; hence
+            its argument-places are both constrained to instances (see
+            #$argIsa) of <a
+            href="./fundamental-vocab.html#Predicate">#$Predicate</a> or
+            some broad specialization thereof (such as
+            #$BinaryPredicate). Examples include #$genlPreds,
+            #$genlInverse, and <a href="./fundamental-vocab.html#negationPreds">#$negationPreds.</a><br />
+            <b>guid: </b>567dc080-4087-11d6-8000-00a0c9da2002<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a
+                href="./predicate-type-vocab.html#MetaPredicate">#$MetaPredicate</a>&nbsp;&nbsp;<a href="./predicate-type-vocab.html#TaxonomicSlot">#$TaxonomicSlot</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="FunctionalSlot">#$FunctionalSlot<i>&nbsp;&nbsp;&nbsp;functional slots</i></a></font>
+        <blockquote> A specialization of <a
+            href="./fundamental-vocab.html#FunctionalPredicate">#$FunctionalPredicate</a>
+            each instance of which is a binary predicate that is
+            functional in its second argument position. More precisely,
+            a binary predicate PRED is an instance of <a
+            href="./fundamental-vocab.html#FunctionalSlot">#$FunctionalSlot</a>
+            if and only if, for any legal occupant THING1 of PRED's
+            first (or arg1 ) argument position, there is at most one
+            legal occupant THING2 of PRED's second (or arg2 ) argument
+            position such that (PRED THING1 THING2) holds. In other
+            words, <a
+            href="./fundamental-vocab.html#FunctionalSlot">#$FunctionalSlot</a>
+            is the subcollection of the collection-intersection of
+            #$BinaryPredicate and <a
+            href="./fundamental-vocab.html#FunctionalPredicate">#$FunctionalPredicate</a>
+            containing those predicates whose second argument (at least)
+            is functional. Examples include #$latitude, <a
+            href="./geography-vocab.html#countryOfAddress">#$countryOfAddress,</a>
+            and #$femaleParentActor.<br />
+            <b>guid: </b>bd5881a4-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./fundamental-vocab.html#FunctionalPredicate">#$FunctionalPredicate</a>&nbsp;&nbsp;#$BinaryPredicate&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./quantity-vocab.html#IntervalBasedQuantitySlot">#$IntervalBasedQuantitySlot</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="SubEventSlot">#$SubEventSlot<i>&nbsp;&nbsp;&nbsp;sub
+                    event slots</i></a></font>
+        <blockquote> A collection of predicates that are used to relate
+            an event to its sub-events. Each instance of <a
+            href="./predicate-type-vocab.html#SubEventSlot">#$SubEventSlot</a>
+            has an arity of 2, and both argument places are constrained
+            (see #$argIsa) to instances of <a
+            href="./time-vocab.html#Event">#$Event,</a> or some
+            subcollection thereof. Each instance of <a
+            href="./predicate-type-vocab.html#SubEventSlot">#$SubEventSlot</a>
+            is a specialization of the predicate <a
+            href="./top-vocab.html#subEvents">#$subEvents</a> (q.v.);
+            consequently, for each instance PRED of <a
+            href="./predicate-type-vocab.html#SubEventSlot">#$SubEventSlot,</a>
+            either (#$genlPreds PRED <a
+            href="./top-vocab.html#subEvents">#$subEvents)</a> or
+            (#$genlInverse PRED <a
+            href="./top-vocab.html#subEvents">#$subEvents)</a> holds.<br />
+            <b>guid: </b>bd5882c6-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of:
+                </b>#$BinaryRolePredicate&nbsp;&nbsp;<a href="./predicate-type-vocab.html#TemporalPartSlot">#$TemporalPartSlot</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="InterPersonalRelationSlot">#$InterPersonalRelationSlot<i>&nbsp;&nbsp;&nbsp;human
+                    relationships (inter existing object slot)</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> An instance of <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory,</a>
+            and a specialization of <a
+            href="./predicate-type-vocab.html#InterExistingObjectSlot">#$InterExistingObjectSlot.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#InterPersonalRelationSlot">#$InterPersonalRelationSlot</a>
+            is a binary predicate used to represent relationships
+            between two instances of <a
+            href="./biology-vocab.html#Animal">#$Animal.</a> Instances
+            of <a
+            href="./predicate-type-vocab.html#InterPersonalRelationSlot">#$InterPersonalRelationSlot</a>
+            include #$mate, <a
+            href="./social-vocab.html#friends">#$friends,</a> and <a href="./social-vocab.html#boss">#$boss.</a><br />
+            <b>guid: </b>be00bb8e-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#InterExistingObjectSlot">#$InterExistingObjectSlot</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./predicate-type-vocab.html#FamilyRelationSlot">#$FamilyRelationSlot</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="PerceivingSlot">#$PerceivingSlot<i>&nbsp;&nbsp;&nbsp;perceiving slot</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of predicates. Each instance of <a
+            href="./predicate-type-vocab.html#PerceivingSlot">#$PerceivingSlot</a>
+            is a binary predicate relating a perceiver and an object or
+            event (not a sense-datum) that s/he perceives in the mode
+            specified by the predicate; e.g., sees, hears, smells,
+            tactuallyPerceives, tastes. Assertions that use a predicate
+            belonging to <a
+            href="./predicate-type-vocab.html#PerceivingSlot">#$PerceivingSlot</a>
+            imply that some perception event occurs during the time that
+            the assertion holds. See also <a
+            href="./perception-vocab.html#Perceiving">#$Perceiving</a>
+            and its subcollections.<br />
+            <b>guid: </b>bd588eba-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>#$CognitiveAwarenessPredicate&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="CostBreakdownSlot">#$CostBreakdownSlot<i>&nbsp;&nbsp;&nbsp;cost
+                    breakdown slots</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of predicates. Each instance of <a
+            href="./predicate-type-vocab.html#CostBreakdownSlot">#$CostBreakdownSlot</a>
+            is a binary predicate used to describe some pecuniary aspect
+            of an instance of <a
+            href="./financial-vocab.html#Buying">#$Buying.</a> The first
+            argument to every <a
+            href="./predicate-type-vocab.html#CostBreakdownSlot">#$CostBreakdownSlot</a>
+            is an instance of <a
+            href="./financial-vocab.html#Buying">#$Buying</a> and the
+            second argument is always an instance of <a
+            href="./financial-vocab.html#Money">#$Money.</a> Examples:
+                <a
+            href="./poss-transfer-vocab.html#moneyTransferred">#$moneyTransferred,</a>
+            #$discount, #$salesTax, #$salesCommission.<br />
+            <b>guid: </b>bd5896b1-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>#$BinaryPredicate&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="FamilyRelationSlot">#$FamilyRelationSlot<i>&nbsp;&nbsp;&nbsp;family relationships</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A specialization of <a
+            href="./predicate-type-vocab.html#InterPersonalRelationSlot">#$InterPersonalRelationSlot.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#FamilyRelationSlot">#$FamilyRelationSlot</a>
+            is a binary predicate used to represent relationships among
+            members of human families. Instances of <a
+            href="./predicate-type-vocab.html#FamilyRelationSlot">#$FamilyRelationSlot</a>
+            include <a href="./social-vocab.html#spouse">#$spouse,</a>
+            #$siblings, #$grandmothers, #$grandfathers, #$relatives, and
+                <a href="./social-vocab.html#cohabitingFamilyMembers">#$cohabitingFamilyMembers.</a><br />
+            <b>guid: </b>bd58d96b-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#InterPersonalRelationSlot">#$InterPersonalRelationSlot</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="IntangibleObjectRelatingPredicate">#$IntangibleObjectRelatingPredicate<i>&nbsp;&nbsp;&nbsp;relation predicate</i></a></font>
+        <blockquote> A collection of predicates used to assert
+            relationships between intangible objects. As such, each
+            instance of <a
+            href="./predicate-type-vocab.html#IntangibleObjectRelatingPredicate">#$IntangibleObjectRelatingPredicate</a>
+            has at least two of its argument-places constrained to
+            instances of <a
+            href="./top-vocab.html#IntangibleIndividual">#$IntangibleIndividual</a>
+            or some subcollection thereof. Examples include
+            #$subAlgorithms, <a
+            href="./quantity-vocab.html#maxQuantValue">#$maxQuantValue,</a>
+            #$meanQuantValue, #$expectedValue, #$derivativesOfFunction,
+            #$rangeOfDistribution, #$inverseFunc, and #$lessLikelyThan.<br />
+            <b>guid: </b>bd58ed34-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./predicate-type-vocab.html#IntangibleObjectPredicate">#$IntangibleObjectPredicate</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="MicrotheoryPredicate">#$MicrotheoryPredicate<i>&nbsp;&nbsp;&nbsp;microtheory predicates</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A specialization of <a
+            href="./fundamental-vocab.html#Predicate">#$Predicate.</a>
+            Each instance of <a
+            href="./predicate-type-vocab.html#MicrotheoryPredicate">#$MicrotheoryPredicate</a>
+            is a predicate used to describe the properties and
+            relationships of instances of <a
+            href="./context-vocab.html#Microtheory">#$Microtheory.</a>
+            Instances of <a
+            href="./predicate-type-vocab.html#MicrotheoryPredicate">#$MicrotheoryPredicate</a>
+            include <a
+            href="./context-vocab.html#domainAssumptions">#$domainAssumptions,</a>
+            #$mtTime, <a
+            href="./context-vocab.html#genlMt">#$genlMt,</a>
+            #$adheresToCodeOfConduct, <a
+            href="./agreement-vocab.html#ist-Agreement">#$ist-Agreement,</a>
+            and #$ist-Obligation.<br />
+            <b>guid: </b>bd58817a-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#PredicateCategory">#$PredicateCategory</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./fundamental-vocab.html#Predicate">#$Predicate</a>&nbsp;&nbsp;</blockquote>
+        <p />
+        <hr />
+        <i>Copyright&copy; 1996-2002.  All rights reserved.</i>  See <a
+            href="/cycdoc/legal-terms.html">Terms of Usage.</a></body></html>

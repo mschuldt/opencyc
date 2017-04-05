@@ -1,0 +1,114 @@
+<html>
+
+<title>What Is A Context?</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo-small.gif border=0></a>What Is A Context?</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy; 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/contexts-basic-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/contexts-basic-module.html>Contexts in Cyc&reg;</a></td></tr><tr><td><a href=/cycdoc/course/the-hierarchy-of-contexts.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/the-hierarchy-of-contexts.html>The Hierarchy of Contexts in Cyc&reg;</a></td></tr></table>
+<hr>
+An important idea in Cyc is the <strong>context.</strong>  A context (or "microtheory" in Cyc&reg) is a <strong>set of assertions</strong>, representing a particular set of  surrounding circumstances, relevant facts, IF-THEN rules, and background assumptions.  Cyc's enormous knowledge base of assertions (including its IF-THEN rules) is divided into many different contexts; every fact or rule is in some particular context.  (It could also be in more than one context.)
+<p>
+  Whenever Cyc is asked a question, or has to do some reasoning, the task is always done <em>in</em> some particular context.  Being in a context confines Cyc&reg to relevant facts and rules.   For example, if you just want to ask Cyc&reg about brushing your teeth, Cyc&reg doesn't need to know every kind of fact in the Cyc&reg Knowledge Base, such as how much a toothbrush costs.  In the ManualHumanActivitiesMt context for typical human activities (like tooth-brushing) there is no fact about this, although in a different context, ShoppingGMt, the cost is there because it's relevant to shopping.
+<p>
+In Cyc, a context is a way of talking about a group of
+related assertions by representing this grouping explicitly as  a Cyc
+object.  Each context should therefore be designed as a coherent set of relevant material.
+<p>
+
+<ul>
+<lh><strong>Why We Have Contexts</strong></lh>
+
+<li><strong>(a)</strong> In general, naming a theory (i.e., a set of sentences) will allow us
+to <strong>make statements about it</strong> --e.g., perhaps we want to state
+explicitly that for answering a certain kind of question, a certain
+theory is more relevant.  For example, we can call the group of
+assertions dealing with ailments the <a href=/cycdoc/vocab/medical-vocab.html#AilmentMt>#$AilmentMt</a>, and the set of
+statements about jobs the #$JobMt, and state that the former group is
+more relevant to answering questions about illnesses than the latter.
+
+<li><strong>(b)</strong> Cyc's "<strong>Microtheories</strong>" provide a mechanism for focusing on <strong>relevant</strong> information
+during problem solving.  For example, if we have a question about heart
+attacks, the system can find all the information about heart attacks in
+the <a href=/cycdoc/vocab/medical-vocab.html#AnimalPhysiologyMt>#$AnimalPhysiologyMt</a>, the <a href=/cycdoc/vocab/medical-vocab.html#HumanAilmentMt>#$HumanAilmentMt</a>, and the <a href=/cycdoc/vocab/medical-vocab.html#AilmentMt>#$AilmentMt</a>, and group
+all of this information into a single, temporary, "problem-solving"
+bundle created for the sole purpose of answering the question.
+
+<li><strong>(c)</strong> Contexts allow us to create limited domains that rest on certain
+<strong>assumptions</strong>.  This allows the statement of the theory to be
+simplified, since we can state the assumptions once for the entire
+theory, rather than having to repeat them for every assertion in the
+domain.  For instance, the #$JobMt as a whole assumes that
+every employed person mentioned in that microtheory has just one job.  (Having two jobs is an exception.)  Therefore, we can omit prefacing every sentence in that microtheory with,
+"Assuming the person has only one job at a time ..."  
+
+<li><strong>(d)</strong> By keeping different theories based on different assumptions
+distinct, contexts allow the same phenomenon to be represented in
+different ways <strong>without inconsistency</strong>.  For example, two different
+microtheories may take two different perspectives on the same event (e.g. viewing an earthquake as a human catastrophe versus an overdue tectonic adjustment), or
+may make different approximations or allow for different margins of
+error (e.g., by using Newtonian as opposed to relativistic
+mechanics).  Knowledge entry is made easier since the knowledge
+enterer doesn't have to worry about creating "the" single correct
+representation. 
+</ul>
+<p>
+There are several kinds of context in Cyc -- two main kinds are: <strong>General Microtheories</strong> and <strong>Problem Solving Contexts</strong> (abbreviated as <strong>GMt</strong>s and <strong>PSC</strong>s).
+<p>
+ Problem Solving Contexts are specialized contexts created to solve a particular problem; these are usually created "on the fly" and they evaporate after use.  We'll mostly talk about General Microtheories.
+<p>
+  A <strong>General Microtheory</strong> (<strong>GMt</strong>) is a generally useful context that is not application- or problem-specific.  For example, whenever  you talk about shopping for food, you assume various things, such as that the food items are for sale in a store, that they have prices in money, etc.  These assumptions hold throughout our modern culture.  Axioms (assertions in Cyc) about shopping that rest on those assumptions are collected in in the microtheory called #$RetailBuyingMt.  This general microtheory is useful in a number of applications (like directed marketing, automatic personal assistants, simulation games, etc.).
+<p>
+You can also introduce new Microtheories for fictional situations like those in fairy tales, books, television shows, etc.  Various things (like the time, place and culture, and the existence and features of the characters, etc.) are assumed in a #$FictionalMt.   A story character like Paddington Bear has certain definite characteristics, for example: he wears a yellow hat.  This is <em>true</em> in the #$PaddingtonBearMt (an instance of #$FictionalMt) even though in the real world Paddington Bear never existed.
+<p>
+  Similarly, a treaty, agreement or law code has a microtheory for the way things are <em>supposed to be</em> (as opposed to how they actually are).  For this, Cyc has a kind of Microtheory called a #$SupposedToBeMt --  an <a href=/cycdoc/vocab/agreement-vocab.html#Agreement>#$Agreement</a> is one example that contains the facts needed to represent this situation, namely the facts recited, anticipated and agreed-to in the agreement.
+<p>
+Microtheories are also used to represent information about "information-bearing things" like articles, movies, messages, etc.  If we were to represent this course module in Cyc, itsinformation content would be in a microtheory; the assertions of the microtheory would convey the content about the article.
+
+		<p>Most Microtheories have assumptions about space and time. If you ask about travelling a long distance, the likely means of travel depends on the historical period that is assumed. Cyc will not make the mistake of assuming that Abraham Lincoln travelled to Washington by airplane or car, but it will assume that a modern businessman could use one of these means. The vast majority of Microtheories assume that human events occur on or near the surface of the Earth and a lot of common-sense assumptions depend on that. You can imagine how difficult it would be for two astronauts to attempti to play pool in space, with the balls  floating all over the place and the table starting to rotate.
+		<BLOCKQUOTE>
+			</BLOCKQUOTE>
+		<p>
+A Microtheory has a set of relevant <strong>assertions</strong> (including simple facts and IF-THEN rules) and it may have a set of <strong>Domain Assumptions</strong> that always apply within the Microtheory.  In addition, it has a certain set of <em>other Microtheories</em> to which it has access; if Cyc is in that Microtheory, Cyc&reg can access all of the assertions in those other Microtheories, and it is subject to all of the Domain Assumptions in those other Microtheories.  (Special pages describing these features are coming next.)  Frequently, the microtheory makes basic assumptions which simplify the axioms within it.
+<p>
+A Microtheory is linked to its other, accessible Microtheories by using
+an explicit predicate asserted about the microtheories: <a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a>.  If
+there are two microtheories ?MT1 and ?MT2, we assert
+ <pre>(<a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> ?MT1 ?MT2)</pre>
+ to say that Microtheory ?MT2 is accessible from Microtheory ?MT1.
+All assertions and Domain Assumptions in ?MT2 then become available to
+Cyc if it is operating in ?MT1.
+<p>
+Microtheories allow two different parts of the Knowledge Base to contain conflicting information without causing trouble.  It is no problem for Cyc if <a href=/cycdoc/vocab/state-change-vocab.html#TeethCleaning>#$TeethCleaning</a> normally happens one to three times a year according to the #$JobMt, but one to three times a <em>day</em> according to the #$PersonalActivitiesMt.  (Professional teeth cleaning versus personal teeth cleaning).  In Cyc&reg, Knowledge Entry (putting assertions into the Cyc&reg knowledge base) usually aims for logical consistency within a Microtheory, but not consistency throughout the whole Cyc&reg Knowledge Base.
+<p>
+<BLOCKQUOTE><strong>[Add:</strong> DIFFERENT POINTS OF VIEW?]</BLOCKQUOTE>
+<p> 
+Because a Microtheory in Cyc is treated as an object in its own right, you can assert things about it directly and you can relate it to other objects and Microtheories using Cyc's logical language CycL.<hr>
+<a href=/cycdoc/course/contexts-basic-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/the-hierarchy-of-contexts.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a>
+<hr>
+<h2>Questions:</h2>
+<form action=/cgi-bin/cyccgi/doc-answer.exe?course/what-is-a-context.text method=post>
+
+<p>These are the first, most basic,  questions about contexts:</p>
+
+<p>Is every fact in Cyc stated in some particular context?</p><p><textarea name=item-1 cols=60 rows=4></textarea></p>
+
+<p>The general idea of <em>context</em> covers several
+kinds.  What are two commonly used kinds (types or collections) of context we've mentioned?</p><p><textarea name=item-2 cols=60 rows=4></textarea></p>
+
+<p>Typically, when Cyc is reasoning (drawing inferences
+based on its facts and rules) does it have access to its entire
+Knowledge Base, in all subject-areas?</p><p><textarea name=item-3 cols=60 rows=4></textarea></p>
+
+<p>A microtheory may contain assertions about many
+things -- but is the microtheory itself treated as a thing, something we
+can qualify and talk about?</p><p><textarea name=item-4 cols=60 rows=4></textarea></p>
+<input type=submit value="Show Answers"></form><hr>
+<a href=/cycdoc/course/contexts-basic-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/the-hierarchy-of-contexts.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>Last Update: 03/21/2002<br>
+</html>

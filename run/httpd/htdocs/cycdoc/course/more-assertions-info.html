@@ -1,0 +1,79 @@
+<html>
+
+<title>More Information About Assertions</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo-small.gif border=0 alt="OpenCyc.org Homepage"></a>More Information About Assertions</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy; 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/browsing-constants-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/browsing-constants-module.html>Viewing Cyc&reg; Constants with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/other-assertions.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/other-assertions.html>Presentation of Other Assertions</a></td></tr><tr><td><a href=/cycdoc/course/hidden-assertions.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/hidden-assertions.html>Hidden Assertions</a></td></tr></table>
+<hr>
+
+
+The symbols before an assertion also carry information about
+the truth value of the assertion:<p>
+
+<p>
+<img src="../img/cb/red.gif">
+ : False assertion<br>
+
+<img src="../img/cb/white.gif">
+ : Monotonically true GAF<br>
+
+<img src="../img/cb/yellow.gif">
+ : Asserted default true GAF<br>
+
+<img src="../img/cb/green.gif">
+ : Deduced default true GAF<br>
+<p>
+
+See <a href="../ref/cycl-syntax.html#truth values">"Truth Values"</a> in "The Syntax
+of CycL" for more on truth values in Cyc&reg;.<p>
+
+If an assertion is present in the KB because it is the
+result of inference, it is generally preceded by the fourth symbol
+above (i.e. the symbol for deduced default true GAF).  These assertions are
+called <i>remote</i> or <i>inferred</i> assertions.<p>
+
+If an assertion has been directly asserted (by some editing operation)
+into the knowledge base, it is preceded by one of the other three
+color symbols above if it is a GAF.  Such assertions are called
+<i>local</i> assertions.<p>
+
+If an assertion is both local and inferred, it is referred to as
+<i>redundant</i>.  Such redundant default true GAF's are usually
+preceded by this symbol:<br>
+<img src="../img/cb/cyan.gif">
+<p>
+
+Assertions referred to as "HL" inferred, indicates that the
+assertions exist "virtually" in the KB, recomputed on demand by a
+Heuristic Level (HL) module -- a specialized piece of code that
+efficiently performs a particular kind of inference.  For example,
+there is one module that takes care of the transitivity of <a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> (i.e.,
+ensures that if (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> A B) and (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> B C), then (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> A
+C)).<p>
+
+In certain cases, a local assertion may be
+marked as redundant using this symbol:<br>
+<img src="../img/cb/plus-yellow.gif">
+<p>
+
+This means that an HL module has
+concluded that even if the local assertion were removed from the
+KB, the HL module would conclude its existence anyway.<p>
+
+The majority of cases which are currently marked in this fashion are
+<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> and <a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> assertions.<p>
+
+Notice the locally-asserted genls of <a href=/cycdoc/vocab/state-change-vocab.html#TeethCleaning>#$TeethCleaning</a> (there should be two). These are the closest, or most-specific, supersets of <a href=/cycdoc/vocab/state-change-vocab.html#TeethCleaning>#$TeethCleaning</a>.
+
+
+<hr>
+<a href=/cycdoc/course/browsing-constants-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/other-assertions.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/hidden-assertions.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>Last Update: 03/22/2002 11:42:06<br>
+</html>

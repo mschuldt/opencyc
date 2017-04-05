@@ -1,0 +1,42 @@
+<html>
+
+<title>The Communication Mode</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo-small.gif border=0></a>The Communication Mode</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy; 1996, 1997, 1998, 2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/editing-the-kb-module.html>Editing the CYC&reg; KB with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/transcripts.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/transcripts.html>Transcript Files</a></td></tr><tr><td><a href=/cycdoc/course/queue-status.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/queue-status.html>Interpreting the Queue Status Display</a></td></tr></table>
+<hr>In the bottom frame of the interface, the &quot;Comm:&quot; entry indicates the current communication mode for the CYC&reg; Server. The communication mode determines how the CYC&reg; Server keeps transcripts, whether it shares its operations with the other servers at the site and whether it processes operations from other servers. <b>Most of the available modes are not applicable to the initial release of OpenCyc, but could be useful in the future.</b><p>
+
+<hr>In order to view or change your current communication mode, click on the &quot;Comm:&quot; link in the bottom frame of the interface.  You will see the &quot;Communication Status Area&quot; screen, which is divided into two sections that determine your communication status: 
+		<ol>
+<li> The first section controls what happens to operations which you produce.  If you do not have any operations stored in your local transcript you will see the following options:
+<ul>
+<li><i>Send Immediately:</i> Transmit all local operations to the transcript server as they are processed (or write them to the master transcript file if this CYC&reg; image is not set up to use a transcript server).
+<li><i>Store For Later:</i> Write local operations to a local transcript file.  You may transmit them latter.
+<li><i>Do Not Record:</i> Do not make a record of the operations after they have been processed.
+</ul>
+If you do have operations stored, you must handle them first before you can change out of storing mode.  You will see the following options:
+<ul>
+<li> <i>Send Stored Operations:</i> Transmit all stored operations to the transcript server (or write them to the master transcript file if this CYC&reg; image is not set up to use a transcript server).  This also renames the local transcript by adding "-sent" into the name and starts a new local transcript file.
+<li> <i>Clear Stored Operations:</i> Throws away all stored operations.  This also renames the local transcript by adding "-cleared" into the name and starts a new local transcript file.
+</ul>
+<b>Note:</b> If your local queue is non-empty (meaning there are still operations you have produced that have not been processed by the agenda), you will be unable to change the transmission part of your communication status, and will not see either of these options.  You will see a warning instead.
+<li>The second section controls whether you will receive operations transmitted by other CYC&reg; images.  You will have the following options:
+<ul>
+<li><i>Yes:</i> receive operations that others have transmitted.
+<li><i>No:</i> do not receive operations from others.
+</ul>
+</ol>
+		<p>
+To change the communication settings, select the desired setting in each section and click on the  [<i>Submit</i>] button.   The [<i>Current Value</i>] button will restore the previous values for the entire page.
+
+		<hr>
+<a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/transcripts.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/queue-status.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>Last Update: 03/26/2002<br>
+</html>

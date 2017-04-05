@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=UTF-8'>
+    <style type='text/css'>
+    p {font-family: Arial, sans-serif }
+    a {font-family: Arial, sans-serif }
+    p {font-size: 100%}
+    </style>
+  </head>
+
+  <body bgcolor='white'>
+
+<p><b>Why does #$likes-Generic also appear in the list?</b></p>
+
+<p>The short answer is because #$likes-Generic is a genlPred of itself. How can that be? Look at one of the rules that defines #$genlPreds:</p>
+
+<tt>
+<pre>
+(implies 
+       (and 
+           (?PRED ?ARG1 ?ARG2) 
+           (genlPreds ?PRED ?GENL-PRED)) 
+       (?GENL-PRED ?ARG1 ?ARG2))
+</pre>
+</tt>
+
+<p>These will be more specific predicates than #$relatives (e.g., #$cousins).
+</p>
+
+<p>For more information, see the <a href="http://www.cyc.com/cycdoc/help/cb-c-index.html">Term Index Help</a>.</p>
+
+  </body>
+</html>

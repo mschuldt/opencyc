@@ -1,0 +1,114 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON collections-of-collections.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Collections of Collections</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo.gif border=0 alt="OpenCyc.org Homepage"></a>Collections of Collections</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/collections-module.html>Sets and Individuals in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/disjoint-sets.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/disjoint-sets.html>Mutually Disjoint Collections</a></td></tr><tr><td><a href=/cycdoc/course/sibling-disjoint-sets.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/sibling-disjoint-sets.html>Sibling-Disjoint Collections</a></td></tr></table>
+<hr>
+
+
+There are cases where it is useful to make assertions about a class of
+collections, so we can reify these classes as constants which are
+collections of collections.  These constants are both instances of
+<a href=/cycdoc/vocab/fundamental-vocab.html#Collection>#$Collection</a> and subsets of <a href=/cycdoc/vocab/fundamental-vocab.html#Collection>#$Collection</a>, since all their instances
+are also instances of <a href=/cycdoc/vocab/fundamental-vocab.html#Collection>#$Collection</a>.<p>
+
+<img src="../img/col-of-col.gif"><p>
+
+Collections of collections have many uses; a common use is to
+constrain the domain of some predicate which applies to collections.
+For example,<p>
+
+<pre>
+     (#$concentration #$PortionOfLemonade001 #$Sucrose (#$GramsPerMilliliter 0.1))
+</pre><p>
+
+states that in the particular instance of lemonade,
+#$PortionOfLemonade001, the concentration of #$Sucrose is 0.1 g/ml.
+The second argument in an assertion involving #$concentration is a
+collection, not an individual.  But clearly, not just any
+collection could make sense in that role. For example,<p>
+
+<pre>
+     (#$concentration #$PortionOfLemonade001 <a href=/cycdoc/vocab/math-vocab.html#Integer>#$Integer</a> (#$GramsPerMilliliter 0.1))
+</pre><p>
+
+is an assertion which the KB should reject as meaningless.  This can
+be accomplished using the collection of collections
+<a href=/cycdoc/vocab/composition-vocab.html#TangibleStuffCompositionType>#$TangibleStuffCompositionType</a>, which has #$Sucrose as one of its many
+instances. The assertion<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#arg2Isa>#$arg2Isa</a> #$concentration <a href=/cycdoc/vocab/composition-vocab.html#TangibleStuffCompositionType>#$TangibleStuffCompositionType</a>)
+</pre><p>
+
+enforces the minimal constraint that #$concentration can only refer to
+kinds of tangible stuff in its second argument.<p>
+
+If you examine #$Sucrose, you may notice that not only is it an
+instance of <a href=/cycdoc/vocab/composition-vocab.html#TangibleStuffCompositionType>#$TangibleStuffCompositionType</a>, it is also a subset of
+<a href=/cycdoc/vocab/top-vocab.html#TangibleThing>#$TangibleThing</a>.  Why do we have both <a href=/cycdoc/vocab/top-vocab.html#TangibleThing>#$TangibleThing</a> and
+<a href=/cycdoc/vocab/composition-vocab.html#TangibleStuffCompositionType>#$TangibleStuffCompositionType</a>?  The answer is that not all
+collections which are subsets of <a href=/cycdoc/vocab/top-vocab.html#TangibleThing>#$TangibleThing</a> are instances of
+<a href=/cycdoc/vocab/composition-vocab.html#TangibleStuffCompositionType>#$TangibleStuffCompositionType</a>.  This reflects the fact that there are
+distinctions between things which are more "stuff-like" in some
+aspects and more "object-like" in others.  We use type collections to
+express these distinctions.<p>
+
+For example, although <a href=/cycdoc/vocab/transportation-vocab.html#Automobile>#$Automobile</a> is a subset of <a href=/cycdoc/vocab/top-vocab.html#TangibleThing>#$TangibleThing</a>,
+(any automobile is also a tangible thing), it would be unreasonable to
+assert:<p>
+
+<pre>
+     (#$concentration #$PortionOfLemonade001 <a href=/cycdoc/vocab/transportation-vocab.html#Automobile>#$Automobile</a> (#$GramsPerMilliliter 0.1))
+</pre><p>
+
+This is enforced because <a href=/cycdoc/vocab/transportation-vocab.html#Automobile>#$Automobile</a> is not an instance of
+<a href=/cycdoc/vocab/composition-vocab.html#TangibleStuffCompositionType>#$TangibleStuffCompositionType</a>.<p>
+
+(Although one might use the English phrase, "the concentration of
+automobiles in the city...", the word "concentration" in that
+phrase is being used with a different (though analogous) meaning and
+would not be translated to an expression involving #$concentration.)<p>
+
+We'll return to the issue of constraining the arguments of predicates
+in the <a href="argument-types.html">"Argument Types of
+Predicates"</a> section.<p>
+
+Another use of collections of collections is to provide additional
+structure to the genls hierarchy.  For example, there are many ways we
+could divide <a href=/cycdoc/vocab/top-vocab.html#TangibleThing>#$TangibleThing</a> up into subsets (that is,
+"subcollections").  One way is to identify subsets which are
+characterized by some intrinsic material composition shared by their
+elements.  These are subsets of <a href=/cycdoc/vocab/top-vocab.html#TangibleThing>#$TangibleThing</a>, and elements of
+<a href=/cycdoc/vocab/composition-vocab.html#TangibleStuffCompositionType>#$TangibleStuffCompositionType</a>.  Another way is to identify subsets
+which are characterized by some physical state of matter shared by
+their elements.  These are subsets of <a href=/cycdoc/vocab/top-vocab.html#TangibleThing>#$TangibleThing</a>, and elements of
+<a href=/cycdoc/vocab/material-vocab.html#TangibleStuffStateType>#$TangibleStuffStateType</a>.
+
+<hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/disjoint-sets.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/sibling-disjoint-sets.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a>
+<hr>
+<h2>Questions:</h2>
+<form action=/cgi-bin/cyccgi/doc-answer.exe?course/collections-of-collections.text method=post>
+
+<p>What are some assertions that all collections of collections have in common?</p><p><textarea name=item-1 cols=60 rows=4></textarea></p>
+<input type=submit value="Show Answers"></form><hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/disjoint-sets.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/sibling-disjoint-sets.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 03/28/2002<br>
+</html>

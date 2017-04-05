@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--Converted with LaTeX2HTML 98.1p1 release (March 2nd, 1998)
+originally by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Lexification Wizard Help</TITLE>
+<META NAME="description" CONTENT="Lexification Wizard Help">
+<META NAME="keywords" CONTENT="lexwiz">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+</HEAD>
+<BODY >
+
+<P>
+
+
+<body bgcolor="#FFFFFF">
+<a name="top"></a>
+<h2><a href=http://www.cyc.com><img src=http://localhost/cycdoc/img/cyc-logo-10-t.gif border=0></a>
+Lexification Wizard Help
+</h2>
+E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy 2000, 2001 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br><hr><p>
+
+
+
+<P>
+
+<H1><A NAME="SECTION00010000000000000000">
+Background</A>
+</H1>
+
+<P>
+Currently at Cycorp, concepts are labelled in a two phase process.
+First, when the knowledge engineer is creating a concept, a phrase is
+associated with the concept using a #$termStrings assertion.
+This is suitable for retrieving the concept using the same phrase, but
+doesn't allow for recognition of simple variants, for example, those
+based on pluralization.  Furthermore, these labels are not suitable for
+generation purposes where the form might change based on the context
+(e.g., 'how to swim' vs. 'swimming advice'). Thus, there is a second
+phase in which the plain labels are converted into lexical assertions,
+which encode syntactic information suitable for recognizing variants and
+proper generation. Such assertions are generally only made by the NL
+staff, although KE'ers with substantial experience can also make
+them. Thus there is a bottleneck is the process of ensuring that proper
+``lexifications'' are associated with Cyc concepts.
+
+<P>
+As a first step in addressing this problem, the Open Directory linking
+tool introduced a lexical wizard that guided the users in the decisions
+that needed to be made when performing the lexification and made the
+appropriate assertions for them.  However, this is only applicable for
+concepts created during external concept linking.  Also, only a limited
+range of lexifications were supported..
+
+<P>
+
+<H1><A NAME="SECTION00020000000000000000">
+Introduction</A>
+</H1>
+
+<P>
+The Cycorp Lexification Wizard is extension of the Open Directory
+linking tool lexification wizard that is integrated into the browser.
+The interface is designed to have the feel of a Microsoft Windows based
+wizard. In particular, options can be specified one at a time with the
+next phase invoked via a  N<SMALL>EXT</SMALL>-&gt;button. Defaults will be filled in
+based on the selection and then the same page brought up for further
+input.  When the tool has determined the settings for all options needed
+forthe lexification, a  L<SMALL>EXIFY </SMALL>button will replace the next
+button. After the proposed assertion is diagnosed OK, the  F<SMALL>INISH </SMALL>
+button will appear, signalling that the actual assertion can be made.
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000">
+General Lexification</A>
+</H1>
+
+<P>
+For all terms to be lexified, the following options need to be
+specified.
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Term</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>The Cyc concept to be lexified</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Phrase</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>A word or phrase serving as a label for the term</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Is preferred?</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Whether the phrase the most suitable form of reference</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Is proper noun?</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Whether the phrase is a proper name</TD>
+</TR>
+<TR><TD ALIGN="LEFT">MT</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Microtheory to use for the lexification (usually
+#$EnglishMt except for relations which use
+#$EnglishParaphraseMt)</TD>
+</TR>
+</TABLE>
+<P>
+
+<H1><A NAME="SECTION00040000000000000000">
+Proper Name Lexification</A>
+</H1>
+
+<P>
+Proper name lexification involves selecting a predicate that best
+expresses the relationship of a name to a Cyc constant. Often this will
+just be #$nameString, unless a specialization is more
+appropriate (e.g., #$scientificName). Therefore, there is a
+single option to be selected in this case:
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Proper-name-predicate</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Name of the predicate to use (see #$properNameStrings)</TD>
+</TR>
+</TABLE>
+<P>
+
+<H1><A NAME="SECTION00050000000000000000">
+Denotational Lexification</A>
+</H1>
+
+<P>
+``Denotational'' lexification involves selecting options needed for a
+#$denotation or one of the multi-word lexification predicates
+(e.g., #$multiWordString). The relevant options follow:
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Headword position</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Position in the phrase of the headword (i.e.,
+the word that determines the grammatic function of the entire phrase)</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Headword part of speech</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Grammatical part of speech of the
+headword (see #$SpeechPart).</TD>
+</TR>
+</TABLE>
+<P>
+Often selecting between the #$SimpleNoun and #$MassNoun
+parts of speech is not straightforward. For tips on making this
+decision, see <A NAME="tex2html1"
+ HREF="file://localhost/cyc/projects/od/gen-info/odFAQ.htm#massSimple">file://localhost/cyc/projects/od/gen-info/odFAQ.htm#massSimple</A>.
+
+<P>
+Whenever the selected headword for a phrase being lexified doesn't have
+an entry in the Cyc Lexicon, the ``No suitable parts of speech'' error
+message will be displayed and the  A<SMALL>DD </SMALL>M<SMALL>APPING</SMALL> button will be
+shown to allow the syntactic information to be added via Wales.  For
+documentation using Wales for this purpose, see
+<A NAME="tex2html2"
+ HREF="file:////home/tom/cvs/head/cycorp/cyc/doc/help/lexwiz-wales.html">file:////home/tom/cvs/head/cycorp/cyc/doc/help/lexwiz-wales.html</A>.
+
+<P>
+
+<H1><A NAME="SECTION00060000000000000000">
+Relation Lexification</A>
+</H1>
+
+<P>
+During lexification of relation terms, the term itself is not lexified,
+since relations are only of interest when instantiated. Instead,
+relational lexification involves creating a #$genFormat
+statement which indicates how a particular instance of a relation along
+with the arguments can be paraphrased into English. The relevant options
+follow:
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Relation template</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Template for relational lexifications (via #$genFormat)</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Argument specification</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Argument specification for the relational template</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Skip arity checks?</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Whether to bypass the relation arity checks</TD>
+</TR>
+</TABLE>
+<P>
+An introduction to the use of #$genFormat can be found in
+<A NAME="tex2html3"
+ HREF="file:////home/baxter/cvs/head/cycorp/cyc/doc/ref/generation.text">file:////home/baxter/cvs/head/cycorp/cyc/doc/ref/generation.text</A>.
+
+<P>
+Keywords commonly used in the argument specifications:
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">:quote</TD>
+<TD ALIGN="LEFT">Use concept name rather than NL paraphrase</TD>
+</TR>
+<TR><TD ALIGN="LEFT">:plural-generic</TD>
+<TD ALIGN="LEFT">Use a plural noun form</TD>
+</TR>
+<TR><TD ALIGN="LEFT">:singular-generic</TD>
+<TD ALIGN="LEFT">Use a singular noun form</TD>
+</TR>
+<TR><TD ALIGN="LEFT">:mass-number-generic</TD>
+<TD ALIGN="LEFT">Use a mass (aka non-count) noun form such as 'sand'</TD>
+</TR>
+<TR><TD ALIGN="LEFT">:non-plural-generic</TD>
+<TD ALIGN="LEFT">Use either a mass or a singular form</TD>
+</TR>
+<TR><TD ALIGN="LEFT">:non-singular-generic</TD>
+<TD ALIGN="LEFT">Use either a mass or a plural form</TD>
+</TR>
+<TR><TD ALIGN="LEFT">:a</TD>
+<TD ALIGN="LEFT">Include the determiner 'a' or 'an' as appropriate</TD>
+</TR>
+<TR><TD ALIGN="LEFT">:the</TD>
+<TD ALIGN="LEFT">Include the determiner 'the'</TD>
+</TR>
+<TR><TD ALIGN="LEFT">:gerund</TD>
+<TD ALIGN="LEFT">Use a progressive verb form such as 'walking'</TD>
+</TR>
+</TABLE>
+<P>
+The following points should be kept in mind:
+
+<P>
+<UL>
+<LI>The <EM>phrase</EM> option is currently ignored
+
+<P>
+<LI>Only select <EM>Skip arity checks?</EM> when really confident.
+
+<P>
+This option is a temporary workaround until more sophisticated checks
+are implemented for ensuring that the template corresponds to the
+argument specifications.
+
+<P>
+<LI>Do not add determiners (e.g., 'a') in the relation template. 
+
+<P>
+Determiner words should not be placed in the relation template. For example,
+<PRE>
+    (genFormat genls 'a ~a is a ~a' (1 2))
+</PRE>Instead, the determiner keywords should be used, such as :a or :the.
+<PRE>
+    (genFormat genls '~a is ~a' ((1 :a :singular-generic) (2 :a :singular-generic)))
+</PRE>
+<P>
+</UL>
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

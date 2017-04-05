@@ -1,0 +1,57 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON changing-direction.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Changing the Direction of a Rule</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo-small.gif border=0 alt="OpenCyc.org Homepage"></a>Changing the Direction of a Rule</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/editing-the-kb-module.html>Editing the OpenCyc KB with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/changing-strength.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/changing-strength.html>Changing the Strength of an Assertion</a></td></tr><tr><td><a href=/cycdoc/course/creating-constants.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/creating-constants.html>Creating a New Constant</a></td></tr></table>
+<hr>
+
+
+Direction is a value attached to every assertion which determines
+whether inferencing involving the assertion is done at assert time or
+at ask time. There are two possible values for direction: <b>:forward</b>
+(inferencing done at assert time) and <b>:backward</b> (inferencing done at
+ask time).<p>
+
+Any Cyc formula which begins with <a href=/cycdoc/vocab/fundamental-vocab.html#implies>#$implies</a> (a rule)
+defaults to direction <b>:backward</b>.  All other assertions default
+to direction <b>:forward</b>.<p>
+
+<tt>[Change Direction]</tt> may be used to change the direction of an
+assertion.  When you click <tt>[Change Direction]</tt>, it prompts for the
+new direction. When you click the "Change Direction" button, the interface
+queues the operations to unassert the old assertion and reassert it
+with the new direction.<p>
+
+The most common reason to change the direction of an assertion is to
+make a rule <b>:forward</b>.  When a rule is <b>:backward</b>, it is
+only considered when the KB is queried with backward inference
+allowed. But when a rule is made <b>:forward</b>, inference is
+immediately performed to draw conclusions based on that rule and
+relevant GAFs in the KB.  Whenever forward assertions are made, forward
+rules are tested to see if they are applicable.<p>
+
+Backward GAFs are exactly analogous to backward rules: they are not
+used in forward inference. So if you change the direction of some GAF
+to <b>:backward</b>, it will not be considered at the time of any 
+subsequent assertions, only during queries which allow backward inference.
+This is currently rare in the Cyc KB, but it can be used in cases
+where the cyclist wishes to suppress forward inference in particular
+cases.
+
+<hr>
+<a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/changing-strength.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/creating-constants.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 03/28/2002<br>
+</html>

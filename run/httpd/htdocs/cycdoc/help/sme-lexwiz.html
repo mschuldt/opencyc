@@ -1,0 +1,538 @@
+<HTML>
+<HEAD>
+<TITLE>Dictionary Assistant Help</TITLE>
+<META NAME="description" CONTENT="Dictionary Assistant Help">
+<META NAME="keywords" CONTENT="sme-lexwiz">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+</HEAD>
+<BODY >
+
+<P>
+
+
+<body bgcolor="#FFFFFF">
+<a name="top"></a>
+<h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo.gif border=0 alt="OpenCyc.org Homepage"></a>
+Dictionary Assistant Help
+</h2>
+E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 2000-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br><hr><p>
+
+<P>
+
+<H1><A NAME="SECTION00010000000000000000">
+1. Introduction</A>
+</H1>
+Traditionally at Cycorp, the process of creating new terms (i.e.,
+constants or narts) involved work by two separate groups. First, the
+concept is created along definitional assertions and comments by someone
+in the Ontological Engineering (OE) department. Afterwards, lexical
+mappings are added by some in the Natural Language (NL) group.
+
+These two steps have been separated because sometimes adding these
+lexical mappings, which we call <EM>lexifications</EM>, can involve
+linguistic considerations that OE'rs might not have in general. 
+The <EM>Dictionary Assistant</EM>
+<A NAME="tex2html2"
+ HREF="#foot124"><SUP>1</SUP></A>
+shields the user from the technical considerations by explaining the
+choices in a nontechnical manner. It is designed to let whoever creates
+a term also handle the lexical mappings, thus streamlining the overall
+term-creation process.
+
+<P>
+This manual is organized as follows: Section <A HREF="sme-lexwiz.html#starting-tool">2</A>
+explains how to start up the tool.
+Section <A HREF="sme-lexwiz.html#lexification-steps">3</A> provides details on the specific questions
+that the assistant asks.
+Finally, section <A HREF="sme-lexwiz.html#sample-interaction">4</A> for a sample interaction using
+the tool. 
+
+<P>
+
+<H1><A NAME="SECTION00020000000000000000">&#160;</A>
+<A NAME="starting-tool">&#160;</A>
+<BR>
+2. Starting the tool
+</H1>
+
+<P>
+The Dictionary Assistant is available from the Tools menu, but it is
+usually easier to invoke it from the <EM>Cyc Browser</EM>. For the current
+Cyc term, the assistant can be started by first displaying the <B>Lexical Info</B> page and then clicking the <B>[Lexify]</B> link at the
+bottom of the page.  (The [Lexify] link will also be shown on the
+browser for any unlexified term.)  This will bring up the tool start-up
+page with the term and a default phrase for referring to the term, based
+on the term's label. For example, the phrase for AdHocUnit-Military will
+be "ad hoc unit - military".
+
+<P>
+Tips on selecting the phrase will be shown in a 'Tip:' section. In
+addition, the term documentation and definitional information will be
+shown in the bottom of the page to help with the phrase selection.
+After changing the phrase (e.g., "ad hoc military unit"), the user
+should select OK to proceed with the lexification. This will lead to a
+series of non-technical questions that the user needs to answer to
+complete the lexification. Each question is shown on a separate page
+that usually also includes a tips section at the bottom providing more
+information on making the decision.
+
+<P>
+
+<H1><A NAME="SECTION00030000000000000000">&#160;</A>
+<A NAME="lexification-steps">&#160;</A>
+<BR>
+3. Lexification steps
+</H1>
+
+<P>
+The Dictionary Assistant guides the user in making the decisions
+necessary for proper lexification as terms. It presents the user with
+simple nontechnical questions in order to determine the parameters
+needed for making the lexical assertions. This section provides details
+on the questions that the Dictionary Assistant needs to
+determined. These questions determine the lexification parameters needed
+for the underlying assertions.
+
+<P>
+The questions are organized into four groups. There is one group common
+to all lexifications (section <A HREF="sme-lexwiz.html#general">3.1</A>); and, there are separate
+groups for each of the main types of lexical assertions supported:
+proper-name mappings (section <A HREF="sme-lexwiz.html#proper-name">3.2</A>), denotational mappings
+(section <A HREF="sme-lexwiz.html#denotational">3.3</A>), and lexical assertions for paraphrasing
+relations (section <A HREF="sme-lexwiz.html#relational">3.4</A>).
+
+<P>
+
+<H2><A NAME="SECTION00031000000000000000">&#160;</A>
+<A NAME="general">&#160;</A>
+<BR>
+3.1 General Lexification
+</H2>
+
+<P>
+For all terms to be lexified, the following options need to be
+determined.
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Term</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>The Cyc concept to be lexified</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Phrase</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>A word or phrase serving as a label for the term</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Is proper noun?</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Whether the phrase is a proper name</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Is preferred?</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Whether the phrase the most suitable form of reference</TD>
+</TR>
+</TABLE>
+<P>
+The first two (<I>Term</I> and <I>Phrase</I>) are specified on the initial screen.
+An error message will be displayed if the term is invalid or if the
+phrase if empty. Once the term is known, it's comments and definition
+assertions will be shown at the bottom of the screen, which can be
+helpful in selecting a phrase for the lexical mapping.
+
+<P>
+The next option (
+<!-- MATH: $Is proper noun?$ -->
+<I>Is proper noun</I>?) determines whether the lexical
+mappings should use proper-name type assertions (e.g.,
+#$nameString) versus one of the other semantic assertions (e.g.,
+#$multiWordString). This often can be determined based on the
+type of type of term (e.g., instances of #$Individual generally
+use proper-name lexical mappings). But the question will be asked
+regardless to avoid overgeneralization.
+
+<P>
+The last general option (
+<!-- MATH: $Is preferred?$ -->
+<I>Is preferred</I>?) determines whether the system
+should use the given phrase whenever referring to the term. It is asked
+at the end of the lexification process, so that the phrasing reflects
+the syntactic information that might have been determined from the other
+questions (see section <A HREF="sme-lexwiz.html#denotational">3.3</A> below).
+
+<P>
+
+<H2><A NAME="SECTION00032000000000000000">&#160;</A>
+<A NAME="proper-name">&#160;</A>
+<BR>
+3.2 Proper Name Lexification
+</H2>
+
+<P>
+Proper name lexification involves determining whether one of the
+specialized proper-name predicates should be used, as appropriate for
+the type of term being lexified. For example, for type of organisms
+(i.e., #$OrganismClassificationType), the predicate for scientific
+names (i.e.,#$scientificName) would be appropriate if the phrase
+is the formal Latin name.
+
+<P>
+In addition, for certain types of terms, additional proper-name
+assertions might be desired. For example, if a full name is given for a
+person, it would be useful for the system to know the components of the
+name (e.g., first, middle, and last). Similarly, if an long name is
+entered, it might be useful for the user to enter an abbreviation.  In
+both cases, the system will make a guess at the most likely values and
+then have the user verify the information.
+
+<P>
+
+<H2><A NAME="SECTION00033000000000000000">&#160;</A>
+<A NAME="denotational">&#160;</A>
+<BR>
+3.3 Denotational Lexification
+</H2>
+
+<P>
+``Denotational'' lexification involves selecting options needed for a
+#$denotation or one of the multi-word lexification predicates
+(e.g., #$multiWordString). Unlike proper-name mappings, which
+usually just have a single form (i.e., the phrase itself), denotational
+mappings can involve several variations of the phrase. For example,
+since the verb ``gamble'' maps into #$Gambling, so do the verb
+forms ``gambled' and ``gambling''. The variations usually occurs only
+for a single word in the phrase, which can be viewed as being qualified
+by the other words (i.e., the chief or head word).
+
+<P>
+Thus the relevant options for denotational mappings are as follows,
+(where 'headword' refers to the word that is qualified):
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Headword position</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Position in the phrase of the headword (i.e.,
+the word that determines the grammatic function of the entire phrase)</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Headword part of speech</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Grammatical part of speech of the
+headword (see #$SpeechPart).</TD>
+</TR>
+</TABLE>
+<P>
+Often selecting between the simple noun and mass noun part of speech
+choices (see #$SimpleNoun and #$MassNoun) is not
+straightforward. For tips on making this decision, see the following sub-section,
+<a href="./sme-lexwiz.html#SimpleMass">Simple versus Mass Nouns</a>.
+
+<P>
+After the choices have been made, there will be a verification step in
+which all the variations for the phrase will be generated based on the
+position of the headword and it's part of speech. This serves as an
+important diagnostic as to whether the previous choices make sense for
+the given mapping.
+
+<P>
+
+<h3><a name="SimpleMass">Simple versus Mass Nouns</a></h3>
+
+In short, simple nouns are countable, whereas mass nouns are
+uncountable.  To be more precise (borrowing definitions from
+Merriam-Webster's International Dictionary):<br>
+<br>
+A simple noun is a noun (as bean or sheet) that forms a plural and is
+used with a numeral, with words such as "many" or "few", or with the
+indefinite article "a" or "an"<br>
+<br>
+A mass noun is a noun (as sand or water) that characteristically denotes
+a homogeneous substance or a concept without subdivisions and that is
+preceded in indefinite singular constructions by "some".<br>
+<br>
+<hr>
+<pre>
+<b>Distinguishing between Simple versus Mass nouns.</b>
+
+Types of usages for Simple Nouns        Examples
+- I have three BLAHs                    I have three dogs.
+- How many BLAHs do you want?           How many cookies do you want?
+- I want a BLAH.                        I want a magazine.
+- He has a good collection of BLAHs.    He has a big collection of pins.
+- BLAHs are required.                   Needles are required.
+
+Types of usages for Mass Nouns          Examples
+- I have much BLAH.                     I have much tea.
+- How much BLAH do you want?            How much sugar do you want?
+- I want some BLAH.                     I want some pork.
+- He has a bad case of BLAH.            He has a bad case of diphtheria.
+- BLAH is required.                     Information is required
+</pre>
+<hr>
+<pre>
+<b>Typical cases of Simple and Mass nouns</b>
+
+Typical cases of Simple Nouns           Examples
+Animals                                 Dog, Cat
+Works (of art)                          Symphonies, Novel
+Solid Objects                           Rock, Frame
+Specific events                         Earthquake, Massacre
+Objects in general                      Magazine, Cookie
+
+Typical cases of Mass Nouns             Examples
+Categories                              Furniture, Pottery, Poetry
+Chemicals & Compounds                   Cerium, Nitroglycerine
+Diseases                                Leukemia, Influenza
+Emotions                                Delight, Horror
+Fields of Study                         Pragmatics, Anthropology
+General Conditions                      Malnutrition, Stress
+Liquids                                 Tequila, Water
+Meat Types                              Pork, Poultry
+Music Types                             Jazz, Rap
+Processes                               Circulation, Homework
+Stuff in general                        Acrylic, Porcelain
+</pre>
+<hr>
+<pre>
+<b>Notes</b>
+
+1. In general, nouns tend to be simple nouns.
+
+2. Often a mass nouns appear to occur in a countable usage, but usually
+there an implicit mass usage intended.
+
+   Simple?: I bought several acrylics.
+   Mass: I bought several pieces of acrylics.
+
+3. A few words fall under both categories. For instance "egg" has both
+simple and mass noun usages:
+
+   Simple:
+   - I have three eggs
+   - How many eggs do you want?
+
+   Mass:
+   - I have much egg on my face.
+   - Do you want some egg on yours?
+
+However, generally one usage is preferred over the other, such as the
+simple noun sense of egg.
+</pre><p>
+
+
+<H2><A NAME="SECTION00034000000000000000">&#160;</A>
+<A NAME="relational">&#160;</A>
+<BR>
+3.4 Relation Lexification
+</H2>
+
+<P>
+During lexification of relation terms, the emphasis is not on how the
+term itself is referred to but is instead on how assertions made using
+the term can be paraphrased. This is done by asking the user for a
+sample sentence or phrase using the relation. Then the correspondence of
+words in the phrase to the relation's arguments are established.  Since
+the relation paraphrasing also might involve variations based on the
+argument, the parts of speech are checked as well.
+
+<P>
+The relevant options for relational mapping thus are as follows:
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Sample usage</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Example sentence or phrase for the relation</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Argument positions</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Positions in the phrase for each of the relation's
+arguments</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Argument parts of speech</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=360>Grammatical part of speech for each of the
+arguments (generally nouns)</TD>
+</TR>
+</TABLE>
+<P>
+
+<H1><A NAME="SECTION00040000000000000000">&#160;</A>
+<A NAME="sample-interaction">&#160;</A>
+<BR>
+4. Sample Interaction
+</H1>
+
+<P>
+This sections shows a complete interaction using the Dictionary
+Assitant. Each subsection represents a separate question to be answered,
+showing the result after the user has entered any input.
+
+<P>
+
+<H2><A NAME="SECTION00041000000000000000">
+4.1 Dictionary Assistant start-up page</A>
+</H2>
+<PRE>
+                             Dictionary Assistant
+
+           Specify the term and phrase for the lexical mapping
+
+   Term :   AdHocUnit-Military________________________________
+   Phrase : ad hoc unit - military______________________________________
+
+   Reset OK
+
+   Tip:
+
+   Choose a phrase that clearly distinguishes the Cyc term in question,
+   yet reflects common ways of referring to the term. However, it is
+   important to avoid being overly specific as well as being overly
+   general.
+
+   For example, for the term 'MakingCoffee-TheBeverage', the phrase
+   "making coffee beverage" is overly precise. Instead, "making coffee"
+   is preferred since "coffee" in this case only refers to the beverage
+   and not for instance to the beans or to grinds. In contrast, for the
+   term 'Paint-Dry', "paint" would be overly general, since this can
+   also refer to liquid paint as well. Instead "dry paint" would be
+   preferrable.
+
+   If you want to use more than one word or phrase to refer to the term,
+   complete the wizard for the current term and then begin again with
+   the same term but with a different word or phrase.
+
+   Note that for relational terms, the phrase is just used to refer to
+   the term itself. It is not the phrasing for paraphrases, which is
+   specified in a subsequent form. For example, "liking the experience
+   of" would be a good phrase for 'likesSensorially'.
+     ________________________________________________________________
+
+   AdHocUnit-Military documentation :
+   Mt : USOrderOfBattleMt
+   comment : [Def] "The collection of all military units constituted on
+   an ad hoc basis."
+
+   Collection : AdHocUnit-Military
+   Arg : 1
+   Mt : MilitaryForceStructureMt
+
+   isa : [Mon] ConventionalClassificationType [Mon] ExistingObjectType
+
+   genls : [Mon] ModernMilitaryOrganization
+
+   Lexical Info for AdHocUnit-Military:
+
+   Default generated phrase: "ad hoc unit military"
+   (#$termStrings-GuessedFromName)
+
+   Mt: TemporaryLexicalAssertions-GuessedMt
+   [Def] (termStrings-GuessedFromName AdHocUnit-Military "ad hoc unit
+   military")
+</PRE>
+<P>
+
+<H2><A NAME="SECTION00042000000000000000">
+4.2 Proper-name determination page</A>
+</H2>
+<PRE>
+   Checking whether the phrase is a proper name
+
+   Is the phrase "ad hoc military unit" a name?
+   Yes No
+
+   Tip:
+
+   Normally, capitalized phrases are proper names. Some lowercase
+   phrases may be proper names as well; those which refer to specific
+   people (e.g., "e. e. cummings") or entities (e.g., "priceline.com"),
+   or those which are scientific names for specific organisms,
+   compounds, etc. (e.g., "plexus brachialis"). But in most cases,
+   lowercase phrases refer to classes of individuals and to concepts
+   rather than to specific individuals.
+
+   Example proper names (particular individuals):
+               Mother Teresa
+               IBM
+               Acquired Immune Deficiency Syndrome
+
+   Example common nouns or phrases (categories):
+               cat
+               thing
+               Nissan car
+</PRE>
+<P>
+
+<H2><A NAME="SECTION00043000000000000000">
+4.3 Headword verification page</A>
+</H2>
+<PRE>
+   Guessing the headword of the phrase
+
+   Is "ad hoc military unit" a type of "unit"?
+   Yes No
+
+   Tip:
+
+   The headword is the word that is being qualified by the other words in
+   the phrase. It often indicates the general class of the concept
+   described by the phrase. And, it determines the grammatic function of
+   the phrase.
+
+   For example, in the noun phrase "metal desk", the noun "desk" is the
+   headword qualified by "metal". Similarly, the verb "sleeping" is the
+   headword of the verb phrases "sleeping on the job" and "quietly sleeping".
+</PRE>
+<P>
+
+<H2><A NAME="SECTION00044000000000000000">
+4.4 Headword part-of-speech page</A>
+</H2>
+<PRE>
+   Determining how the word 'unit' is used in "ad hoc military unit"
+
+   Which of the following sounds best?
+   (*) a unit; many units: countable noun like 'book'
+   ( ) some unit; much unit: uncountable noun like 'sand'
+   OK
+</PRE>
+<P>
+<PRE>
+   Checking variant phrases due to variations of headword 'unit'
+
+   Are the following good ways to refer to 'ad hoc unit military'?
+               ad hoc military units
+   Yes No
+
+   Tip:
+
+   The main thing to check for is odd looking phrases, such as "loadings
+   a weapon" as a variation of "loading a weapon". Note that there might
+   not be variations. This may or may not be a problem, depending on the
+   part of speech selected. For example, mass nouns like "sand" won't
+   have variations.
+</PRE>
+<P>
+
+<H2><A NAME="SECTION00045000000000000000">
+4.5 Preferred reference check</A>
+</H2>
+<PRE>
+   Checking status of preferred reference
+
+   Is "ad hoc military unit" the most common way of referring to the
+   concept 'ad hoc unit military'?
+   Yes No
+
+   Tip:
+
+   Other ways of referring to AdHocUnit-Military are the following:
+               ad hoc unit military
+</PRE>
+<P>
+<BR><HR><H4>Footnotes</H4>
+<DL>
+
+<DT><A NAME="foot124">... Assistant</EM></A><A NAME="foot124"
+ HREF="sme-lexwiz.html#tex2html2"><SUP>1</SUP></A>
+<DD>The Dictionary Assistant is also known as the Lexification
+Wizard (lexwiz).
+
+</DL>
+<BR><HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,110 @@
+<html>
+
+
+<title>Looking at Assertions in the Transcript</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo.gif border=0 alt="OpenCyc.org Homepage"></a>Looking at Assertions in the Transcript</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/editing-the-kb-module.html>Editing the Cyc KB with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/adding-assertions.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/adding-assertions.html>Adding an Assertion</a></td></tr><tr><td><a href=/cycdoc/course/editing-an-assertion.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/editing-an-assertion.html>Editing an Assertion</a></td></tr></table>
+<hr>
+
+
+Lets look at how your operations were recorded in the transcript.  Go
+to the bottom frame and click on "System".<p>  
+
+Additional information is added when the operation is saved to the transcript, so
+let's look at the contents of the local transcript:<p>
+
+Click on the hyper link after <b> Write Transcript: </b> to display that file.
+The most recent operations are at the end of the file. Here's an
+example of the resulting operations if the cyclist was #$Natasha, the
+Cyc Server was "cyc-server", and the date was March 12, 1996:<p>
+
+<pre>
+     ((:HP "Natasha" 201285) "cyc-server" 19960312 
+       (FI-ASSERT 
+       '(
+	 (:HP "isa" 260) 
+	   (:HP "Natasha" 201285) 
+	   (:HP "Doctor-Medical" 27477)) 
+       '(:HP "BaseKB" 273) ':DEFAULT ':FORWARD))
+
+     ((:HP "Natasha" 201285) "cyc-server" 19960312 
+       (FI-TIMESTAMP-ASSERTION 
+       '(:HP "Natasha" 201285) '19960312))
+</pre><p>
+
+The first thing that you should notice is that the constants are
+referred to with expressions containing 3 items: ":HP", the constant
+name, and a number which is that constant's internal id. These are
+called "encapsulated" constants (explained below). Lets "unencapsulate" the 
+constants and generally make the expressions more readable:<p>
+
+<pre>
+     (#$Natasha cyc-server 19960312 
+       (FI-ASSERT '(<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> #$Natasha <a href=/cycdoc/vocab/medical-vocab.html#Doctor-Medical>#$Doctor-Medical</a>)
+                   <a href=/cycdoc/vocab/mt-vocab.html#BaseKB>#$BaseKB</a> 
+                   :DEFAULT 
+                   :FORWARD))
+
+     (#$Natasha cyc-server 19960312 
+       (FI-TIMESTAMP-ASSERTION #$Natasha 19960312))
+</pre><p>
+
+So each operation has the form:
+
+<pre>
+     (&lt;undefined&gt; &lt;originating-cyc-server&gt; &lt;date&gt; &lt;fi-operation&gt;)
+</pre><p>
+
+The first item, <tt>&lt;undefined&gt;</tt>, used to be the cyclist's
+constant, but it is not currently defined. Although it is often the
+cyclist's constant, it may have other values and should not be relied
+on. Ignore it.<p>
+
+<tt>&lt;fi-operation&gt;</tt> is a call to one of the functions
+of the Cyc Functional Interface, the application program interface (API)
+for Cyc.<p>
+
+The first operation is obviously the assertion that we entered.  But
+what is the second operation which calls FI-TIMESTAMP-ASSERTION?<p>
+
+FI-TIMESTAMP-ASSERTION puts an explicit date and author on an
+assertion. Cyc assertions made via the Cyc Web Interface are always
+performed as a pair of operations, one to do the assertion and the
+other to annotate it.<p>
+
+Notice that FI-TIMESTAMP-ASSERTION does not refer to the assertion
+directly, but depends on the cyc-server to have recorded the
+last assertion.  In the unusual case that transcripts are
+edited by hand, care must be taken to keep timestamping operations
+immediately after the operations to which they refer.<p>
+
+<hr>
+
+We need to encapsulate constants with a unique and unchanging id
+number because constants can be renamed.  Suppose a Cyc Server is
+processing a long sequence of operations from other Cyc Servers. From
+Server-A comes an operation that renames #$Constant1 to #$Constant2,
+but close behind it comes an operation from Server-B, making an
+assertion involving #$Constant1.  Clearly, it is better for the
+assertion to be made on the intended constant, despite the rename,
+than to get an error.<p>
+
+Incidentally, the ":HP" doesn't stand for "Hewlett-Packard", but
+for "Hash-Percent".  Cyc constants used to be prefixed with "#%"
+instead of "#$", so at the time this convention was devised we chose
+":HP" as the marker for encapsulated constant expressions.
+
+
+<hr>
+<a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/adding-assertions.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/editing-an-assertion.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 03/28/2002<br>
+</html>

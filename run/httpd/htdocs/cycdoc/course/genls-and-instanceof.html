@@ -1,0 +1,73 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON genls-and-instanceof.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Uses of #$genls and #$isa</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/cyc-ball-sm.gif border=0></a>Uses of #$genls and #$isa</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy 1996, 1997, 1998 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/collections-module.html>Sets and Individuals in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/predicates.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/predicates.html>CYC&reg; Predicates</a></td></tr><tr><td><a href=/cycdoc/course/disjoint-sets.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/disjoint-sets.html>Mutually Disjoint Collections</a></td></tr></table>
+<hr>
+
+
+Every CYC&reg; constant is an element of at least one collection.  In
+fact, everything that can appear in a CYC&reg; expression is an element of
+some collection.  Every collection, with the exception of <a href=/cycdoc/vocab/fundamental-vocab.html#Thing>#$Thing</a>, is
+a subset of at least one other collection.  These subset and instance
+of relations, expressed with assertions using <a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> and
+<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a>, make up the basic framework of the CYC&reg; KB.<p>
+
+Heres a diagram showing some hypothetical constants and the <a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> and
+<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> relations between them:<p>
+
+<img src="../img/genls-and-io-1.gif"><p>
+
+In this diagram, we introduce some conventions which will be used
+throughout the CYC&reg; documentation:<p>
+
+<ul>
+<li>CYC&reg; constants are represented as text in rectangular boxes. 
+<li>A constant with blue text denotes a collection.
+<li>A constant with green text denotes an individual.
+<li>Constants which could be either a collection or an individual are
+shown with black text.
+<li>Assertions involving binary predicates are shown as lines between constants.
+<li><a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> assertions are shown as green lines.
+<li><a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> assertions are shown as blue lines.
+<li>An abbreviation for the predicate in a binary assertion is placed near the
+middle of the line, using red text.  A key to the abbreviations is included
+in the diagram.
+<li>More general collections are placed higher on the page than their subsets.
+<li>Collections are placed higher on the page than their instances.
+</ul>
+<p>
+
+The diagram therefore indicates the following assertions:<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> A <a href=/cycdoc/vocab/fundamental-vocab.html#Collection>#$Collection</a>)
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> B <a href=/cycdoc/vocab/fundamental-vocab.html#Collection>#$Collection</a>)
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> C <a href=/cycdoc/vocab/fundamental-vocab.html#Collection>#$Collection</a>)
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> A <a href=/cycdoc/vocab/fundamental-vocab.html#Individual>#$Individual</a>)
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> B <a href=/cycdoc/vocab/fundamental-vocab.html#Individual>#$Individual</a>)
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> C B)
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> S C)
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> R A)
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> R B)
+</pre><p>
+
+
+
+<hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/predicates.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/disjoint-sets.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 10/26/1998 11:41:21<br>
+</html>

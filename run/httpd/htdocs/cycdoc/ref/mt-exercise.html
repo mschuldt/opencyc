@@ -1,0 +1,118 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON mt-exercise.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Exercise: Microtheories and Inferencing</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a>
+<h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo-old.gif border=0 alt="OpenCyc.org Homepage"></a>Exercise: Microtheories and Inferencing</h2>
+
+E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+
+
+Last Update: 03/28/2002<br>
+
+<i>Copyright&copy 1997-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  See <a href=/cycdoc/legal-terms.html>Terms of Usage.</a><br>
+
+<hr>
+<a href=/cycdoc/toc.html><img src="/cycdoc/img/cyc-ball-sm.gif" border=0>Return to Table of Contents</a><br>
+
+<hr>
+<p>
+
+<h3>Step 1: Preliminary knowledge entry</h3>
+<p>
+  First, locate or create the constant January, and verify these facts are 
+  present, asserting them if necessary:
+<pre>
+    (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> #$January #$MonthOfYearType)
+    (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> #$MonthOfYearType <a href=/cycdoc/vocab/time-vocab.html#TemporalObjectType>#$TemporalObjectType</a>)
+    (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> #$January <a href=/cycdoc/vocab/time-vocab.html#CalendarMonth>#$CalendarMonth</a>)
+</pre>
+  Next, locate or create the constant NewYearsDay, and assert, if necessary:
+<pre>
+    (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> #$NewYearsDay <a href=/cycdoc/vocab/time-vocab.html#TemporalObjectType>#$TemporalObjectType</a>)
+</pre>
+<hr>
+<h3>Step 2: Creating new microtheories</h3>
+<p>
+  Now locate or create the GeneralMicrotheory NorthernHemisphereMt; after creating
+  it, assert:
+<pre>
+    (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> #$NorthernHemisphereMt <a href=/cycdoc/vocab/mt-vocab.html#GeneralMicrotheory>#$GeneralMicrotheory</a>)
+</pre>
+  In this Mt, assert:
+<pre>
+    (<a href=/cycdoc/vocab/time-vocab.html#subsumesIntervalType>#$subsumesIntervalType</a> <a href=/cycdoc/vocab/time-vocab.html#CalendarWinter>#$CalendarWinter</a> #$January)
+</pre>
+  Next, create the GeneralMicrotheory WesternCultureMt; as with
+  NorthernHemisphereMt, assert:
+<pre>
+    (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> #$WesternCultureMt <a href=/cycdoc/vocab/mt-vocab.html#GeneralMicrotheory>#$GeneralMicrotheory</a>)
+</pre>
+  In this Mt, assert:
+<pre>
+    (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> #$NewYearsDay <a href=/cycdoc/vocab/time-vocab.html#LegalHoliday>#$LegalHoliday</a>)
+    (<a href=/cycdoc/vocab/time-vocab.html#subsumesIntervalType>#$subsumesIntervalType</a> #$January #$NewYearsDay)
+</pre>
+  Now create NorthAmericanCultureMt as an instance of GeneralMicrotheory . 
+<p>
+  Make NorthernHemisphereMt and WesternCultureMt genlMts of NorthAmericanCultureMt.
+<p>
+<hr>
+<h3>Step 3:  Querying within Microtheories</h3>
+<p>
+  Go to the Ask interface, and set these resource constraints: 
+  <ul>
+  <li>Get everything
+  <li>Run for 20 seconds
+  <li>Backchain for 2 steps
+  <li>Limit total depth to 10
+  </ul>
+<p>
+  In NorthAmericanCultureMt ask:
+<pre>
+    (<a href=/cycdoc/vocab/time-vocab.html#intersectsIntervalType>#$intersectsIntervalType</a> <a href=/cycdoc/vocab/time-vocab.html#CalendarWinter>#$CalendarWinter</a> #$NewYearsDay)
+</pre>
+  The bindings found should be (((T.T))).  
+<p>
+  Examine #$NewYearsDay, and view the arguments for any newly
+  concluded assertions.  
+<ul>
+<li>Note that some of the steps in the inference path 
+  are assertions, and some are the results of HL modules.  
+<li>Note that the argument order in the resulting assertion is the reverse of
+the formula that was originally asked.  This is because <a href=/cycdoc/vocab/time-vocab.html#intersectsIntervalType>#$intersectsIntervalType</a> 
+is symmetric. 
+</ul>
+
+<p>
+  Now try the ASK in BaseKB, NorthernHemisphereMt, and WesternCultureMt.
+<p>
+  Did you get an answer? 
+<p>
+  Now ask if NewYearsDay is a LegalHoliday in BaseKB; in NorthAmericanCultureMt:
+<pre>
+    (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> #$NewYearsDay <a href=/cycdoc/vocab/time-vocab.html#LegalHoliday>#$LegalHoliday</a>)
+</pre>
+
+  If we create AustralianLifeMt, which existing Mts would be its genlMts?
+  What other Mts would we want to add as its genlMts?
+  Which assertions should hold true of NewYearsDay in AustralianLifeMt?
+<p>
+  If we create ArabianPeninsulaLifeMt, which existing Mts would be its genlMts?
+  What other Mts would we want to add as its genlMts?
+  Which assertions should hold true of NewYearsDay in
+  ArabianPeninsulaLifeMt?
+
+<p>
+<hr>
+<a href=#top><img src="/cycdoc/img/cyc-ball-sm.gif" border=0>Go to Top</a><br>
+
+
+</body>
+
+
+</html>

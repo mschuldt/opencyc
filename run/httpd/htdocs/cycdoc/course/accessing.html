@@ -1,0 +1,39 @@
+<html>
+
+<title>Accessing The Cyc Web Interface</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo.gif border=0 alt="OpenCyc.org Homepage"></a>Accessing The Cyc Web Interface</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy; 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/web-interface-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/web-interface-module.html>Using The Cyc Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/browser-setup.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/browser-setup.html>Setting Up Your Web-Browser</a></td></tr><tr><td><a href=/cycdoc/course/cyc-main-menu.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/cyc-navigator.html>The Cyc Navigator Page</a></td></tr></table>
+<hr>
+
+
+When running the web interface, your transactions are passed from your
+web browser to a web server.  The web server starts up a CGI (Common
+Gateway Interface) program which interfaces with the Cyc Server: a
+machine running the Cyc software which has loaded some version of the
+Cyc KB.  These may all be running on the same machine, but the web
+browser, Cyc server, and web server/CGI program could be running on
+three different machines.<p>
+
+There may be several machines functioning as Cyc servers.  In the
+simplest setup, each of these machines also has its own web server
+(this is also the fastest setup, since the connection between the web
+server and the Cyc server does not use the network).  Assuming that
+this is your setup, and the machine you want to use is
+"host.domain.com", then you start by opening the URL:
+
+<pre>
+     http://host.domain.com/cgi-bin/cyccgi/cg?cb-start
+</pre>
+<p>
+<hr>
+<a href=/cycdoc/course/web-interface-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/browser-setup.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/cyc-main-menu.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>Last Update: 03/21/2002<br>
+</html>

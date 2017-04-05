@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/WD-html-in-xml/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Documentation Vocabulary</title></head>
+    <body>
+        <h2>
+            <a href="http://www.opencyc.org"><img alt="OpenCyc Homepage"
+                    border="0"
+            src="/cycdoc/img/opencyc-logo.gif" /></a>Documentation
+        Vocabulary</h2>E-Mail Comments to: <a
+        href="mailto:opencyc-doc@cyc.com">opencyc-doc@cyc.com</a><br />Last
+        Update: 4/5/02<br />
+        <i>Copyright&copy; 1996-2002.  All rights reserved.</i>  See <a
+            href="/cycdoc/legal-terms.html">Terms of Usage.</a><br />
+        <hr />
+        <a href="/cycdoc/toc.html"><img border="0" src="/cycdoc/img/cyc-ball-sm.gif" /></a>
+        <a href="/cycdoc/toc.html">Return to Documentation Contents</a>
+        <br />
+        <a href="/cycdoc/vocab/vocab-toc.html"><img border="0" src="/cycdoc/img/cyc-ball-sm.gif" /></a>
+        <a href="/cycdoc/vocab/vocab-toc.html">Return to Vocabulary Contents</a>
+        <br />
+        <hr />
+        <p />Documentation predicates annotate Cyc constants for the
+        benefit of users examining the Cyc KB. In general, assertions
+        involving  documentation predicates have no bearing on Cyc's
+        inference -- they are  simply for people to read and consult.<p />
+        <font size="+1">
+            <a name="comment">#$comment<i>&nbsp;&nbsp;&nbsp;comment
+                    (distributing meta knowledge predicate)</i></a></font>
+        <blockquote> A #$DocumentationPredicate (q.v.) that is used to
+            relate a #$CycLIndexedTerm (usually a #$CycLConstant) to a
+            #$SubLString containing an English explanation of the term's
+            meaning and use, as an aid to humans (whether #$Cyclists or
+            not) browsing the Cyc Knowledge Base. <a
+            href="./doc-vocab.html#comment">(#$comment</a> TERM STRING)
+            means that STRING is a piece of Cyc documentation that
+            explains the meaning and use of TERM. For example, the
+            passage you are reading now is the comment for the CycL
+            constant `#$comment'. See also <a href="./doc-vocab.html#cyclistNotes">#$cyclistNotes.</a><br />
+            <b>guid: </b>bd588109-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>#$OpenCycDefinitionalPredicate
+            #$DistributingMetaKnowledgePredicate  <a
+            href="./predicate-type-vocab.html#DefaultMonotonicPredicate">#$DefaultMonotonicPredicate</a>
+            #$BinaryPredicate  #$DefinitionalPredicate  </blockquote>
+        <font size="+1">
+            <a
+                    name="sharedNotes">#$sharedNotes<i>&nbsp;&nbsp;&nbsp;shared notes</i></a></font>
+        <blockquote> A predicate-denoting constant that is an instance
+            #$DocumentationPredicate. It is sometimes useful to include
+            the same piece of text in the documentation of two or more
+            constants. Rather than actually duplicating text in the
+            Knowledge Base, one can create a special constant -- an
+            instance of <a
+            href="./doc-vocab.html#SharedNote">#$SharedNote</a> (q.v.)
+            -- whose sole purpose is to hold this shared documentation
+            in the form of its own <a
+            href="./doc-vocab.html#comment">#$comment.</a> <a
+            href="./doc-vocab.html#sharedNotes">(#$sharedNotes</a> CONST
+            SHARED-NOTE) means that SHARED-NOTE is a constant that is an
+            instance of <a
+            href="./doc-vocab.html#SharedNote">#$SharedNote</a> whose <a
+            href="./doc-vocab.html#comment">#$comment</a> is shared
+            documentation about CONST. Since <a
+            href="./doc-vocab.html#SharedNote">#$SharedNotes</a> are
+            usually shared, it is quite likely that other constants
+            besides CONST will have SHARED-NOTE as their <a
+            href="./doc-vocab.html#sharedNotes">#$sharedNotes</a> as well.<br />
+            <b>guid: </b>c0fb9be2-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>#$OpenCycDefinitionalPredicate
+            #$BinaryPredicate  #$DistributingMetaKnowledgePredicate  </blockquote>
+        <font size="+1">
+            <a
+                    name="salientAssertions">#$salientAssertions<i>&nbsp;&nbsp;&nbsp;salient assertions</i></a></font>
+        <blockquote> <a
+            href="./doc-vocab.html#salientAssertions">(#$salientAssertions</a>
+            TERM ASSERTION) means that ASSERTION has been deemed one of
+            the assertions most useful to examine when one is trying to
+            figure out the intended meaning of TERM. Thus, ASSERTION
+            will normally contain TERM, and should be something that has
+            been asserted on its own in the KB as well. Statements using
+                <a
+            href="./doc-vocab.html#salientAssertions">#$salientAssertions</a>
+            are primarily intended for human consumption, and are not
+            normally used by the Cyc inference engine.<br />
+            <b>guid: </b>bd5db814-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of:
+            </b>#$DistributingMetaKnowledgePredicate  #$BinaryPredicate  </blockquote>
+        <font size="+1">
+            <a
+                    name="cyclistNotes">#$cyclistNotes<i>&nbsp;&nbsp;&nbsp;cyclist notes</i></a></font>
+        <blockquote> A #$DocumentationPredicate (q.v.) that is used to
+            relate a #$CycLIndexedTerm (usually a #$CycLConstant) to a
+            #$SubLString containing information regarding the term that
+            is potentially useful to #$HumanCyclists, but is of a more
+            technical or speculative nature than would be suitable for a
+            standard comment (see <a
+            href="./doc-vocab.html#comment">#$comment).</a> For example,
+            a cyclist-note might contain practical advice for
+            ontological engineers and knowledge enterers about the use
+            of a term, express a particular cyclist's concerns about the
+            term, or mention that the term presently lacks code support.<br />
+            <b>guid: </b>bd588108-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of:
+            </b>#$DistributingMetaKnowledgePredicate  #$BinaryPredicate
+            #$DefinitionalPredicate  </blockquote>
+        <font size="+1">
+            <a
+                    name="englishGloss">#$englishGloss<i>&nbsp;&nbsp;&nbsp;english gloss</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> To be used to refer to the manual english rendering
+            of an assertion or perhaps a constant but see also
+            #$denotation. <a
+            href="./doc-vocab.html#englishGloss">#$englishGloss</a>
+            assertions may be used to enhance or supplement automatic nl
+            generation results, serve as a training data set for a
+            program which learns to generate NL from CycL, etc.. This
+            predicate should not be used for commentary. For commentary
+            see <a href="./doc-vocab.html#comment">#$comment</a> or <a href="./doc-vocab.html#cyclistNotes">#$cyclistNotes.</a><br />
+            <b>guid: </b>bd5c7466-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./fundamental-vocab.html#FunctionalSlot">#$FunctionalSlot</a>
+                <a
+            href="./predicate-type-vocab.html#MetaKnowledgePredicate">#$MetaKnowledgePredicate</a>  </blockquote>
+        <font size="+1">
+            <a name="myCreator">#$myCreator<i>&nbsp;&nbsp;&nbsp;my creator</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> <a
+            href="./doc-vocab.html#myCreator">(#$myCreator</a> X Y)
+            means that Y is the constant representing the person who
+            introduced the constant X into the Cyc vocabulary. In
+            general, the editing interfaces to the Cyc KB only allow the
+            KB to be modified when an instance of #$Cyclist is
+            designated as the author of the changes. See also #$sourceOfTerm-Person.<br />
+            <b>guid: </b>bd58810b-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./predicate-type-vocab.html#DefaultMonotonicPredicate">#$DefaultMonotonicPredicate</a>
+                <a
+            href="./predicate-type-vocab.html#BookkeepingPredicate">#$BookkeepingPredicate</a>
+                <a
+            href="./predicate-type-vocab.html#MetaKnowledgePredicate">#$MetaKnowledgePredicate</a>
+                <a
+            href="./fundamental-vocab.html#FunctionalSlot">#$FunctionalSlot</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="myCreationTime">#$myCreationTime<i>&nbsp;&nbsp;&nbsp;my
+                    creation time</i></a></font>
+        <blockquote> <a
+            href="./doc-vocab.html#myCreationTime">(#$myCreationTime</a>
+            CONSTANT TIME) means that the #$CycLConstant CONSTANT was
+            created at TIME, an instance of #$CycUniversalDate. The
+            format of TIME is YYYYMMDD; that is, the first four digits
+            give the year in which the constant was created, the next
+            two digits give the month in which it was created, and the
+            final two digits give the day of the month on which it was
+            created. For example, 19910309 is March 9, 1991.<br />
+            <b>guid: </b>bd588107-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./fundamental-vocab.html#FunctionalSlot">#$FunctionalSlot</a>
+                <a
+            href="./predicate-type-vocab.html#BookkeepingPredicate">#$BookkeepingPredicate</a>
+                <a
+            href="./predicate-type-vocab.html#MetaKnowledgePredicate">#$MetaKnowledgePredicate</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="futureAssertion">#$futureAssertion<i>&nbsp;&nbsp;&nbsp;future assertion</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> <a
+            href="./doc-vocab.html#futureAssertion">(#$futureAssertion</a>
+            ARG1 TEXT PSEUDO_CYCL) is used to associate a Cyc thing
+            (ARG1) with some proposition which should be formalized in
+            CycL and added to the kb when the required representational
+            vocabulary is available. TEXT is a #$SubLString expressing
+            the proposition in standard English, as clearly as possible.
+            PSEUDO_CYCL is a pseudo-CycL expression of the proposition,
+            in CycL syntax and using strings to denote units which may
+            not exist (or were not known to the author) at the time of
+            entry. The PSEUDO_CYCL will often be left NIL.<br />
+            <b>guid: </b>bd588498-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>#$TernaryPredicate  </blockquote>
+        <font size="+1">
+            <a
+                    name="oldConstantName">#$oldConstantName<i>&nbsp;&nbsp;&nbsp;old
+                    constant name</i></a></font>
+        <blockquote> This bookkeeping predicate relates a CycL constant
+            to a former name of that constant. More accurately, <a
+            href="./doc-vocab.html#oldConstantName">(#$oldConstantName</a>
+            CONSTANT STRING) means that the underlying data structure
+            currently associated with the CycL expression CONSTANT was
+            formerly associated instead with the SubL string STRING. If
+            CONSTANT has undergone multiple renames , STRING will
+            normally be its most recent former name . While <a
+            href="./doc-vocab.html#oldConstantName">#$oldConstantName</a>
+            sentences can be asserted and edited by hand, they are
+            asserted automatically when a Rename is done in the
+            Knowledge Base.<br />
+            <b>guid: </b>bd6422c8-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>#$BinaryPredicate  <a
+            href="./predicate-type-vocab.html#MetaKnowledgePredicate">#$MetaKnowledgePredicate</a>
+                <a
+            href="./predicate-type-vocab.html#BookkeepingPredicate">#$BookkeepingPredicate</a>  </blockquote>
+        <font size="+1">
+            <a name="SharedNote">#$SharedNote<i>&nbsp;&nbsp;&nbsp;shared note</i></a></font>
+        <blockquote> A quoted-collection that is a subcollection of
+            #$DocumentationConstant (see #$quotedCollection). Shared
+            notes are used for documentation in which two or more CycL
+            constants are discussed together, where doing this is deemed
+            more efficient than including the discussion in the
+            constants' <a href="./doc-vocab.html#comment">#$comments</a>
+            or <a
+            href="./doc-vocab.html#cyclistNotes">#$cyclistNotes.</a> To
+            be precise: Each instance of <a
+            href="./doc-vocab.html#SharedNote">#$SharedNote</a> is a
+            CycL constant that denotes some text (see #$TextString) in
+            which two or more other CycL constants are discussed. This
+            text -- which is given as the <a
+            href="./doc-vocab.html#comment">#$comment</a> on the <a
+            href="./doc-vocab.html#SharedNote">#$SharedNote</a> -- is
+            what one intuitively thinks of as the actual note in
+            question. Thus, while the <a
+            href="./doc-vocab.html#comment">#$comment</a> on a given
+            constant usually _describes_ the constant's denotation, the
+                <a href="./doc-vocab.html#comment">#$comment</a> on a <a
+            href="./doc-vocab.html#SharedNote">#$SharedNote</a>
+            literally _is_ the Note's denotation. See also <a href="./doc-vocab.html#sharedNotes">#$sharedNotes.</a><br />
+            <b>guid: </b>c0fb9bb4-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a href="./top-vocab.html#ObjectType">#$ObjectType</a>  <br />
+            <b>direct specialization of: </b>#$TextString&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="PublicConstant">#$PublicConstant<i>&nbsp;&nbsp;&nbsp;public constant</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> The collection of CycL constants that are included
+            in the public release of Cyc. Instances of <a
+            href="./doc-vocab.html#PublicConstant">#$PublicConstant</a>
+            include all constants that denote things in the so-called
+            Upper Cyc Ontology, as well as various constants that denote
+            things in the Mid and Lower Cyc Ontologies. For more
+            information, see the Cycorp Proprietary Documentation.<br />
+            <b>guid: </b>bd7abd90-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <br />
+            <b>direct specialization of: </b>
+            <br />
+            <b>direct generalization of: </b>#$CoreConstant  </blockquote>
+        <font size="+1">
+            <a
+                    name="ProprietaryConstant">#$ProprietaryConstant<i>&nbsp;&nbsp;&nbsp;proprietary constant</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> Instances of <a
+            href="./db-vocab.html#ProprietaryConstant">#$ProprietaryConstant</a>
+            and any assertions involving them will be omitted from
+            non-proprietary KBs and will not displayed in
+            non-proprietary applications. Typically, one would create
+            specs of <a
+            href="./db-vocab.html#ProprietaryConstant">#$ProprietaryConstant</a>
+            to correspond to the owner of the proprietary information,
+            e.g. AcmeConstant for constants proprietary to Acme corporation.<br />
+            <b>guid: </b>c10ada4d-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./fundamental-vocab.html#Collection">#$Collection</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./fundamental-vocab.html#Thing">#$Thing</a>&nbsp;&nbsp;</blockquote>
+        <p />
+        <hr />
+        <i>Copyright&copy; 1996-2002.  All rights reserved.</i>  See <a
+            href="/cycdoc/legal-terms.html">Terms of Usage.</a></body></html>

@@ -1,0 +1,85 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON reading-a-graph.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Reading a Graph</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/cyc-ball-sm.gif border=0></a>Reading a Graph</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy; 1996, 1997, 1998, 2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/hierarchy-browser-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/hierarchy-browser-module.html>The Hierarchy Browser</a></td></tr><tr><td><a href=/cycdoc/course/graphing-genls.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/graphing-genls.html>Graphing Along #$genls</a></td></tr><tr><td><a href=/cycdoc/course/graphing-from-a-graph.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/graphing-from-a-graph.html>Graphing from Constants in the Graph</a></td></tr></table>
+<hr>If your copy of OpenCyc had detailed information on reptiles, the Hierarchy Browser would now be displaying a graph that looks something like this:<p>
+
+<pre>
+ Hierarchical display radiating from reptile
+        isa: organism classification type, public constant
+      genls: air breathing vertebrate, animal
+    Context: BaseKB
+  Predicate: genls
+      Index: 2
+
+  Parameters updated at 12:34:56 on0 70/820030
+
+  [?]  Back   [Change Hierarchy Browser Settings]
+
+
+     +Reptile
+	+(JuvenileFn Reptile)
+	+Crocodilian
+	   +Alligator
+	   +Crocodile
+	+Dinosaur
+	   +Stegosaurus
+	   +Velociraptor
+	+Lizard
+	   +Chameleon
+	   +Gecko
+	   +Iguana
+	+Snake
+	   +BoaConstrictor
+	   +Cobra
+	   +CoralSnake
+	   +PitViper
+	      +Copperhead
+	      +Rattlesnake
+	      +WaterMoccasin
+	   +Python
+	   +WaterSnake
+	      +WaterMoccasin
+	+Turtle
+	   +SeaTurtle
+	   +Tortoise
+
+</pre><p>
+
+<a href=/cycdoc/vocab/biology-vocab.html#Reptile>#$Reptile</a> is at the top and is not indented, indicating that it is the
+root of the graph.  #$Dinosaur is below <a href=/cycdoc/vocab/biology-vocab.html#Reptile>#$Reptile</a> and indented one
+level. #$Stegosaurus is below #$Dinosaur and is indented another
+level. This indicates that the KB has the assertions:<p> 
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> #$Dinosaur <a href=/cycdoc/vocab/biology-vocab.html#Reptile>#$Reptile</a>)<a href="#note">*</a>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> #$Stegosaurus #$Dinosaur)
+</pre><p>
+
+In general, when we graph along the predicate P with Index Argument =
+2, and constant Y is below X and at one more level of indentation, then
+
+<pre>
+     (P X Y)
+</pre><p>
+
+
+<hr>
+<a name="note">*</a> (Ok, if you are serious about your biology, dinosaurs are in their own order. But this is a reasonable approximation. If in the future, you expand your copy of OpenCyc's zoological expertise, more sophisticated species representations could be developed and used in &quot;expert&quot; microtheories.)
+<hr>
+<a href=/cycdoc/course/hierarchy-browser-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/graphing-genls.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/graphing-from-a-graph.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>Last Update: 03/22/2002 11:41:56<br>
+</html>

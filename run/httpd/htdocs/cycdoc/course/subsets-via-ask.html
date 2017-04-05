@@ -1,0 +1,67 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON subsets-via-ask.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Finding Common Subsets with Ask</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/cyc-ball-sm.gif border=0></a>Finding Common Subsets with Ask</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy 1996, 1997, 1998 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/collections-module.html>Sets and Individuals in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/genls-and-instanceof-ex-2.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/genls-and-instanceof-ex-2.html>More Exercises About Sets and Elements</a></td></tr><tr><td><a href=/cycdoc/course/exercise-vocabulary.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/exercise-vocabulary.html>Exercise Vocabulary</a></td></tr></table>
+<hr>
+Prerequisites:
+<a href=asking-module.html>Querying CYC&reg; with the Web Interface</a><br>
+
+
+<hr>
+
+
+In the CYC&reg; Web Interface, go to the "Ask" page (by clicking
+<b><tt>Ask</tt></b> under the <b>Tools</b> menu of the browsing
+window)<p>
+
+We'll try answering the same question -- "What are the subsets of
+#$DomesticCleaningTool that are also subsets of
+#$ElectricalHouseholdAppliance?" -- by querying the KB in CycL.
+
+In the <b>Formula:</b> input field, type the following expression:<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#and>#$and</a>
+          (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> ?X #$ElectricalHouseholdAppliance)
+	  (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> ?X #$DomesticCleaningTool))
+</pre><p>
+
+(remember the "#$" prefix for all the constant names!)<p>
+
+Under <b>Resource Constraints:</b>, specify 5 bindings and 15 seconds.  
+Leave the other parameters with the default values.  Now click "Ask".  
+The bindings found for ?X should be the same as the ones which you found
+by browsing.<p>
+  
+<hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/genls-and-instanceof-ex-2.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/exercise-vocabulary.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a>
+<hr>
+<h2>Questions:</h2>
+<form action=/cgi-bin/cyccgi/doc-answer.exe?course/subsets-via-ask.text method=post>
+
+<p>Try composing some more CycL queries to answer the following:</p>
+
+<p>Find 3 collections which are common instances of #$UniquePartType and <a href=/cycdoc/vocab/physiology-vocab.html#AnimalBodyPartType>#$AnimalBodyPartType</a>.</p><p><input name=item-1 size=60 type=text></p>
+
+<p>Find a subset of <a href=/cycdoc/vocab/time-vocab.html#TemporalStuffType>#$TemporalStuffType</a> that #$DomesticCleaningTool is not an instance of.</p><p><input name=item-2 size=60 type=text></p>
+<input type=submit value="Show Answers"></form><hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/genls-and-instanceof-ex-2.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/exercise-vocabulary.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 10/26/1998 11:41:12<br>
+</html>

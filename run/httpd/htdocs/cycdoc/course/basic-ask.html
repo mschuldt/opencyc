@@ -1,0 +1,64 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON basic-ask.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Basic Queries</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo.gif border=0 alt="OpenCyc.org Homepage"></a>Basic Queries</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy; 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/asking-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/asking-module.html>Querying CYC&reg; with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/ask-in-mts.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/ask-in-mts.html>Queries within Microtheories</a></td></tr></table>
+<hr>
+
+
+On the CYC&reg; Navigator page, under the "Browsing and Editing" heading
+click <b><tt>[Ask]</tt></b> to go to the page for the Ask
+facility. Links to this page are also available from many other pages
+displayed by the CYC&reg; Web Interface.<p>On the Ask page, the input windows correspond to the arguments of <a href="http://www.opencyc.org/doc/cycapi#FN-DEF-CYC-QUERY">CYC-QUERY</a>, the basic CYC&reg; interface function for making queries. The first input window is a long horizontal region marked <b><tt>Mt:</tt></b>.  Enter the microtheory in which you wish
+the ask to be performed, e.g. #$InferencePSC, here.  Immediately below you
+will notice a large text area marked <b><tt>Formula:</tt></b>, where you can enter a CycL query formula. After entering appropriate text in these input windows, clicking the &quot;Ask Query&quot; button generates a call to <a href="http://www.opencyc.org/doc/cycapi#FN-DEF-CYC-QUERY">CYC-QUERY</a> and the result is displayed on a new Ask page (making it easy to ask a series of queries).<p>The rest of the input windows default to reasonable values, so let's ignore them for a moment and try writing some queries.<p>
+
+A CycL query formula is a CycL expression in which some terms are 
+variables.  Querying with that formula instructs the inference engine
+to find sets of terms which, when substituted for the variables, make
+the formula true.  These sets of terms are referred to as "bindings":
+each term is "bound" to one of the variables. A set of bindings which 
+makes the query formula true is said to "satisfy" the query.<p>
+
+For example, consider the formula:<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> ?X <a href=/cycdoc/vocab/biology-vocab.html#Dog>#$Dog</a>)
+</pre><p>
+
+When used in a query, the inference engine will try to find bindings
+for ?X which would make the proposition true, i.e. collections which
+are subsets of <a href=/cycdoc/vocab/biology-vocab.html#Dog>#$Dog</a>, the collection of all dogs. <p>
+
+Notice that we used "?X" for a variable name, rather than "X".
+<b>Variables in CycL expressions must begin with "?".</b>
+
+After typing in 
+		<pre>#$InferencePSC</pre>
+		(#$InferencePSC is a a problem solving context in which all assertions in the entire KB are initially visible) into the <b><tt>Mt:</tt></b>
+input window and typing the expression 
+		<pre>(<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> ?X <a href=/cycdoc/vocab/biology-vocab.html#Dog>#$Dog</a>)</pre>
+		
+into the <b><tt>Formula:</tt></b> input window, click the &quot;Ask Query&quot; button. In a KB with the proper knowledge, the interface would display a page with information such as:<p>
+		<pre>
+    [Explain #1]  Dog 
+    [Explain #2]  Hound)
+    [Expalin #3]  Setter-TheDog)
+    [Explain #4]  EnglishSetter)
+      ...
+</pre>
+		<p>Note that the exact values depend on the particular constants and assertions in your KB. The possible bindings for ?X are returned as a list with links to the justifications for each binding.
+		<hr>
+		<a href=/cycdoc/course/asking-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/ask-in-mts.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>Last Update: 03/25/2002<br>
+</html>

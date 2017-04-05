@@ -1,0 +1,280 @@
+SBHL Predicates and Hierarchies:
+--------------------------------
+One of the main advantages of a structured ontology like that used in Cyc is
+the fact that knowledge can be inherited, allowing for much more efficient
+representation. For instance:
+
+<insert diagram 1>
+
+The above diagram illustrates this principal. Given an arbitrary instance of
+#$Truck, Cyc immediately knows many things about it: that it leaves tracks,
+that it cannot control its altitude and that it is driven by a trained, adult
+human. This follows, because it is known that the members of the collections
+above #$Truck have these properties, and all members of #$Truck are also
+members of each of the collections above #$Truck in the #$genls hierarchy.
+
+#$genls is just one of a class of predicates with special code support which
+are used for this kind of transitive reasoning. These predicates are called
+"SBHL" predicates and form the basis of most hierarchical reasoning that takes
+place in Cyc. "SBHL" stands for "subsumption-based heuristic layer". It can be
+thought of as one of the largest and most important of our HL modules. The
+implementation of SBHL is built around a set of graphs which act as a cache for
+the information stored in these predicates.
+
+Other SBHL predicates include #$genlPreds, #$genlAttributes, and #$genlMt, as
+well as predicates for denoting instance relations like #$isa.
+
+
+
+
+Reusability (was "Modularity and Reusability"):
+-----------------------------------------------
+One of the paramount concerns of ontologists must be the reusability of their
+work. Since logical correctness underdetermines the logical form used to
+express any particular set of propositions, other considerations must also be
+taken into account when making choices about the representation of a domain.
+These choices can lead to knowledge which is represented in an idiosyncratic
+way that is not useful for purposes which are even slightly more general than
+those which the author had in mind when the domain was originally designed.
+
+This is one of the major areas where the engineering aspect of ontological
+engineering comes into play. It will probably be useful to all ontologists to
+develop a working knowledge of software engineering principles since many of
+these same concerns come up in that area as well and mechanisms have been
+developed to manage them. There is not space here to detail all the principles
+of software engineering, but there are a few cardinal ideas which are worth
+keeping in mind when designing ontological systems.
+
+The first thing to realize is that, in designing software, we cannot expect to
+anticipate all of our future needs. Similarly with knowledge represented in
+the KB. If we cannot do a perfect job of anticipating all of our needs then
+the next best thing is to design systems which can be easily extended to handle
+later requirements. One of the main tools which is used to ensure this in
+software engineering is the use of hierarchically ordered structures and
+inheritance. Since all of the concepts in the knowledge base are ordered in
+this way we receive much of the benefit these approaches provide for
+extensibility already. This is one reason, however, why it is generally worth
+a little extra care in making sure that the hierarchy itself is solid (see
+Finding the Right Level of Generality).
+
+The above ongoing additions are much of what is done under the heading of
+software maintenance. Once it is realized that most software will require
+maintenance of this kind the problem reduces to one of trying to do a good
+job of making it easy to identify components of a system and for components to
+work with each other. It is to handle this problem that software engineering
+emphasizes the value of modularity and interfaces. By creating a number of
+stand-alone components which provide stated functionality we can create an
+environment in which developers can rely on the functions contained in the
+published interfaces of modules while leaving the maintainer of that module
+free to modify the inner workings of that module at will (since no one else
+has access to it).
+
+This kind of modularity should be seen as a desirable goal of ontological
+as well as software engineering, however, there are not currently clear
+mechanisms for implementing modular additions to the knowledge base. There are,
+however, several things that can be done to help with this problem. We
+currently use microtheory space to divide up our workspace (among many other
+things). It is hoped that, over time, we will add new ways of identifying
+public and private work in the knowledge base as well as ways to achieve the
+benefits of carefully designed modules and interfaces between them. Here are
+a few of the mechanisms currently used for this purpose that take advantage of
+microtheory inheritance in order to achieve some of these benefits.
+
+(1) Careful identification of the microtheories in which knowledge should be
+stored.
+
+By placing knowledge in microtheories which correspond to natural divisions in
+our how we expect that knowledge to be used we can segregate rules about a
+particular domain allowing them to be modified without altering other areas
+of the knowledge base. In order for this to work it is important that we
+ensure that microtheories do not "over-inherit" from others in order to
+minimize the impact of later changes. This segregation is usually done by
+domain area though there are other effective ways of doing this as well. In
+particular, data can often be usefully collected in microtheories dependent on
+either the content or the source of the data which allows the data to be
+used together in contexts where it is appropriate and to be excluded from 
+contexts in which it is not.
+
+(2) Temporary microtheories for unfinished/application-specific work:
+
+While working on new domains it is a good practice to make sure that the newly
+added knowledge is located in a part of the microtheory hierarchy where it is
+unlikely to interfere negatively with others' work. This can be accomplished
+by putting the information into a temporary microtheory which is not used
+by anyone else. This information can be moved to the microtheory in which it
+belongs when it has been completed and tested (remember it is easier to merge
+microtheories than to split them).
+
+
+
+Avoiding Existential Quantification:
+------------------------------------
+Existential quantification poses a problem for computational systems due to the
+interaction between skolemization (the usual way in which this problem is
+handled) and equality reasoning.
+
+Skolemization results in a skolem function which can be used to represent a
+particular term based on the variables which exist within the scope of the
+existential quantifier (see the comment on #$SkolemFunction for more detail).
+This function takes as inputs a set of values which satisfy those variables and
+returns a term which is the term known to exist for that set.
+
+The problem with this is that Cyc has no way of knowing which term this is (if
+it is a fort already defined elsewhere in the system). This is because of the
+lack of sufficient conditions for equality in the KB (these are, of course,
+notoriously difficult to define). Since we cannot, in general, determine
+whether two things are equal, and therefore cannot determine whether a
+particular fort is identical to a skolem term what we end up with when we
+assert existentially quantified statements in Cyc are terms which allow us
+almost no inferential power.
+
+Because of this such assertions are generally avoided, though they can be
+asserted (sometimes as documentation of a sort, e.g.) and will be handled
+correctly by the KB. Note that none of this applies to the use of existential
+quantification in asks (see Using #$thereExists to Eliminate Unwanted
+Variables)or other inferential contexts that do not involve making assertions
+to the knowledge base. There are also certain exceptional contexts in which
+the knowledge that such a term exists is all that is needed.
+
+
+
+
+OE v. Programming Responsibilities:
+------------------------------------
+There are a number of problems that come up repeatedly which involve both
+programming and ontology. In general these cases are of two kinds: (1) 
+ontologists would like a particular tool in order to be able to do their
+work more efficiently/better, and (2) there is a piece of knowledge in the
+KB which can only be made to work efficiently by the addition of code support.
+
+(1) Tools:
+
+In the case of tool requests, the OE department is responsible for providing
+a concrete specification of the tool in question including use cases to the
+satisfaction of the programmer(s) who will be implementing this tool. Once
+this specification is complete the programmer(s) will provide an estimate
+of time to deliver the tool in question and feedback on the design itself with
+possible suggested improvements. If this is approved, then the programmer(s)
+will implement the tool. The ontologis(s) will then test and approve the final
+product.
+
+Note that all of this assumes that the tool is approved by the programming and
+OE departments. Some tools (just like some representation choices made in the
+KB) have the ability to alter the meaning of terms in the language. This should
+only be done if it is moving in a direction which is in line with the visions
+of the company at that time.
+
+In many cases, where the tool is a small one this approval process and the
+subsequent stages of specification, development and testing can be
+streamlined and done very quickly. The main thing to avoid is a specification
+which is too loose to be useful.
+
+(2) Code support:
+
+This tends to require more careful consideration in every case since additions
+of code support almost always have the effect of changing the meaning of terms
+in CycL. Also, it is worth noting that, because of the expressiveness of CycL,
+almost anything desired can be done with no special code support of any kind.
+The main reason to provide such support is to increase the speed with which
+certain tasks can be performed. This should be done only when the speed
+increases justify the cost in available person time.
+
+It is also more difficult to specify appropriate code support for CycL
+vocabulary. Often it is the case that the desired speedup can be achieved
+with only slightly more work by adding much more general computational
+capabilities to Cyc. For this reason the specification of such code support
+should involve at least an ontologist familiar with the problem and a
+programmer with knowledge of the behavior of Cyc and the methods commonly
+employed to alter it.
+
+Code support ranges from the trivial (most #$evaluationDefns and HL modules)
+to the very complex (alterations to the language itself at the HL or to
+global assumptions made in code). Which of these categories a particular task
+falls into will determine the level of approval and the level of effort which
+will be required in order to even construct an adequate design to cope with
+the problem at hand.
+
+The most common kinds of code support are Defns and removal modules (a spec
+of HL modules). Defns include #$evaluationDefns, #$defnNecessary's,
+#$defnSufficients and #$defnIffs. #$evaluationDefns can be added to a
+#$Relation in order to return a value which is calculated in code for
+expressions which use it (terms in the case of functions, truth values in the
+case of predicates). #$defn*'s can be used in order to determine membership in
+a collection based on functions in code. Removal modules are used to perform
+inference and can be thought of as a generalization of #$evaluationDefns used
+on predicates. Where an #$evaluationDefn can only return a truth value for a
+fully bound formula removal modules can do that and can also return binding
+lists for asks involving partially bound formulae. This can be done for a
+number of reasons including: the information needed is not stored in the KB,
+the results of inference will be generated directly by some computation rather
+than being looked up in the KB, or simply because backchaining is too expensive
+and the predicate is important enough to deserve methods in code to support
+faster answer retrieval. Note that the last only works well when something
+approaching the complete set of rules needed to conclude to the desired
+results can be stated. For more open ended tasks other solutions will probably
+need to be found.
+
+
+
+Proposing and Designing New Tools:
+----------------------------------
+
+<This has been subsumed in "OE v. Programming Responsibilities" above. This
+section can be removed.>
+
+
+
+What Ontological Engineers Should Know About Programming:
+---------------------------------------------------------
+There are a number of aspects of programming which are worth understanding
+in order to do a good job of representing knowledge in the KB. Some of these
+have been discussed in other sections. These include those having to do with
+the advantages of understanding software engineering practice and its
+applications to ontology (see "Principles of Composing CycL" especially
+"Reusability" as well as "SBHL Predicates and Hierarchies", "Microtheory Use",
+"Rule Direction" among others), those pertaining to understanding the
+functioning of computational systems that implement logical inference ("Using
+the Inference Engine", "Avoid Existential Quantification", "EL/HL
+Distinction", "Rule Direction"), and those involving efficiency concerns
+("Prefer GAFs to Rules", "Theorem Proving v. HL Modules").
+
+In addition to this there are a number of other aspects of programming that are
+worth becoming familiar with in order to improve the effectiveness of OE work
+in the company.
+
+(1) SubL is a scripting language:
+
+There is a great deal that can be accomplished with a very small amount of
+knowledge of SubL. This includes small scripts which can be used to move
+assertions from one microtheory to another, to add or delete assertions,
+or simply to gather certain kinds of information that would be awkward to
+get using an ask. In general OE work does not require a detailed understanding
+of the code that makes our system work, a little bit of knowledge can be
+an invaluable tool in the ontologist's toolbox.
+
+(2) Understand the process of inference:
+
+A little time spent with the inference grapher and the inference tree examiner
+can provide a great deal of insight into the functioning of the inference
+engine which will in turn help ontologists to generate more efficient CycL.
+
+(3) Vocabulary:
+
+There is a great deal of vocabulary used by computer scientists in the field
+of artificial intelligence that is worth learning. Terms such as "ontology",
+"knowledge representation", "learning", "inference", and "theorem proving" are
+good examples of terms with technical definitions that shed light on the field
+of a.i..
+
+(4) Understand the mechanisms of inference:
+
+A working understanding of backchaining, hl modules and other mechanisms of
+inference in Cyc will help ontologists specify code support and make better
+design decisions when adding knowledge to the system.
+
+(5) Think about software engineering:
+
+Ontological engineering is engineering. Many of the same principles that
+apply to software engineering can (and should) be applied to OE work in order
+to improve the quality (in terms of reusability, maintainability, efficiency
+and power) of that work.

@@ -1,0 +1,67 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON partitioned-sets.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Partitioning Collections</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/cyc-ball-sm.gif border=0></a>Partitioning Collections</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy 1996, 1997, 1998 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/collections-module.html>Sets and Individuals in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/covered-sets.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/covered-sets.html>Covering Collections</a></td></tr><tr><td><a href=/cycdoc/course/sets-by-defnSufficient.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/sets-by-defnSufficient.html>Sets Defined by Internal CYC&reg; Functions</a></td></tr></table>
+<hr>
+
+
+When we initially described <a href=/cycdoc/vocab/fundamental-vocab.html#Thing>#$Thing</a>, we informally said that it was
+partitioned into <a href=/cycdoc/vocab/math-vocab.html#SetOrCollection>#$SetOrCollection</a> and <a href=/cycdoc/vocab/fundamental-vocab.html#Individual>#$Individual</a>.
+Partitioning is expressed in the KB in a similar way to the covering
+relationships described in the previous section.<p>
+
+A collection is covered by its partitions.  But unlike a covering set,
+the elements of a partitioning set must be subsets of the partitioned
+collection, and must be mutually disjoint.  Thus, every instance of the
+partitioned collection must be an instance of one and only one of the
+partitions.<p>
+
+The partitions are specified using the function <a href=/cycdoc/vocab/fundamental-vocab.html#ThePartition>#$ThePartition</a>.  The
+set created by this function is linked to the partitioned collection
+by the predicate <a href=/cycdoc/vocab/fundamental-vocab.html#partitionedInto>#$partitionedInto</a>. In the case of <a href=/cycdoc/vocab/fundamental-vocab.html#Thing>#$Thing</a>, the
+following assertions hold:<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#partitionedInto>#$partitionedInto</a> <a href=/cycdoc/vocab/fundamental-vocab.html#Thing>#$Thing</a> (<a href=/cycdoc/vocab/fundamental-vocab.html#ThePartition>#$ThePartition</a> <a href=/cycdoc/vocab/math-vocab.html#SetOrCollection>#$SetOrCollection</a> <a href=/cycdoc/vocab/fundamental-vocab.html#Individual>#$Individual</a>))
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#partitionedInto>#$partitionedInto</a> <a href=/cycdoc/vocab/fundamental-vocab.html#Thing>#$Thing</a> (<a href=/cycdoc/vocab/fundamental-vocab.html#ThePartition>#$ThePartition</a> <a href=/cycdoc/vocab/top-vocab.html#Intangible>#$Intangible</a> <a href=/cycdoc/vocab/top-vocab.html#PartiallyTangible>#$PartiallyTangible</a>))
+</pre><p>
+
+Or, for the following example:<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#partitionedInto>#$partitionedInto</a> Z (<a href=/cycdoc/vocab/fundamental-vocab.html#ThePartition>#$ThePartition</a> D E F))
+</pre><p><p>
+
+<img src="../img/partition.gif"><p>
+
+The collection Z is partitioned by collections D, E, and F, each of
+which is an <a href=/cycdoc/vocab/math-vocab.html#elementOf>#$elementOf</a> the set created by <a href=/cycdoc/vocab/fundamental-vocab.html#ThePartition>#$ThePartition</a>.<p>
+
+The constant Q is in violation of the partitioning constraints since
+it is an instance of G (and hence of Z) but it is not an instance of
+either D, E, or F.<p>
+
+The constant V is also in violation of the partitioning constraints
+due to the fact that it is an instance of both D and E.<p>
+
+The relation (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> F E) makes F vacuous since any instances will
+also violate the partitioning constraints.
+
+<hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/covered-sets.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/sets-by-defnSufficient.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 10/26/1998 11:41:17<br>
+</html>

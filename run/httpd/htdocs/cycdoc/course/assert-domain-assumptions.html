@@ -1,0 +1,70 @@
+<html>
+
+<title>Accessible Assertions in Contexts</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo-small.gif border=0 alt="OpenCyc.org Homepage"></a>Accessible Assertions in Contexts</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy; 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/contexts-basic-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/contexts-basic-module.html>Contexts in Cyc</a></td></tr><tr><td><a href=/cycdoc/course/the-hierarchy-of-contexts.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/the-hierarchy-of-contexts.html>The Hierarchy of Contexts in Cyc</a></td></tr><tr><td><a href=/cycdoc/course/useful-kinds-contexts.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/useful-kinds-contexts.html>Useful Kinds of Context in Cyc</a></td></tr></table>
+<hr>
+Suppose Cyc is "in" a particular Microtheory, and you ask Cyc a question.  Cyc can use all the facts and rules in that Microtheory and in all of the other Microtheories accessible to it (via the <a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> links between Microtheories).
+<p>
+  If there is a fact (or rule) somewhere in Cyc that's <em>not</em> in that Microtheory, and also not in any of the the other Microtheories accesible to that Microtheory along the <a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> links, then Cyc <em> will not use</em> that fact.  It's <em>inaccessible</em>.
+
+		<p>
+  Is that good or bad?  It's generally good because facts in inaccessible microtheories are designed to be <em>irrelevant</em>.  For example, if you are processing a natural language description of die-stamping machinery on a factory floor, it usually doesn't matter at all what the chemical structure of clouds is, nor the wedding ceremonies of Lapps.  It improves Cyc's reasoning speed immensely to ignore irrelevant information.  The Cyc system of Microtheories has the effect of <em>masking out</em> most of the assertions in the Cyc Knowledge Base.
+
+		<p>
+
+We have described how the information in the knowledge base can be
+divided up into various contexts.  But a context is more than just a set of related
+assertions; as mentioned above, a microtheory can rest on assumptions or
+take points of view that allow the assertions in it to be simplified.
+Let's look more closely at what this means.
+
+		<p>
+Consider the collection of teeth cleaning events.  Typically, we might
+wish to make many assertions about normal instances of <a href=/cycdoc/vocab/state-change-vocab.html#TeethCleaning>#$TeethCleaning</a>:
+who performs them, where they are performed, using what tools, how long
+they take, how often they are performed, etc.  Easy, right?  One cleans
+one's teeth for oneself, in the bathroom, with a toothbrush and maybe
+dental floss, it takes a minute or two, and usually happens at least
+once a day.
+<p>
+But what about the annual trip to the dentist?  There, a dentist or
+dental hygienist does the teeth cleaning, in a dentist's office, often
+using an electric tooth polisher and a dental pick, for fifteen minutes
+or half an hour, and this can happen once or twice a year.  In one
+sense, these are atypical instances of <a href=/cycdoc/vocab/state-change-vocab.html#TeethCleaning>#$TeethCleaning</a>; viewed in a
+different way, they are just as typical, though they don't happen as
+often.
+<p>
+Yet we can't simply make all these assertions about <a href=/cycdoc/vocab/state-change-vocab.html#TeethCleaning>#$TeethCleaning</a> as
+they stand, for they conflict with each other.  We need to make explicit
+the fact that the first set of assertions assumes one is cleaning one's
+teeth for oneself, while the latter set assumes one is having one's
+teeth cleaned by someone else.  But we would also prefer to avoid having
+to preface each statement with the set of assumptions it depends upon,
+some of which we may not even have identified yet.
+<p>
+Instead, we put the assertions in different microtheories: the
+#$PersonalActivitiesMt, which assumes one is performing the action for
+oneself, or the #$JobMt, which assumes one is performing the action as
+one's job, or the #$RecipientOfServicePerspectiveMt, which assumes that
+something is being performed as a service and takes the perspective of
+the person receiving the service.  So, for example, the assertion that
+<a href=/cycdoc/vocab/state-change-vocab.html#TeethCleaning>#$TeethCleaning</a> takes place once or twice per day will go in the
+#$PersonalActivitiesMt, while in the #$RecipientOfServicePerspectiveMt it
+will be asserted that it takes place once or twice per year, and in the
+JobMt the person cleaning teeth may do so ten or more times per day.
+
+		<p>Making such assertions in different contexts keeps them from conflicting; the statements don't really conflict because they make different assumptions. 
+		<hr>
+		<a href=/cycdoc/course/contexts-basic-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/the-hierarchy-of-contexts.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/useful-kinds-contexts.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>Last Update: 03/21/2002<br>
+</html>

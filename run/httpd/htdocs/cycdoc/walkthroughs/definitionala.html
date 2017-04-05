@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=UTF-8'>
+    <style type='text/css'>
+    p {font-family: Arial, sans-serif }
+    a {font-family: Arial, sans-serif }
+    p {font-size: 100%}
+    </style>
+  </head>
+
+  <body bgcolor='white'>
+
+<p><b>What are definitional assertions?</b></p>
+
+<p>Definitional assertions constrain the use and meaning of some sonstant. They are those GAFs (<a href="http://www.cyc.com/cycdoc/ref/glossary.html#GAF" target="reading_window">Ground Atomic Formulas</a>) which have a definitional predicate in their arg 0 slot.</p>
+
+<p>
+Definitional predicates are those predicates which are used to constrain other arguments. So, for example, the following are definitional predicates:</p>
+
+
+<ul>
+<li><a href="http://www.cyc.com/cycdoc/vocab/fundamental-vocab.html#isa" target="reading_window">#$isa</a><tt></li>  
+<li><a href="http://www.cyc.com/cycdoc/vocab/fundamental-vocab.html#genls" target="reading_window">#$genls</a></li>
+<li><a href="http://www.cyc.com/cycdoc/vocab/fundamental-vocab.html#disjointWith" target="reading_window">#$disjointWith</a></li>
+</ul>
+
+
+<p>These predicates can be used to make the following definitional assertions about #$Animal:</p>
+
+<ul>
+<li><nobr>(#$isa #$Animal #$OrganismClassificationType)</nobr></li>
+<li><nobr>(#$genls #$Animal #$Heterotroph)</nobr></li>
+<li><nobr>(#$disjointWith #$Animal #$SomethingToWear)</nobr></li>
+</ul>
+
+  </body>
+</html>

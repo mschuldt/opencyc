@@ -1,0 +1,54 @@
+<html>
+
+<title>Managing Cyc&reg; Operations</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo-small.gif border=0></a>Managing Cyc Operations</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy; 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/editing-the-kb-module.html>Editing the Cyc&reg; KB with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/login.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/login.html>Logging In</a></td></tr><tr><td><a href=/cycdoc/course/agenda.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/agenda.html>Starting The Agenda</a></td></tr></table>
+<hr>
+
+
+
+A Cyc&reg; Server is a Cyc executable image running on some machine.  In
+principle, more than one Cyc Server could be running on a machine, but
+the software currently assumes that there is only one per machine.<p>
+
+At a site using Cyc, the Cyc Servers share changes to their KB's by
+recording the operations in common transcript files.  Cyc Servers
+which start with the same KB and which process the same set of
+operations ought to end with identical KBs.<p>
+
+This "loosely-coupled" multiple-server scheme allows many users to
+edit a shared knowledge base while retaining the advantages of using
+local copies of the data, such as good response time.  It also
+provides the flexibility to perform local experiments without
+affecting other users.  It's possible for two users to share operations
+which become contradictory when merged in the common transcript, but
+this happens infrequently and is not typically a problem in daily
+usage.<p>
+
+More than one user can be logged in to a Cyc Server via the Cyc Web
+Interface.  In that case, the users need to cooperate carefully since
+they are all working in the same image and each can change system
+parameters that will affect the others.  At Cycorp, there is typically
+one primary user for each Cyc Server, and that person is the one who
+may edit its KB.  Others may log in and browse that copy of the KB,
+but they should only edit or modify system parameters with the
+permission of the primary user.<p>
+
+Usually, one Cyc Server is chosen to maintain the "reference" copy
+of the KB and at intervals its entire KB is written out to files.  From
+the KB files, new executable images can be generated, incorporating
+all the changes from the old shared transcript.<p>
+
+<hr>
+<a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/login.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/agenda.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 10/26/1998<br>
+</html>

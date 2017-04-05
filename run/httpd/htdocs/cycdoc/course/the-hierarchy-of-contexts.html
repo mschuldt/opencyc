@@ -1,0 +1,84 @@
+<html>
+
+<title>The Hierarchy of Contexts in Cyc&reg;</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo-small.gif border=0></a>The Hierarchy of Contexts in Cyc&reg;</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy; 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/contexts-basic-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/contexts-basic-module.html>Contexts in Cyc&reg;</a></td></tr><tr><td><a href=/cycdoc/course/what-is-a-context.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/what-is-a-context.html>What Is A Context?</a></td></tr><tr><td><a href=/cycdoc/course/assert-domain-assumptions.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/assert-domain-assumptions.html>Accessible Assertions and Domain Assumptions in Contexts</a></td></tr></table>
+<hr>
+Contexts are organized hierarchically; the predicate <a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> (for
+"base-Microtheory") is used to state
+that one context includes (has access to the contents of) another.  
+
+<p>
+To link up two microtheories ?MT1 and ?MT2 in this way, you assert
+this to Cyc:<br>
+<PRE>
+(<a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> ?MT1 ?MT2)
+</PRE>
+
+
+A context ?MT1 has access to another ?MT2 if
+everything that is true in the accessed context ?MT2 is true in the
+accessing context ?MT1 as well.  In other words, to say 
+(<a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> <a href=/cycdoc/vocab/medical-vocab.html#HumanAilmentMt>#$HumanAilmentMt</a> <a href=/cycdoc/vocab/medical-vocab.html#AilmentMt>#$AilmentMt</a>)--i.e., that the <a href=/cycdoc/vocab/medical-vocab.html#HumanAilmentMt>#$HumanAilmentMt</a> has access to the
+<a href=/cycdoc/vocab/medical-vocab.html#AilmentMt>#$AilmentMt</a> as its base (or that the <a href=/cycdoc/vocab/medical-vocab.html#AilmentMt>#$AilmentMt</a> is the base microtheory of
+the <a href=/cycdoc/vocab/medical-vocab.html#HumanAilmentMt>#$HumanAilmentMt</a>)--means that every assertion that is true in the
+<a href=/cycdoc/vocab/medical-vocab.html#AilmentMt>#$AilmentMt</a> is also true in the <a href=/cycdoc/vocab/medical-vocab.html#HumanAilmentMt>#$HumanAilmentMt</a>.
+<p>
+Cyc's <a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> relation relates all contexts to two special
+contexts: one, called <a href=/cycdoc/vocab/mt-vocab.html#BaseKB>#$BaseKB</a>, is the base microtheory of every other context in the system. Conversely the other extreme, called #$EverythingPSC (a "virtual" context used only in browsing around in Cyc), has every other context in the system as <em>its</em> base microtheory.  The former,
+called the <a href=/cycdoc/vocab/mt-vocab.html#BaseKB>#$BaseKB</a>, is the most general context in the system, and
+contains only information that will be true in every other context as
+well; as a result, only the most general, context-independent
+information belongs in the <a href=/cycdoc/vocab/mt-vocab.html#BaseKB>#$BaseKB</a>.
+<p>The #$EverythingPSC, on the other hand, has every other context as a base; it is used to see the totality of information that has been entered about some unit in all contexts. Because it is used only for browsing, and not as a theory of some domain, assertions cannot be made in the #$EverythingPSC itself.   <p>
+Cyc uses temporary <strong>Problem-Solving Contexts</strong> (<strong>PSC</strong>s) when it needs to combine information from various other contexts to solve a particular problem.  A PSC has no built-in facts or IF-THEN rules of its own; it get all its assertions by "lifting" them from other microtheories which exist in Cyc&reg to solve the problem at hand.  When Cyc&reg is finished working, the PSC is discarded.
+
+		<p>
+Mathematically speaking, then, the microtheories in the Cyc Knowledge Base form a partially ordered set (also called a "poset" or just "ordered set") of contexts with <a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> as the ordering relation. This corresponds to a Directed Acyclic Graph (DAG), having a top node (#$EverythingPSC) above other contexts, and a bottom node (<a href=/cycdoc/vocab/mt-vocab.html#BaseKB>#$BaseKB</a>) included in all others.  This is not merely a tree structure because one context may have many "parents" and many "children" in the partially ordered set of contexts.
+
+		<hr>
+		<a href=/cycdoc/course/contexts-basic-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/what-is-a-context.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/assert-domain-assumptions.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a>
+<hr>
+<h2>Questions:</h2>
+<form action=/cgi-bin/cyccgi/doc-answer.exe?course/the-hierarchy-of-contexts.text method=post>
+
+<p>Questions about the structure of how different contexts (or Microtheories) relate to each other:</p>
+
+<p>What is the special microtheory that's accessible from  all other microtheories in Cyc?</p><p><textarea name=item-1 cols=60 rows=4></textarea></p>
+
+<p>What is the special "virtual" context that has access to all other contexts in Cyc?</p><p><textarea name=item-2 cols=60 rows=4></textarea></p>
+
+<p>What is the name of the predicate that relates two
+contexts, to indicate that the first context has access to all the assertions and Domain Assumptions available in the second context?</p><p><textarea name=item-3 cols=60 rows=4></textarea></p>
+
+<p>Mathematically, what is the structure of all these Microtheories  connected by <a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> links?  Is it a <em>chain</em> of Microtheories , a <em>tree</em> of Microtheories, or what?</p><p><textarea name=item-4 cols=60 rows=4></textarea></p>
+
+<p>For any two Mts ?MT1 and ?MT2 (these are only
+variable names), is it always true that either (<a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> ?MT1 ?MT2) or
+(<a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> MT2 MT1)?</p><p><textarea name=item-5 cols=60 rows=4></textarea></p>
+
+<p>For any three Mts, ?MT1, ?MT2, and ?MT3, if (<a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> ?MT1 ?MT2) AND (<a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> ?MT2 ?MT3), does this mean that (<a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> ?MT1 ?MT3)?</p><p><textarea name=item-6 cols=60 rows=4></textarea></p>
+
+<p>Which of these do you think is the Cyc constant for the concept of "basement":  <a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> or #$BasementLevelOfAConstruction?</p><p><textarea name=item-7 cols=60 rows=4></textarea></p>
+
+<p>Suppose that (<a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> <a href=/cycdoc/vocab/medical-vocab.html#HumanAilmentMt>#$HumanAilmentMt</a> <a href=/cycdoc/vocab/medical-vocab.html#AilmentMt>#$AilmentMt</a>).  Does this mean that <a href=/cycdoc/vocab/medical-vocab.html#AilmentMt>#$AilmentMt</a> has access to all of the assertions and Domain Assumptions available in #$HumanAilmentAilmentMt?</p><p><textarea name=item-8 cols=60 rows=4></textarea></p>
+
+<p>Can there be a Mt that has no <a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> relation at all to any other Mt in Cyc, that is, a completely isolated Mt?</p><p><textarea name=item-9 cols=60 rows=4></textarea></p>
+
+<p>Can two different Mts have the <a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> relation to the same Mt? That is, is (<a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> ?MT1 ?MT3) <em>AND</em> (<a href=/cycdoc/vocab/mt-expansion-vocab.html#genlMt>#$genlMt</a> ?MT2 ?MT3) possible?)</p><p><textarea name=item-10 cols=60 rows=4></textarea></p>
+<input type=submit value="Show Answers"></form><hr>
+<a href=/cycdoc/course/contexts-basic-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/what-is-a-context.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/assert-domain-assumptions.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 3/29/2002<br>
+</html>

@@ -1,0 +1,46 @@
+<html>
+
+
+<title>Interpreting the Queue Status Display</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo-small.gif border=0></a>Interpreting the Queue Status Display</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy; 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/editing-the-kb-module.html>Editing the Cyc&reg; KB with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/mode.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/mode.html>The Communication Mode</a></td></tr><tr><td><a href=/cycdoc/course/adding-assertions.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/adding-assertions.html>Adding an Assertion</a></td></tr></table>
+<hr> When operations on the Cyc&reg; KB are set to be processed by the Cyc Agenda, they are placed in queues: operations originating on other machines go on the remote queue, operations originating on the user's local machine are on the local queue. These queues will not appear in the Agenda Status bar until there are some operations to process.
+<pre>
+      <b>Remote:()</b> <b>Local:()</b>
+</pre><p>
+
+Remote shows the status of operations read from the master transcript, and local shows
+the status of operations originating on the local Cyc Server.  Each may have up to three numbers 
+showing the number of operations in various stages of processing.  The first is the number of operations 
+waiting to be processed.  The second is the number of operations that have been 
+processesd but have not been recorded in the transcript.
+The third is the number of operations that have been processed and recorded in the transcript.
+When no operations are waiting to be processed or recorded only the third number is displayed.
+Therefore,
+
+<pre>
+      <b>Remote:</b>(50 20 100) <b>Local:</b>(30 10 50)
+</pre><p>
+
+will be followed by
+
+<pre>
+      <b>Remote:</b> (170) <b>Local:</b> (90)
+</pre><p>
+
+assuming, of course, that all the operations are processed without errors.
+<hr>
+<a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/mode.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/adding-assertions.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>Last Update: 03/26/2002<br>
+	
+		
+	
+</html>

@@ -1,0 +1,31 @@
+OpenCyc Change Log
+Release 0.7.0
+
+Includes Win32 version.
+
+Includes the planner.
+
+Adds more API functions and allows definition of new cyc server functions
+ - see www.opencyc.org/doc
+
+Includes contributed Oracle application interface to Cyc - see ooi.pdf. 
+
+
+Release 0.6.0  Initial public beta release.
+
+Does not yet include the Semantic Web DAML services, although DAML can be
+exported from the knowledge base via the java class:
+org.opencyc.xml.ExportDaml.
+
+Does not yet include Rapid Knowledge Formation (RKF) HTML GUI tools.
+
+Does not yet include examples for the built in planner.
+
+Does not yet include the blackboard.
+Does not yet include English sentence/phrase parsing, but does include 
+English sentence/phase generation from CycL assertions.
+
+Java api unit tests work for the org.opencyc.cycobject package, but have
+failing test cases for the org.opencyc.api package because the tests are 
+not yet fully aligned with the released knowledge base content.
+

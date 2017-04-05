@@ -1,0 +1,12 @@
+Java classpath entries for OpenCyc:
+junit.jar
+jakarta-oro-2.0.3.jar
+commons-collections.jar
+xerces.jar
+ViolinStrings.jar
+jdom.jar
+FIPA_OSv2_1_0.jar
+jena.jar
+rdf-api-2001-01-19.jar
+icu4j.jar
+dynamicjava.jar

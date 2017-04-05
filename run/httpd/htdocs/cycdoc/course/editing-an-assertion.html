@@ -1,0 +1,44 @@
+<html>
+
+
+<title>Editing an Assertion</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/opencyc-logo-small.gif border=0></a>Editing an Assertion</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/editing-the-kb-module.html>Editing the CYC&reg; KB with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/assertions-in-transcripts.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/assertions-in-transcripts.html>Looking at Assertions in the Transcript</a></td></tr><tr><td><a href=/cycdoc/course/deleting-assertions.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/deleting-assertions.html>Deleting an Assertion</a></td></tr></table>
+<hr>
+
+
+Now lets suppose that <a href=/cycdoc/vocab/medical-vocab.html#Doctor-Medical>#$Doctor-Medical</a> was not the right collection
+for your constant.  Lets change it to #$Zoologist.<p>
+
+Display your assertion and then click on <tt>[Edit]</tt>.  Like <tt>[Assert Similar]</tt>,
+this displays the assertion in an editable field.  The difference
+is that whatever new assertion you enter will <i>replace</i> the
+existing assertion.  Edit "<a href=/cycdoc/vocab/medical-vocab.html#Doctor-Medical>#$Doctor-Medical</a>" to "#$Zoologist" and
+click "Assert". Once again, the system will display a page confirming
+that the resulting operations have been queued.<p>
+
+If you go back to the assertion page and force it to reload, you will
+see an interesting result - the system will display an error page, informing
+you that there is no such assertion in the KB.  This is because the
+original assertion was removed and the new assertion was added.  Go back
+to the page displaying your constant and reload it; you should see that
+your constant is now an instance of #$Zoologist.<p>
+
+If you examine your local transcript again, you will find three new
+operations at the end of the file: an FI-UNASSERT, an FI-ASSERT, and
+an FI-TIMESTAMP-ASSERTION:<p>
+
+
+<hr>
+<a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/assertions-in-transcripts.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/deleting-assertions.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 3/28/2002<br>
+</html>

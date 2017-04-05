@@ -1,0 +1,82 @@
+<html>
+
+<title>Adding an Assertion</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo.gif border=0 alt="OpenCyc.org Homepage"></a>Adding an Assertion</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/editing-the-kb-module.html>Editing the Cyc KB with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/queue-status.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/queue-status.html>Interpreting the Queue Status Display</a></td></tr><tr><td><a href=/cycdoc/course/assertions-in-transcripts.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/assertions-in-transcripts.html>Looking at Assertions in the Transcript</a></td></tr></table>
+<hr>
+
+
+Now that we've covered transcripts and communication modes, we're ready
+to modify the KB. Make sure that you are either the sole user of the Cyc Server
+or that you are cooperating with the other users.  Set your communication 
+mode to <b>:isolated</b> and make sure that the agenda is enabled.
+
+Click on the name of your constant in the top frame. 
+The constant will be displayed on a browsing page in the center frames.
+We'll add and edit assertions on this constant.
+
+Next to each assertion is a <a
+href="more-assertions-info.html"> truth-value symbol</a>
+which is also a clickable link representing the assertion.  On the
+assertion which looks like:<p>
+
+<pre>
+     isa :  <img src="../img/cb/yellow.gif">HumanCyclist  
+</pre><p>
+
+click on the <img src="../img/cb/yellow.gif">.  The web interface will display a page
+showing the assertion in proposition syntax and presenting a set of
+editing options.<p>
+
+Now, we don't really want to change this assertion, since the cyclist
+logged in should be an instance of #$Cyclist.  So lets add a new
+assertion that we can experiment with:<p>
+
+Click on "<tt>[Assert Similar]</tt>" and a new page will display the
+assertion in an editing pane.  You are probably wondering why there
+isn't a command "<tt>[New]</tt>" which would bring up a blank
+editing window.  The reason is that your new assertion often shares at
+least one term with the one you were browsing, so this behavior is
+usually more convenient. If you want to enter a completely
+different assertion, all you have to do is delete the line before you
+start typing.<p>
+
+Change the assertion from<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> &lt;your constant&gt; #$HumanCyclist)
+</pre><p>
+
+to<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> &lt;your constant&gt; <a href=/cycdoc/vocab/medical-vocab.html#Doctor-Medical>#$Doctor-Medical</a>)
+</pre><p>
+ 
+and click the "Assert Formula" button.  The assertion is added
+to your local queue and the interface displays a page confirming
+that the operation was added.<p>
+
+Use your browsers "Back" button <i>three times</i> to return to the 
+page displaying your constant, then click the "Reload/Refresh" button
+to get the latest information from your Cyc Server.  If your Cyc Server
+was not busy, your new assertion has probably already been added, and
+your constant is now an instance of <a href=/cycdoc/vocab/medical-vocab.html#Doctor-Medical>#$Doctor-Medical</a>.  If not, wait 
+a moment and hit "Reload/Refresh" again.  You should see that the number of 
+operations in your transcript file has increased by <i>two</i> (not one,
+as we'll see in a moment).<p>
+
+
+<hr>
+<a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/queue-status.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/assertions-in-transcripts.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 03/28/2002<br>
+</html>

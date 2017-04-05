@@ -1,0 +1,67 @@
+<html>
+
+<title>The SubL Interactor</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/opencyc-logo-small.gif border=0 alt="OpenCyc.org Homepage"></a>The SubL Interactor</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/interactor-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/interactor-module.html>Using The SubL Interactor</a></td></tr></table>
+<hr>
+
+
+The SubL interactor page can be reached by following the <b><tt>SubL Interactor</tt></b>
+link under the <b>OpenCyc System</b> section of the <b>OpenCyc Navigator</b> page.
+It can also be reached by following the <b><tt>Interactor</tt></b>
+link on the <b>Browser Tools</b> page (which can be reached from the
+<b>Tools</b> link in the upper left corner of most pages.<p>
+
+On the SubL interactor page, there is a large text input field
+labeled "Enter Form:".  SubL forms entered in that field are
+evaluated by the OpenCyc Server when you click the <b>Eval</b> button.  The
+value returned is displayed on a new SubL interactor page.<p>
+
+Try this example: type the following expression in the input field
+and click <b>Eval</b>.
+
+<pre>
+     (cons 'a (append '(d e) '(f g)))
+</pre><p>
+
+A new SubL interactor page is displayed, with two sections above the
+input field that look like:<p>
+
+<b>Last Form : </b>
+<pre>
+ (cons 'a (append '(d e) '(f g)))
+</pre>
+<b>Results : </b>
+<pre>
+(A D E F G)
+</pre><p>
+
+<!-- An additional feature allows you to check the argument list for the first
+function, macro, or special form in the SubL expression.  If you check
+the box labeled "Show arglist?", then clicking "Eval" returns the arglist
+instead of actually evaluating the form.<p>
+
+Use the "back" button of your browser to return to the interactor page
+which had the form <tt>(cons 'a (append '(d e) '(f g)))</tt> in the input
+field.  Check the "Show arglist?" box and click "Eval".  The new SubL
+interactor displayed retains the form in the input field and adds a new
+section above it which looks like:<p>
+
+
+<b>Arglist : </b>
+<pre>
+CONS : (CAR CDR)
+</pre><p>
+
+This is the argument list for <tt>CONS</tt>.-->
+
+
+<hr>
+<a href=/cycdoc/course/interactor-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><hr>
+Last Update: 3/29/2002<br>
+</html>

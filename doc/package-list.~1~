@@ -1,0 +1,15 @@
+org.opencyc.api
+org.opencyc.chat
+org.opencyc.constraintsolver
+org.opencyc.conversation
+org.opencyc.cycagent
+org.opencyc.cycagent.coabs
+org.opencyc.cycagent.fipaos
+org.opencyc.cycobject
+org.opencyc.inferencesupport
+org.opencyc.jxta
+org.opencyc.kif
+org.opencyc.templateparser
+org.opencyc.util
+org.opencyc.webserver
+org.opencyc.xml

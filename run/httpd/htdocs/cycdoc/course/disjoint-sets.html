@@ -1,0 +1,78 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON disjoint-sets.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Mutually Disjoint Collections</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/cyc-ball-sm.gif border=0></a>Mutually Disjoint Collections</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy 1996, 1997, 1998 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/collections-module.html>Sets and Individuals in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/genls-and-instanceof.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/genls-and-instanceof.html>Uses of #$genls and #$isa</a></td></tr><tr><td><a href=/cycdoc/course/collections-of-collections.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/collections-of-collections.html>Collections of Collections</a></td></tr></table>
+<hr>
+Prerequisites:
+<a href=browsing-constants-module.html>Viewing CYC&reg; Constants with the Web Interface</a><br>
+
+
+<hr>
+
+
+<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> lets us describe which collections subsume others, but we
+would also like to describe which collections are mutually
+exclusive. For example, while we say "all dogs are animals" we also
+want to say "no dogs are ladybugs".<p>
+
+CYC&reg; provides several mechanisms for this, but the simplest is the
+binary predicate <a href=/cycdoc/vocab/fundamental-vocab.html#disjointWith>#$disjointWith</a>.  For two (sets or) collections, C1
+and C2:<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#disjointWith>#$disjointWith</a> C1 C2)
+</pre><p>
+
+indicates that no instance of C1 can be an instance of C2. So,<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#disjointWith>#$disjointWith</a> <a href=/cycdoc/vocab/biology-vocab.html#Dog>#$Dog</a> #$Ladybug)
+</pre><p>
+
+would make it a contradiction to assert that any constant was both an
+instance of <a href=/cycdoc/vocab/biology-vocab.html#Dog>#$Dog</a> and an instance of #$Ladybug.<p>
+
+Disjoining <a href=/cycdoc/vocab/biology-vocab.html#Dog>#$Dog</a> and #$Ladybug in this way may makes for a clear
+example, but it would be a poor choice for the KB, since it is overly
+specific and implies a multitude of similar assertions. I.E. dogs are
+not ants, nor whales, nor planets, etc.  It would be better to
+assert<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#disjointWith>#$disjointWith</a> <a href=/cycdoc/vocab/biology-vocab.html#Vertebrate>#$Vertebrate</a> <a href=/cycdoc/vocab/biology-vocab.html#Invertebrate>#$Invertebrate</a>)
+</pre><p>
+
+and similar general propositions.  Nevertheless, we would still
+require a large number of assertions to disjoin <a href=/cycdoc/vocab/biology-vocab.html#Dog>#$Dog</a> with its
+"sibling" collections (such as #$Cat). Because of this awkwardness,
+most of the disjoins in the CYC&reg; KB are performed with more general
+mechanisms using <a href=/cycdoc/vocab/fundamental-vocab.html#SiblingDisjointCollection>#$SiblingDisjointCollection</a> (described in subsequent
+sections).<p>
+
+<a href=/cycdoc/vocab/fundamental-vocab.html#disjointWith>#$disjointWith</a> is therefore only used in limited cases where a more
+general disjoin cannot be applied.<p>
+
+To see some examples, browse <a href=/cycdoc/vocab/fundamental-vocab.html#disjointWith>#$disjointWith</a> and choose the
+<b><tt>Predicate Extent</tt></b> item to take you to the section showing
+assertions where <a href=/cycdoc/vocab/fundamental-vocab.html#disjointWith>#$disjointWith</a> is in the predicate position.
+There are a few hundred assertions of this form in the <a href=/cycdoc/vocab/mt-vocab.html#BaseKB>#$BaseKB</a>. <p>
+
+
+<hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/genls-and-instanceof.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/collections-of-collections.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 10/26/1998 11:41:20<br>
+</html>

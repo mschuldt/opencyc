@@ -1,0 +1,716 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/WD-html-in-xml/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Agreement</title></head>
+    <body>
+        <h2>
+            <a href="http://www.opencyc.org"><img alt="OpenCyc Homepage"
+                    border="0"
+        src="/cycdoc/img/opencyc-logo.gif" /></a>Agreement</h2>E-Mail
+        Comments to: <a
+        href="mailto:opencyc-doc@cyc.com">opencyc-doc@cyc.com</a><br />Last
+        Update: 4/5/02<br />
+        <i>Copyright&copy; 1996-2002.  All rights reserved.</i>  See <a
+            href="/cycdoc/legal-terms.html">Terms of Usage.</a><br />
+        <hr />
+        <a href="/cycdoc/toc.html"><img border="0" src="/cycdoc/img/cyc-ball-sm.gif" /></a>
+        <a href="/cycdoc/toc.html">Return to Documentation Contents</a>
+        <br />
+        <a href="/cycdoc/vocab/vocab-toc.html"><img border="0" src="/cycdoc/img/cyc-ball-sm.gif" /></a>
+        <a href="/cycdoc/vocab/vocab-toc.html">Return to Vocabulary Contents</a>
+        <br />
+        <hr />
+        <br />
+        <font size="+1">
+            <a name="Agreement">#$Agreement<i>&nbsp;&nbsp;&nbsp;agreements</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of `objects' with temporal extent.
+            Each instance of <a
+            href="./agreement-vocab.html#Agreement">#$Agreement</a>
+            involves two or more parties, who agree that certain
+            propositions should be true. Making the propositions true
+            may require some action or commitment of wealth on the part
+            of one or more of the <a
+            href="./agreement-vocab.html#agreeingAgents">#$agreeingAgents.</a>
+            Thus, instances of <a
+            href="./agreement-vocab.html#Agreement">#$Agreement</a> will
+            usually involve some instances of <a
+            href="./context-vocab.html#Obligation">#$Obligation.</a>
+            Note: Instances of <a
+            href="./agreement-vocab.html#Agreement">#$Agreement</a> and
+                <a
+            href="./context-vocab.html#Obligation">#$Obligation</a>
+            differ, however, in that an #$obligatedAgent is responsible
+            for the truth of all of the propositions in an obligation.
+            In an <a
+            href="./agreement-vocab.html#Agreement">#$Agreement,</a>
+            some agents may not be responsible for all of the
+            propositions in the agreement being true. For example, in a
+            loan agreement, the borrower agrees to give the lender back
+            the money, but the borrower is the only #$obligatedAgent for
+            the repayment. Note that #$obligatedAgents need not be among
+            the <a
+            href="./agreement-vocab.html#agreeingAgents">#$agreeingAgents</a>
+            in the agreement that involves or generates the obligation.
+            For example, the Board of Directors of XYZCorporation may
+            agree that some non-director will assume the post and duties
+            of President of XYZCorporation. Moreover, <a
+            href="./agreement-vocab.html#agreeingAgents">#$agreeingAgents</a>
+            aren't always #$obligatedAgents; e.g., Wanda and Paul may
+            agree that Paul alone is obligated to do some task. Examples
+            include instances of #$PeaceAccord, <a
+            href="./agreement-vocab.html#LegalAgreement">#$LegalAgreement,</a>
+            #$InformalAgreement, #$BusinessPartnershipAgreement, <a
+            href="./professional-vocab.html#WorkAgreement">#$WorkAgreement,</a>
+                <a
+            href="./agreement-vocab.html#SalesAgreement">#$SalesAgreement,</a>
+            #$MaintenanceAgreement, #$Reservation, #$Appointment, etc.<br />
+            <b>guid: </b>bd58afa3-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a
+                href="./top-vocab.html#IntangibleExistingThing">#$IntangibleExistingThing</a>&nbsp;&nbsp;#$Artifact-Intangible&nbsp;&nbsp;<a
+                href="./context-vocab.html#SupposedToBeMicrotheory">#$SupposedToBeMicrotheory</a>&nbsp;&nbsp;<a href="./info-vocab.html#PropositionalInformationThing">#$PropositionalInformationThing</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./agreement-vocab.html#OrganizationPolicy">#$OrganizationPolicy</a>
+                <a
+            href="./agreement-vocab.html#SalesAgreement">#$SalesAgreement</a>
+                <a
+            href="./financial-vocab.html#AuthorizedAgreement">#$AuthorizedAgreement</a>
+                <a
+            href="./professional-vocab.html#WorkAgreement">#$WorkAgreement</a>
+                <a
+            href="./agreement-vocab.html#LegalAgreement">#$LegalAgreement</a>
+                <a
+            href="./agreement-vocab.html#Permission">#$Permission</a>  </blockquote>
+        <hr />
+        <h3>Predicates Describing Agreements</h3>
+        <br />
+        <font size="+1">
+            <a
+                    name="subAgreements">#$subAgreements<i>&nbsp;&nbsp;&nbsp;sub agreements</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> The predicate <a
+            href="./agreement-vocab.html#subAgreements">#$subAgreements</a>
+            relates a particular agreement to the subordinate agreements
+            it comprises. <a
+            href="./agreement-vocab.html#subAgreements">(#$subAgreements</a>
+            AGR SUB) means that both AGR and SUB are instances of <a
+            href="./agreement-vocab.html#Agreement">#$Agreement,</a> and
+            AGR has SUB as a sub-part.<br />
+            <b>guid: </b>be018058-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>#$AsymmetricBinaryPredicate
+            #$TransitiveBinaryPredicate  <a
+            href="./part-vocab.html#NonPhysicalPartPredicate">#$NonPhysicalPartPredicate</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="agreeingAgents">#$agreeingAgents<i>&nbsp;&nbsp;&nbsp;agreeing agents</i></a></font>
+        <blockquote> The predicate <a
+            href="./agreement-vocab.html#agreeingAgents">#$agreeingAgents</a>
+            relates a particular agreement to the agents who made, or
+            who are making, the agreement. <a
+            href="./agreement-vocab.html#agreeingAgents">(#$agreeingAgents</a>
+            AGREE PARTY) means that the <a
+            href="./agreement-vocab.html#Agreement">#$Agreement</a>
+            AGREE has the <a href="./agent-vocab.html#Agent">#$Agent</a>
+            PARTY among its agreeing parties. If an <a
+            href="./agreement-vocab.html#Agreement">#$Agreement</a>
+            AGREE and an <a href="./agent-vocab.html#Agent">#$Agent</a>
+            PARTY are related via <a
+            href="./agreement-vocab.html#agreeingAgents">#$agreeingAgents,</a>
+            they may also be related by more specialized versions of <a
+            href="./agreement-vocab.html#agreeingAgents">#$agreeingAgents,</a>
+            such as #$agreeingBuyer or #$agreeingSeller, #$insuringAgent
+            or #$policyHolder, <a
+            href="./professional-vocab.html#employedAgent">#$employedAgent</a>
+            or <a
+            href="./professional-vocab.html#employingAgent">#$employingAgent.</a>
+            Note that if <a
+            href="./agreement-vocab.html#agreeingAgents">(#$agreeingAgents</a>
+            AGREE PARTY) holds, the <a
+            href="./agent-vocab.html#Agent">#$Agent</a> PARTY will be
+            mentioned in the <a
+            href="./agreement-vocab.html#Agreement">#$Agreement</a> AGREE.<br />
+            <b>guid: </b>bd58dc25-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./time-vocab.html#CotemporalObjectsSlot">#$CotemporalObjectsSlot</a>
+                <a
+            href="./predicate-type-vocab.html#InterActorSlot">#$InterActorSlot</a>  <br />
+            <b>direct specialization of: </b>
+            <a
+            href="./info-vocab.html#propositionalInfoAbout">#$propositionalInfoAbout</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="governedByAgreement">#$governedByAgreement<i>&nbsp;&nbsp;&nbsp;governed
+                    by agreement</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> The predicate <a
+            href="./agreement-vocab.html#governedByAgreement">#$governedByAgreement</a>
+            relates an event to an agreement that stipulates something
+            with respect to it, such as certain conditions that are to
+            hold during the event, or whether the event should or should
+            not occur. <a
+            href="./agreement-vocab.html#governedByAgreement">(#$governedByAgreement</a>
+            EVT AGR) means that some aspects of the instance of <a
+            href="./top-vocab.html#HumanActivity">#$HumanActivity</a>
+            EVT are controlled by, or 'under the jurisdiction of', the
+            instance of <a
+            href="./agreement-vocab.html#Agreement">#$Agreement</a> AGR.
+            For example, a <a
+            href="./organization-vocab.html#BuyingGroup">#$BuyingGroup</a>
+            may have <a
+            href="./agreement-vocab.html#SalesContract">#$SalesContracts</a>
+            with its <a
+            href="./organization-vocab.html#suppliers">#$suppliers</a>
+            that specify what prices may be charged for goods bought by
+            members of the group during the agreement period. But note
+            that an event's being governed by an agreement does not
+            entail that the event conforms to what the agreement
+            stipulates: an act that violates the agreement is still
+            governed by it.<br />
+            <b>guid: </b>c10adbcb-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a href="./actor-vocab.html#ActorSlot">#$ActorSlot</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./actor-vocab.html#preActors">#$preActors</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="ist-Agreement">#$ist-Agreement<i>&nbsp;&nbsp;&nbsp;ist
+                    - agreement</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> The predicate <a
+            href="./agreement-vocab.html#ist-Agreement">#$ist-Agreement</a>
+            is used to indicate the propositions which have been agreed
+            upon in a particular agreement. <a
+            href="./agreement-vocab.html#ist-Agreement">(#$ist-Agreement</a>
+            AGR PROP) means that the proposition PROP is and should be
+            true, according to the <a
+            href="./agreement-vocab.html#Agreement">#$Agreement</a> AGR.
+            PROP is expressed as a <a
+            href="./fundamental-vocab.html#ELSentence-Assertible">#$ELSentence-Assertible</a>
+            and is considered true within the microtheory which
+            represents AGR. PROP may or may not be true in reality. Note
+            the distinction between <a
+            href="./context-vocab.html#ist">#$ist</a> and <a
+            href="./agreement-vocab.html#ist-Agreement">#$ist-Agreement:</a>
+                <a href="./context-vocab.html#ist">#$ist</a> relates any
+            particular microtheory to all assertions that happen to be
+            true in that microtheory; but <a
+            href="./agreement-vocab.html#ist-Agreement">#$ist-Agreement</a>
+            specially indicates those assertions in an <a
+            href="./agreement-vocab.html#Agreement">#$Agreement</a>
+            microtheory which belong to the agreement itself and are not
+            just something that happens to be true in it (e.g., that one
+            of the <a
+            href="./agreement-vocab.html#agreeingAgents">#$agreeingAgents</a>
+            is named Joe).<br />
+            <b>guid: </b>bd58b89d-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>#$MicrotheoryDesignatingPredicate
+                <a
+            href="./predicate-type-vocab.html#MicrotheoryPredicate">#$MicrotheoryPredicate</a>
+            #$BinaryPredicate  <br />
+            <b>direct specialization of: </b>
+            <a href="./context-vocab.html#ist">#$ist</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="agreementForbids">#$agreementForbids<i>&nbsp;&nbsp;&nbsp;agreement forbids</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> The predicate <a
+            href="./agreement-vocab.html#agreementForbids">#$agreementForbids</a>
+            is used to indicate a type of action that a particular agent
+            is forbidden to play a particular role in under the terms of
+            a particular agreement. <a
+            href="./agreement-vocab.html#agreementForbids">(#$agreementForbids</a>
+            AGR AGENT ACT-TYPE ROLE) means that the instance of <a
+            href="./agreement-vocab.html#Agreement">#$Agreement</a> AGR
+            forbids the instance of <a
+            href="./agent-vocab.html#Agent">#$Agent</a> AGENT to play
+            the instance of <a href="./top-vocab.html#Role">#$Role</a>
+            ROLE in any event that is an instance of the subcollection
+            of <a href="./time-vocab.html#Event">#$Event</a> ACT-TYPE.
+            For example, a peace accord <a
+            href="./agreement-vocab.html#agreementForbids">#$agreementForbids</a>
+            any instance of #$WagingWar against other signatories to be
+                <a
+            href="./actor-vocab.html#performedBy">#$performedBy</a> any
+            of the governments who signed it. Similarly, a business
+            contract may forbid one agent to compete with another after
+            s/he sells rights to a product, design, or practice to the
+            second agent.<br />
+            <b>guid: </b>bd58b463-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>#$QuaternaryPredicate  </blockquote>
+        <font size="+1">
+            <a
+                    name="agreementPeriod">#$agreementPeriod<i>&nbsp;&nbsp;&nbsp;agreement period</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> The predicate <a
+            href="./agreement-vocab.html#agreementPeriod">#$agreementPeriod</a>
+            is used to indicate the period of time during which a
+            particular agreement is in force. <a
+            href="./agreement-vocab.html#agreementPeriod">(#$agreementPeriod</a>
+            AGR TIME) means that the <a
+            href="./agreement-vocab.html#Agreement">#$Agreement</a> AGR
+            holds during the <a
+            href="./time-vocab.html#TimeInterval">#$TimeInterval</a>
+            TIME; i.e., TIME is the period during which the assertions
+            made in AGR are supposed to be true. TIME may or may not
+            begin at the moment that AGR is created; e.g., I may sign an
+            employment contract on the very day I begin working or
+            several weeks before, to begin on a specified future date.
+            Or an <a
+            href="./agreement-vocab.html#agreementPeriod">#$agreementPeriod</a>
+            could begin before the agreement was made, e.g., when an
+            agent agreed to pay disputed royalties retroactively.<br />
+            <b>guid: </b>c10ad9c8-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>#$BinaryPredicate  </blockquote>
+        <hr />
+        <h3>Some Sample Kinds Of Agreements</h3>
+        <br />
+        <font size="+1">
+            <a name="Obligation">#$Obligation<i>&nbsp;&nbsp;&nbsp;obligations</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of microtheories; a subcollection of
+                <a
+            href="./context-vocab.html#SupposedToBeMicrotheory">#$SupposedToBeMicrotheory.</a>
+            Each instance of the collection <a
+            href="./context-vocab.html#Obligation">#$Obligation</a> is a
+            microtheory which contains assertions describing what some
+            agent (the #$obligatedAgent) is obliged to do, or make true,
+            for one or more other agents, possibly including society in
+            general. An obligation is the most general case of some
+            agent owing something to another. Obligations may be
+            undertaken in conjunction with various kinds of <a
+            href="./agreement-vocab.html#Agreement">#$Agreements.</a>
+            Unlike an agreement, however, an obligation need not have a
+            second known party (though some do). An obligation can exist
+            and be understood without identifying another particular
+            agent as the `holder' of the obligation -- and that may be
+            true, even if the beneficiary (#$obligationOwedTo) can be
+            identified. For example, assuming that parents have an
+            obligation to care for their children, it is not clear with
+            whom a parent has `agreed' to take care of his or her child.
+            Some common ways to incur an obligation are through social
+            transactions (e.g., family duties, friendship, favors) or
+            through financial transactions (e.g., a
+            #$PaymentObligation). In addition, obligations may be
+            imposed on those who are subject to one or more instances of
+                <a
+            href="./agreement-vocab.html#CodeOfConduct">#$CodeOfConduct,</a>
+            e.g., #$LegalCode-ModernUnitedStates,
+            #$SportsRulesOf-BoxingSportsEvent, #$OfficeCodeOfConductMt.<br />
+            <b>guid: </b>bd58bfd0-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a
+                href="./context-vocab.html#SupposedToBeMicrotheory">#$SupposedToBeMicrotheory</a>&nbsp;&nbsp;<a href="./top-vocab.html#IntangibleExistingThing">#$IntangibleExistingThing</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./professional-vocab.html#WorkAgreement">#$WorkAgreement</a>
+                <a
+            href="./agreement-vocab.html#CodeOfConduct">#$CodeOfConduct</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="CodeOfConduct">#$CodeOfConduct<i>&nbsp;&nbsp;&nbsp;codes
+                    of conduct</i></a></font>
+        <blockquote> An instance of <a
+            href="./context-vocab.html#MicrotheoryType">#$MicrotheoryType,</a>
+            and a specialization of <a
+            href="./context-vocab.html#Obligation">#$Obligation.</a>
+            Each instance of <a
+            href="./agreement-vocab.html#CodeOfConduct">#$CodeOfConduct</a>
+            is a microtheory containing rules and/or expectations
+            governing the behavior of those agents subject to it.<br />
+            <b>guid: </b>bd5895c7-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./context-vocab.html#MicrotheoryType">#$MicrotheoryType</a>
+                <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./context-vocab.html#Obligation">#$Obligation</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a href="./agreement-vocab.html#FormalCOC">#$FormalCOC</a>  </blockquote>
+        <font size="+1">
+            <a name="FormalCOC">#$FormalCOC<i>&nbsp;&nbsp;&nbsp;formal
+                    codes of conduct</i></a></font>
+        <blockquote> An instance of <a
+            href="./context-vocab.html#MicrotheoryType">#$MicrotheoryType,</a>
+            and a specialization of <a
+            href="./agreement-vocab.html#CodeOfConduct">#$CodeOfConduct.</a>
+            Each instance of <a
+            href="./agreement-vocab.html#FormalCOC">#$FormalCOC</a> is a
+            code of conduct imposed by some organization. Formal codes
+            of conduct typically are explicitly stated and publicly
+            promulgated among the group subject to them, and they are
+            usually associated with prescribed methods of enforcement
+            and punishment of violators. Thus, the collection <a
+            href="./agreement-vocab.html#FormalCOC">#$FormalCOC</a>
+            includes the laws of any legal jurisdiction, the rules of
+            deportment imposed by educational institutions, and the
+            practices of some strict religious sects. In contrast,
+            informal codes of conduct are norms that are not prescribed
+            or enforced by formal means; for example, etiquette
+            (#$MannersCodeOfConduct) and ethics (#$EthicsCodeOfConduct).<br />
+            <b>guid: </b>bd58af5f-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./context-vocab.html#MicrotheoryType">#$MicrotheoryType</a>
+                <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./agreement-vocab.html#CodeOfConduct">#$CodeOfConduct</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./agreement-vocab.html#GovernmentCOC">#$GovernmentCOC</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="GovernmentCOC">#$GovernmentCOC<i>&nbsp;&nbsp;&nbsp;governmental regulations</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of microtheories; a subcollection of
+                <a
+            href="./agreement-vocab.html#FormalCOC">#$FormalCOC</a> (the
+            set of formal codes of conduct). Each instance of <a
+            href="./agreement-vocab.html#GovernmentCOC">#$GovernmentCOC</a>
+            is a formal regulation of behavior imposed upon agents --
+            including citizens, tourists, businesses, government
+            entities, etc., in so far as they are subject to it -- who
+            are located within the legal jurisdiction where that code of
+            conduct holds. <a
+            href="./agreement-vocab.html#GovernmentCOC">#$GovernmentCOC</a>
+            includes both individual laws and whole legal codes. Some
+            examples of <a
+            href="./agreement-vocab.html#GovernmentCOC">#$GovernmentCOC</a>
+            include: the Napoleonic Code, the United States Constitution
+            and all Federal, State, and local laws of the United States,
+            and the particular laws against stealing found in most, if
+            not all, countries. Enforcement of a particular instance of
+                <a
+            href="./agreement-vocab.html#GovernmentCOC">#$GovernmentCOC</a>
+            is authorized by the government associated with that code
+            and carried out by its agents within their jurisdiction(s).
+            See also <a
+            href="./agreement-vocab.html#LegalCode">#$LegalCode</a> and #$Law.<br />
+            <b>guid: </b>bd58a160-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./context-vocab.html#MicrotheoryType">#$MicrotheoryType</a>
+                <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./agreement-vocab.html#FormalCOC">#$FormalCOC</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a href="./agreement-vocab.html#LegalCode">#$LegalCode</a>  </blockquote>
+        <font size="+1">
+            <a name="LegalCode">#$LegalCode<i>&nbsp;&nbsp;&nbsp;legal codes</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A specialization of <a
+            href="./agreement-vocab.html#GovernmentCOC">#$GovernmentCOC.</a>
+            Each instance of <a
+            href="./agreement-vocab.html#LegalCode">#$LegalCode</a> is a
+            microtheory for collecting all the instances of #$Law (q.v.)
+            which hold in a given instance of <a
+            href="./geography-vocab.html#GeopoliticalEntity">#$GeopoliticalEntity.</a>
+            For example, #$LegalCode-ModernUnitedStates.<br />
+            <b>guid: </b>bd65c7ba-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./context-vocab.html#MicrotheoryType">#$MicrotheoryType</a>
+                <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./agreement-vocab.html#GovernmentCOC">#$GovernmentCOC</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a name="laws">#$laws<i>&nbsp;&nbsp;&nbsp;laws (cotemporal predicate)</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> The predicate <a
+            href="./agreement-vocab.html#laws">#$laws</a> is used to
+            relate a geopolitical region (country, state, city, etc.) to
+            a law or entire legal code which applies there. <a
+            href="./agreement-vocab.html#laws">(#$laws</a> GEOPOL CODE)
+            means that the <a
+            href="./geography-vocab.html#GeopoliticalEntity">#$GeopoliticalEntity</a>
+            GEOPOL officially has the law (or set of laws) CODE. See
+            also <a
+            href="./agreement-vocab.html#GovernmentCOC">#$GovernmentCOC</a>
+            for the representation of a #$Law or a <a
+            href="./agreement-vocab.html#LegalCode">#$LegalCode</a> as a
+                <a href="./context-vocab.html#Microtheory">#$Microtheory.</a><br />
+            <b>guid: </b>bd64796e-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./time-vocab.html#CotemporalObjectsSlot">#$CotemporalObjectsSlot</a>  </blockquote>
+        <font size="+1">
+            <a name="Warranty">#$Warranty<i>&nbsp;&nbsp;&nbsp;guarantees</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A specialization of <a
+            href="./financial-vocab.html#AuthorizedAgreement">#$AuthorizedAgreement.</a>
+            Each instance of <a
+            href="./agreement-vocab.html#Warranty">#$Warranty</a> is an
+            agreement between the seller (and/or manufacturer) and the
+            purchaser of some object or service. In a warranty, the
+            seller/manufacturer promises that the object or service will
+            be satisfactory in some indicated way (e.g., free of
+            defects). Usually a warranty specifies what compensation an
+            unsatisfied purchaser is entitled to (e.g., free repairs, a
+            refund), and how s/he can claim it.<br />
+            <b>guid: </b>bd589ead-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./financial-vocab.html#AuthorizedAgreement">#$AuthorizedAgreement</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="SalesAgreement">#$SalesAgreement<i>&nbsp;&nbsp;&nbsp;sales agreements</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of agreements. Each instance of <a
+            href="./agreement-vocab.html#SalesAgreement">#$SalesAgreement</a>
+            is an agreement which governs aspects of some <a
+            href="./financial-vocab.html#Buying">#$Buying</a> activity.
+            This includes bidding activities (in the subcollection <a
+            href="./agreement-vocab.html#SalesBidOrContract">#$SalesBidOrContract),</a>
+            as well as instances of <a href="./agreement-vocab.html#SalesContract">#$SalesContract.</a><br />
+            <b>guid: </b>bd5a2d9c-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./agreement-vocab.html#Agreement">#$Agreement</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a name="SalesBidOrContract">#$SalesBidOrContract<i>&nbsp;&nbsp;&nbsp;bids</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of agreements. Each element of <a
+            href="./agreement-vocab.html#SalesBidOrContract">#$SalesBidOrContract</a>
+            is either a proposed or accepted agreement containing terms
+            at which a seller will provide goods or services to a buyer.<br />
+            <b>guid: </b>bd652630-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./agreement-vocab.html#SalesAgreement">#$SalesAgreement</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="SalesContract">#$SalesContract<i>&nbsp;&nbsp;&nbsp;sales contracts</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of agreements; a subset of <a
+            href="./agreement-vocab.html#LegalAgreement">#$LegalAgreement.</a>
+            Each element of <a
+            href="./agreement-vocab.html#SalesContract">#$SalesContract</a>
+            is a legal agreement between a selling agent and a buying
+            agent, stipulating the terms under which the seller will
+            provide goods and/or services to the buyer.<br />
+            <b>guid: </b>be018921-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a
+                href="./agreement-vocab.html#LegalAgreement">#$LegalAgreement</a>&nbsp;&nbsp;<a href="./agreement-vocab.html#SalesAgreement">#$SalesAgreement</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a name="Proposal">#$Proposal<i>&nbsp;&nbsp;&nbsp;proposals</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> The class of potential agreements or other kinds of
+                <a
+            href="./context-vocab.html#SupposedToBeMicrotheory">#$SupposedToBeMicrotheory</a>
+            which are in the 'proposal' stage -- i.e., which are under
+            consideration but which have not been adopted (yet). The
+            making and consideration of <a
+            href="./agreement-vocab.html#Proposal">#$Proposals</a> is an
+            important part of such activities as #$Negotiating and
+            legislative #$Debate. Examples of <a
+            href="./agreement-vocab.html#Proposal">#$Proposals</a>
+            include #$BidOnSale, job offers, proposed codes of conduct
+            (including proposals for new #$Laws), and proposed punishments.<br />
+            <b>guid: </b>bd646625-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./context-vocab.html#MicrotheoryType">#$MicrotheoryType</a>  <br />
+            <b>direct specialization of: </b>
+            <a
+                href="./context-vocab.html#SupposedToBeMicrotheory">#$SupposedToBeMicrotheory</a>&nbsp;&nbsp;<a
+                href="./info-vocab.html#PropositionalInformationThing">#$PropositionalInformationThing</a>&nbsp;&nbsp;<a href="./top-vocab.html#IntangibleExistingThing">#$IntangibleExistingThing</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a
+                    name="proposalStatus">#$proposalStatus<i>&nbsp;&nbsp;&nbsp;proposal
+                    status (attribute predicate)</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> The predicate <a
+            href="./agreement-vocab.html#proposalStatus">#$proposalStatus</a>
+            is used to indicate the status of a particular proposal. <a
+            href="./agreement-vocab.html#proposalStatus">(#$proposalStatus</a>
+            PROPOS STATUS) means that the <a
+            href="./agreement-vocab.html#Proposal">#$Proposal</a> PROPOS
+            has STATUS as its #$ProposalStatusAttribute (e.g.,
+            #$Acknowledged, #$AwaitingConfirmation, #$Accepted). Since
+            the status of a proposal changes throughout the process of
+            submission and consideration, assertions made with <a
+            href="./agreement-vocab.html#proposalStatus">#$proposalStatus</a>
+            should be temporally qualified (e.g., using <a href="./time-vocab.html#holdsIn">#$holdsIn).</a><br />
+            <b>guid: </b>bd589ae3-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>#$BinaryAttributePredicate  <br />
+            <b>direct specialization of: </b>
+            <a
+            href="./fundamental-vocab.html#hasAttributes">#$hasAttributes</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="OrganizationPolicy">#$OrganizationPolicy<i>&nbsp;&nbsp;&nbsp;policies (agreements)</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A specialization of <a
+            href="./agreement-vocab.html#Agreement">#$Agreement.</a>
+            Each instance of <a
+            href="./agreement-vocab.html#OrganizationPolicy">#$OrganizationPolicy</a>
+            is an agreement which contains the terms of some policy of a
+            particular organization. Instances of <a
+            href="./agreement-vocab.html#OrganizationPolicy">#$OrganizationPolicy</a>
+            would include U.S. Federal government hiring policies, a
+            policy governing a corporation's charitable or political
+            donations, or a school dress code.<br />
+            <b>guid: </b>bd58f5fe-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>
+                <a
+            href="./context-vocab.html#MicrotheoryType">#$MicrotheoryType</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./agreement-vocab.html#Agreement">#$Agreement</a>&nbsp;&nbsp;</blockquote>
+        <font size="+1">
+            <a name="Permission">#$Permission<i>&nbsp;&nbsp;&nbsp;permits</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A specialization of <a
+            href="./agreement-vocab.html#Agreement">#$Agreement.</a>
+            Each instance of <a
+            href="./agreement-vocab.html#Permission">#$Permission</a> is
+            an agreement specifying some rights or privileges which have
+            been granted to an instance of <a
+            href="./agent-vocab.html#Agent">#$Agent</a> (q.v.). A
+            permission may be an informal agreement between individuals,
+            but many instances are formal and involve permissions
+            granted by a government authority to some agent. Notable
+            specializations of <a
+            href="./agreement-vocab.html#Permission">#$Permission</a>
+            include <a
+            href="./info-vocab.html#License-LegalAgreement">#$License-LegalAgreement</a>
+            and <a href="./info-vocab.html#Visa-Permit">#$Visa-Permit.</a><br />
+            <b>guid: </b>bd58afda-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./agreement-vocab.html#Agreement">#$Agreement</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a href="./info-vocab.html#Visa-Permit">#$Visa-Permit</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="LegalAgreement">#$LegalAgreement<i>&nbsp;&nbsp;&nbsp;legal agreements</i></a></font>
+        <blockquote> An instance of <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType,</a>
+            and a specialization of <a
+            href="./agreement-vocab.html#Agreement">#$Agreement.</a>
+            Each instance of <a
+            href="./agreement-vocab.html#LegalAgreement">#$LegalAgreement</a>
+            is an agreement which has a legal status; that is, it is
+            recognized as a valid agreement by some government. Notable
+            specializations of <a
+            href="./agreement-vocab.html#LegalAgreement">#$LegalAgreement</a>
+            include <a
+            href="./agreement-vocab.html#SalesContract">#$SalesContract,</a>
+                <a
+            href="./info-vocab.html#Visa-Permit">#$Visa-Permit,</a> and
+                <a href="./agreement-vocab.html#Account">#$Account.</a><br />
+            <b>guid: </b>bd58b05e-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>  <br />
+            <b>direct specialization of: </b>
+            <a href="./agreement-vocab.html#Agreement">#$Agreement</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a href="./agreement-vocab.html#Account">#$Account</a>  <a
+            href="./info-vocab.html#Visa-Permit">#$Visa-Permit</a>  </blockquote>
+        <font size="+1">
+            <a name="Account">#$Account<i>&nbsp;&nbsp;&nbsp;accounts (agreements)</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of objects; a subcollection of <a
+            href="./agreement-vocab.html#LegalAgreement">#$LegalAgreement.</a>
+            Each instance of <a
+            href="./agreement-vocab.html#Account">#$Account</a> is a
+            recorded obligation (of some particular type) between
+            specified parties, consisting of `funds' which typically can
+            be added to and drawn upon. Examples include instances of
+            #$RetirementAccount, #$TravelExpenseAccount, and of the many
+            types of <a
+            href="./financial-vocab.html#FinancialAccount">#$FinancialAccount</a>
+            . Note that the contents of an account need not be monetary;
+            for example, the contents may be amounts of time, as in the
+            subcollections #$VacationAccount or #$SickLeaveAccount. <a
+            href="./agreement-vocab.html#Account">#$Account</a> does NOT
+            include debt obligations of fixed face value that cannot be
+            increased or reduced (such as a bond).<br />
+            <b>guid: </b>bd588c2b-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./financial-vocab.html#AccountType">#$AccountType</a>  <br />
+            <b>direct specialization of: </b>
+            <a
+                href="./financial-vocab.html#AuthorizedAgreement">#$AuthorizedAgreement</a>&nbsp;&nbsp;<a href="./agreement-vocab.html#LegalAgreement">#$LegalAgreement</a>&nbsp;&nbsp;<br />
+            <b>direct generalization of: </b>
+            <a
+            href="./financial-vocab.html#FinancialAccount">#$FinancialAccount</a>  </blockquote>
+        <font size="+1">
+            <a
+                    name="InsurancePlan">#$InsurancePlan<i>&nbsp;&nbsp;&nbsp;insurance (agreement)</i></a></font>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#comments">**COMMENT NOT REVIEWED**</a></i>&nbsp;&nbsp;&nbsp;<i>
+            <a href="./kb-review-desc.html#GAFs">**GAFs NOT REVIEWED**</a></i>
+        <blockquote> A collection of microtheories; a subset of <a
+            href="./agreement-vocab.html#LegalAgreement">#$LegalAgreement.</a>
+            Each element of <a
+            href="./agreement-vocab.html#InsurancePlan">#$InsurancePlan</a>
+            is an agreement between two or more agents. For each such
+            plan, there is at least one #$insuredAgent who is covered by
+            the insurance plan, and one #$insuringAgent who is the
+            insurance provider (e.g., HMO, insurance company, or U.S.
+            Federal government agency). An insurance plan may be funded
+            by (see #$insuranceFundedBy) the insured or by a third
+            party, such as the insured's employer. Some subsets of <a
+            href="./agreement-vocab.html#InsurancePlan">#$InsurancePlan</a>
+            representing insurance for different #$insuredEventTypes
+            are: #$LifeInsurance, #$MedicalInsurance,
+            #$DisabilityInsurance, #$HomeOwnersInsurance,
+            #$AutomobileInsurance, #$LiabilityInsurance.<br />
+            <b>guid: </b>bd58e2ad-9c29-11b1-9dad-c379636f7270<br />
+            <b>direct instance of: </b>
+            <a
+            href="./top-vocab.html#ExistingObjectType">#$ExistingObjectType</a>
+            #$ProductType  <br />
+            <b>direct specialization of: </b>
+            <a href="./agreement-vocab.html#Account">#$Account</a>&nbsp;&nbsp;</blockquote>
+        <p />
+        <hr />
+        <i>Copyright&copy; 1996-2002.  All rights reserved.</i>  See <a
+            href="/cycdoc/legal-terms.html">Terms of Usage.</a></body></html>

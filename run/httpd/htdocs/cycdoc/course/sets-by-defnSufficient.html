@@ -1,0 +1,79 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON sets-by-defnSufficient.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Sets Defined by Internal CYC&reg; Functions</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/cyc-ball-sm.gif border=0></a>Sets Defined by Internal CYC&reg; Functions</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy 1996, 1997, 1998 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/collections-module.html>Sets and Individuals in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/partitioned-sets.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/partitioned-sets.html>Partitioning Collections</a></td></tr><tr><td><a href=/cycdoc/course/argument-types.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/argument-types.html>Argument Types of Predicates</a></td></tr></table>
+<hr>
+
+
+There are a number of collections whose instances are usually not reified 
+as constants, but which are commonly involved in assertions.  One example 
+would be <a href=/cycdoc/vocab/math-vocab.html#Integer>#$Integer</a>.  Reifying all the instances of <a href=/cycdoc/vocab/math-vocab.html#Integer>#$Integer</a> used in the
+CYC&reg; KB as constants would be expensive in memory and awkward.  Moreover, it
+is unnecessary because the computational substrate already
+implements a more efficient representation of integers which is adequate for
+most uses.<p>
+
+When a character sequence like "3" in a CycL expression is read by the system,
+it is represented as the integer 3 in SubL, the CYC&reg; implementation language.
+We now need a way to determine that a SubL integer is a member of the
+collection <a href=/cycdoc/vocab/math-vocab.html#Integer>#$Integer</a>, so that it will be recognized as a valid argument in an
+expression like:<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#arity>#$arity</a> <a href=/cycdoc/vocab/attitude-vocab.html#purposeInEvent>#$purposeInEvent</a> 3)
+</pre><p>
+
+This could simply be implemented in code, as part of the CYC&reg;
+application.  But for the sake of clarity and extensibility, we
+introduce two predicates, <a href=/cycdoc/vocab/fundamental-vocab.html#defnSufficient>#$defnSufficient</a> and <a href=/cycdoc/vocab/fundamental-vocab.html#defnIff>#$defnIff</a>, which specify a
+SubL function to test for membership in the collection. Here are
+two examples in the KB:<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#defnSufficient>#$defnSufficient</a> <a href=/cycdoc/vocab/math-vocab.html#PositiveInteger>#$PositiveInteger</a> CYC-POSITIVE-INTEGER?)
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#defnIff>#$defnIff</a> <a href=/cycdoc/vocab/math-vocab.html#ScalarInterval>#$ScalarInterval</a> SCALAR-INTERVAL?)
+</pre><p>
+
+If the function specified by a <a href=/cycdoc/vocab/fundamental-vocab.html#defnSufficient>#$defnSufficient</a> assertion returns true
+(actually, non-NIL) when applied to some thing, then that thing is an
+instance of the collection.  <a href=/cycdoc/vocab/fundamental-vocab.html#defnIff>#$defnIff</a> is a stronger relation:
+if and only if a thing satisfies the test function it is an instance
+of the collection.<p>
+
+So for <a href=/cycdoc/vocab/math-vocab.html#PositiveInteger>#$PositiveInteger</a>, both SubL integers and constants which
+denote instances of <a href=/cycdoc/vocab/math-vocab.html#PositiveInteger>#$PositiveInteger</a> are instances. #$OneMillion is
+an example of a constant which is an instance of
+<a href=/cycdoc/vocab/math-vocab.html#PositiveInteger>#$PositiveInteger</a>. But for <a href=/cycdoc/vocab/math-vocab.html#ScalarInterval>#$ScalarInterval</a>, <i>only</i> expressions
+which satisfy SCALAR-INTERVAL?  are instances.
+
+<hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/partitioned-sets.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/argument-types.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a>
+<hr>
+<h2>Questions:</h2>
+<form action=/cgi-bin/cyccgi/doc-answer.exe?course/sets-by-defnSufficient.text method=post>
+
+<p>If one were creating a collection (call it #$SmallNumber) to 
+represent all numbers between -10,000 and 10,000, how would
+one define it such that CYC&reg; would be able to tell
+what is and is not a member of that collection?</p><p><textarea name=item-1 cols=60 rows=4></textarea></p>
+<input type=submit value="Show Answers"></form><hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/partitioned-sets.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/argument-types.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 10/26/1998 11:41:15<br>
+</html>

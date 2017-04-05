@@ -1,0 +1,39 @@
+<html>
+
+<title>Resource Limits for Queries</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo.gif border=0 alt="OpenCyc.org Homepage"></a>Resource Limits for Queries</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy; 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/asking-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/asking-module.html>Querying Cyc with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/ask-backwards.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/ask-backwards.html>Backward Queries</a></td></tr></table>
+<hr>There are four parameters that can be set in the <b><tt>Inference Parameters</tt></b> section of the
+Ask page.  Each of these can specify a constraint on inference,
+limiting search in some way.  This is important since some queries
+will result in enormous or even infinite inference, but practical uses
+of the system require queries to have predictable, finite behavior.<p>When trying backward queries, you may sometimes find queries that fail to find expected bindings because the settings of these resource constraints are too low. It's always a good idea to try again with more resources before assuming that an inference mechanism is failing. Clicking on the link that follows <b><tt>Query halted because :</tt></b>, which allows one to inspect the search that the inference engine conducted, may also be helpful in diagnosing queries that fail.
+<p>
+
+<h3>Constraints:</h3>
+
+<ul> 
+
+<li>Number cutoff (answers)<p>Although the default is to have no cutoff, that is to have &quot;Get Everything&quot; selected, you may wish to allow the system to stop searching after finding a certain number of binding sets. This is done by clicking in the circle to the left of the input field next to &quot;answers&quot; and typing in an integer into that input field. Application programs, using the Cyc Functional Interface ask functions, can be written to ask for a few binding sets, attempt to use them, then ask for more if they need to. Users can access this functionality by pressing the [Continue Last Query] button.<p>
+
+<li>Time cutoff (seconds)<p> 
+
+A maximum time (in seconds) allowed for inference can be specified.
+Note that the time required for a given inference can vary depending
+on the machine running the Cyc Server application, so different Cyc
+Servers may have different behavior given the same time
+constraints.<p>The default time cutoff is 30 seconds. This can be modified by typing in a new value and clicking in the circle to the left of the input field next to &quot;seconds&quot;. One can specify no time cutoff by selecting &quot;Run forever&quot;.<p>
+
+<li>Depth cutoff (proof steps)<p>This limits the maximum number of search nodes which can be open at any time. The default is 20 proof steps, or nodes. This can be modified by typing in a new value and clicking in the circle to the left of the input field next to &quot;proof steps&quot;. No limit on number of nodes can be specified by selecting &quot;Infinite Depth&quot;.
+</ul>
+
+<hr>
+<a href=/cycdoc/course/asking-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/ask-backwards.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><hr>Last Update: 03/26/2002<br>
+</html>

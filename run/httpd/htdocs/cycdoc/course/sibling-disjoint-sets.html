@@ -1,0 +1,49 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON sibling-disjoint-sets.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Sibling-Disjoint Collections</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/cyc-ball-sm.gif border=0></a>Sibling-Disjoint Collections</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy 1996, 1997, 1998 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/collections-module.html>Sets and Individuals in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/collections-of-collections.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/collections-of-collections.html>Collections of Collections</a></td></tr><tr><td><a href=/cycdoc/course/sibling-disjoint-exceptions.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/sibling-disjoint-exceptions.html>Sibling-Disjoint Exceptions</a></td></tr></table>
+<hr>
+
+
+A collection of collections is "sibling-disjoint" if it is an
+instance of <a href=/cycdoc/vocab/fundamental-vocab.html#SiblingDisjointCollection>#$SiblingDisjointCollection</a>.  (A more general but much
+less common collection is #$SiblingDisjointSetOrCollection.)  If
+#$MyDisjointType is an instance of <a href=/cycdoc/vocab/fundamental-vocab.html#SiblingDisjointCollection>#$SiblingDisjointCollection</a>, then
+each instance of #$MyDisjointType is mutually disjoint with all the
+other instances.  In cases where the disjoining collection would have
+many instances, this is much more manageable and economical than
+making a large number of assertions involving <a href=/cycdoc/vocab/fundamental-vocab.html#disjointWith>#$disjointWith</a>.<p>
+
+An exception to the disjoin is the case where one disjoined collection
+is a subset of another.  In that case, a term may be an instance of
+both collections. Consider the following example:<p>
+
+<img src="../img/sib-disjoint.gif"><p>
+
+The constant R may not be an instance of both A and B because A and B
+are both instances of #$MyDisjointType.  S, however, may be an
+instance of both B and C, since (<a href=/cycdoc/vocab/fundamental-vocab.html#genls>#$genls</a> C B) is true.<p>
+
+#$DayOfWeekType is a good example of an instance of
+<a href=/cycdoc/vocab/fundamental-vocab.html#SiblingDisjointCollection>#$SiblingDisjointCollection</a>.  Its instances include terms like
+#$Friday and #$Saturday.  Any particular day could be an instance of
+#$Friday or #$Saturday, but not both.
+
+<hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/collections-of-collections.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/sibling-disjoint-exceptions.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 10/26/1998 11:41:18<br>
+</html>

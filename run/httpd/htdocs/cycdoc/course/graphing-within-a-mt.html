@@ -1,0 +1,49 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON graphing-within-a-mt.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Graphing Within a Microtheory</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/cyc-ball-sm.gif border=0></a>Graphing Within a Microtheory</h2>E-Mail Comments to: <a href=mailto:doc@cyc.com>doc@cyc.com</a><br>
+<i>Copyright&copy; 1996, 1997, 1998, 2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/hierarchy-browser-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/hierarchy-browser-module.html>The Hierarchy Browser</a></td></tr><tr><td><a href=/cycdoc/course/graphing-with-all-mts.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/graphing-with-all-mts.html>Graphing with All Microtheories</a></td></tr><tr><td><a href=/cycdoc/course/graphing-find-constant.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/graphing-find-constant.html>Graphing When You Don't Know the Exact Constant Names</a></td></tr></table>
+<hr>
+
+When you graph assertions within a particular
+microtheory, you need to make one additional choice:
+should assertions in the base microtheories also be included?<p>
+
+The geography microtheories provide an example: #$UnitedStatesGeographyMt has
+#$WorldGeographyMt as a base, i.e. whatever is true in
+#$WorldGeographyMt is true in #$UnitedStatesGeographyMt.<p>
+
+Check the option "Use its genl mts too, if possible" and graph with the following 
+parameters:<p>
+
+<pre>
+    Starting Terme: ContinentOfNorthAmerica
+     Microtheory: UnitedStatesGeographyMt
+     Binary Predicate: geographicalSubRegions<p>
+</pre><p>If your copy of OpenCyc had detailed information on geography, the resulting graph would include subregions of the continental United States, such as #$Maine-State.<a href="#note">*</a><p>Return to the Hierarcy Browser page and try the graph again with the genl mts option turned off. The new graph will omit the assertions which are not in the #$UnitedStatesGeographyMt, so you won't see information about any other countries. It may be surprising not to have any information about the #$ContiguousUnitedStates (lower 48), however the assertion that that is a geographical subregion of North America is in the WorldGeographyMt, not in the UnitedStatesGeographyMt. As a result, all that would appear is #$Alaska-State and all the <a href=/cycdoc/vocab/spatial-vocab.html#geographicalSubRegions>#$geographicalSubRegions</a> thereof.
+
+To display the Mt of each assertion in the hierarchy, click on the button
+"Show assertion's mts after terms".
+
+
+<hr>
+<a name="note">*</a>
+<a href=/cycdoc/vocab/hormuz-area-vocab.html#UnitedStatesOfAmerica>#$UnitedStatesOfAmerica</a> is not a subregion of <a href=/cycdoc/vocab/geography-vocab.html#ContinentOfNorthAmerica>#$ContinentOfNorthAmerica</a>
+since Hawaii is not in North America. This is a gray area, since the US is <i>mostly</i> a North American subregion. If it became an important issue, alternative microtheories with different assumptions could be developed.<p>
+
+<hr>
+<a href=/cycdoc/course/hierarchy-browser-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/graphing-with-all-mts.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/graphing-find-constant.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>Last Update: 03/22/2002<br>
+</html>

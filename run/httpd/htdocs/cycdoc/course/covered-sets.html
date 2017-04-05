@@ -1,0 +1,72 @@
+<html>
+<!--
+ THIS HTML FILE IS GENERATED BASED ON covered-sets.text.
+All modifications should be made to that file, not this one! 
+-->
+
+<title>Covering Collections</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.opencyc.org><img src=/cycdoc/img/opencyc-logo.gif border=0 alt="OpenCyc.org Homepage"></a>Covering Collections</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/collections-module.html>Sets and Individuals in CYC&reg;</a></td></tr><tr><td><a href=/cycdoc/course/sibling-disjoint-exceptions.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/sibling-disjoint-exceptions.html>Sibling-Disjoint Exceptions</a></td></tr><tr><td><a href=/cycdoc/course/partitioned-sets.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/partitioned-sets.html>Partitioning Collections</a></td></tr></table>
+<hr>
+
+
+The function <a href=/cycdoc/vocab/fundamental-vocab.html#TheCovering>#$TheCovering</a> can be used to express the "covering" of
+a (set or) collection by other (sets or) collections.  (For more
+information on functions, see the documentation section on <a
+href="../ref/cycl-syntax.html#NATs">Non-Atomic Terms</a>.)  If a
+collection is covered by a set of other collections, then any instance
+of the covered collection must also be an instance of at least one of
+the members of the covering set.<p>
+
+To specify a covering, we use the predicate <a href=/cycdoc/vocab/fundamental-vocab.html#covering>#$covering</a>, which relates
+a (set or) collection to a set of (sets or) collections that cover it.
+We indicate the collections in the covering set by making them
+arguments of the function <a href=/cycdoc/vocab/fundamental-vocab.html#TheCovering>#$TheCovering</a>.  This function creates a set
+-- here, an actual <a href=/cycdoc/vocab/math-vocab.html#Set-Mathematical>#$Set-Mathematical</a> -- that contains the covering
+subsets.  Consider the following example: <p>
+
+<pre>
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#covering>#$covering</a> Z (<a href=/cycdoc/vocab/fundamental-vocab.html#TheCovering>#$TheCovering</a> D E F))
+</pre><p><p>
+
+<img src="../img/covering.gif"><p>
+
+The collection Z is covered by the collections D, E, and F, which all
+belong to the set created by <a href=/cycdoc/vocab/fundamental-vocab.html#TheCovering>#$TheCovering</a>.  (Note that <a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> is
+<i>not</i> the predicate used to relate D, E, and F to the covering
+set. Since this is a mathematical set rather than a collection, the
+appropriate relation is <a href=/cycdoc/vocab/math-vocab.html#elementOf>#$elementOf</a>.)<p>
+
+Note that the members of the covering set may or may not be subsets of
+the covered set -- D is a spec of Z, but E and F are not.  Note also
+that the members of the covering set may share elements: R is an
+instance of both E and F.<p>
+
+The constant S is in a disallowed situation, since it is an instance
+of Z but it is not an instance of either D, E, or F.<p>
+
+Here is an example usage of <a href=/cycdoc/vocab/fundamental-vocab.html#covering>#$covering</a> in the KB:<p>
+
+<pre>
+    (<a href=/cycdoc/vocab/fundamental-vocab.html#covering>#$covering</a> <a href=/cycdoc/vocab/transform-vocab.html#CreationOrDestructionEvent>#$CreationOrDestructionEvent</a>
+                (<a href=/cycdoc/vocab/fundamental-vocab.html#TheCovering>#$TheCovering</a> <a href=/cycdoc/vocab/transform-vocab.html#CreationEvent>#$CreationEvent</a> <a href=/cycdoc/vocab/transform-vocab.html#DestructionEvent>#$DestructionEvent</a>))
+</pre><p>
+
+The somewhat awkward-sounding constant <a href=/cycdoc/vocab/transform-vocab.html#CreationOrDestructionEvent>#$CreationOrDestructionEvent</a> is
+in fact a useful collection because it is used to constrain the
+arguments for predicates which apply to events which are either
+creation events, destruction events, or both.
+
+<hr>
+<a href=/cycdoc/course/collections-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/sibling-disjoint-exceptions.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/partitioned-sets.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 03/28/2002<br>
+</html>

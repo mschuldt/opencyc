@@ -1,0 +1,73 @@
+<html>
+
+
+<title>Deleting an Assertion</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/opencyc-logo-small.gif border=0></a>Deleting an Assertion</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/editing-the-kb-module.html>Editing the OpenCyc KB with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/editing-an-assertion.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/editing-an-assertion.html>Editing an Assertion</a></td></tr><tr><td><a href=/cycdoc/course/changing-mt.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next]></a></td><td><a href=/cycdoc/course/changing-mt.html>Moving an Assertion to a Different Microtheory</a></td></tr></table>
+<hr>
+
+
+To remove an assertion, display it and simply click on <tt>[Unassert]</tt>.
+An FI-UNASSERT operation is immediately added to the local queue and the
+interface displays a page confirming the action.<p>
+
+Try deleting <tt>(<a href=/cycdoc/vocab/fundamental-vocab.html#isa>#$isa</a> &lt;your constant&gt; #$Zoologist)</tt>, then
+reload your constant and verify that the deletion occured.<p>
+
+You will also see the command <tt>[Blast]</tt>, which will queue an
+operation calling FI-BLAST on the assertion.  FI-BLAST is typically
+used only by experienced cyclists, but it is documented here for
+completeness.<p>
+
+For an assertion which was directly entered into the KB (by FI-ASSERT
+or some comparable operation), FI-BLAST achieves the same result as
+FI-UNASSERT: the assertion is removed from the KB.<p>
+
+But FI-BLAST can also remove propositions which result from inference.
+(FI-BLAST P), where P is some proposition, removes both P and its
+supports, the internal structures describing the logical arguments
+which conclude P.  In short, "blasting" an assertion P is guaranteed
+to change the KB to a state where P is not known to be true. It does
+not, however, remove any other propositions from the KB, so P may
+still be implicit in the KB.  For example, consider the following
+situation<p>
+
+<pre>
+     (#$citizenOf #$Fred <a href=/cycdoc/vocab/hormuz-area-vocab.html#France>#$France</a>)
+     (<a href=/cycdoc/vocab/fundamental-vocab.html#implies>#$implies</a> (#$citizenOf ?X <a href=/cycdoc/vocab/hormuz-area-vocab.html#France>#$France</a>) 
+                       (#$feelsTowardObject ?X #$EiffelTower <a href=/cycdoc/vocab/emotion-vocab.html#Pride>#$Pride</a>))
+</pre>
+from which
+<pre>
+     (#$feelsTowardObject #$Fred #$EiffelTower <a href=/cycdoc/vocab/emotion-vocab.html#Pride>#$Pride</a>)
+</pre><p>
+
+was concluded.  If we blast that conclusion, it does not remove either
+of the two propositions which led to it.  An appropriate
+query, such as asking<p>
+
+<pre>
+     (<a href=/cycdoc/vocab/emotion-vocab.html#feelsTowardsObject>#$feelsTowardsObject</a> #$Fred #$EiffelTower ?X)
+</pre><p>
+
+should draw the same conclusion again.<p>
+
+<tt>[Blast]</tt> should be used with caution. It is sometimes useful
+in recovering from invalid states.  Or you might want to undo the
+conclusions resulting from asking a query that invoked backwards
+inference. 
+
+
+<hr>
+<a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/editing-an-assertion.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><a href=/cycdoc/course/changing-mt.html>
+<img src=/cycdoc/img/cyc-arrow-right.gif border=0 alt=[Next] ></a><hr>
+Last Update: 3/28/2002<br>
+</html>

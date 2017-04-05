@@ -1,0 +1,54 @@
+<html>
+
+<title>Renaming a Constant</title>
+<body bgcolor="#FFFFFF">
+<a name="top"></a><h2><a href=http://www.cyc.com><img src=/cycdoc/img/opencyc-logo-small.gif border=0 alt="OpenCyc.org Homepage"></a>Renaming a Constant</h2>E-Mail Comments to: <a href=mailto:opencyc-doc@cyc.com>opencyc-doc@cyc.com</a><br>
+<i>Copyright&copy 1996-2002 <a href="http://www.cyc.com">Cycorp</a>.  All rights reserved.</i>  <br>
+<hr>
+<table border=0><tr><td><a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up]></a></td><td><a href=/cycdoc/course/editing-the-kb-module.html>Editing the OpenCyc KB with the Web Interface</a></td></tr><tr><td><a href=/cycdoc/course/creating-similar-constants.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back]></a></td><td><a href=/cycdoc/course/creating-similar-constants.html>Creating Similar Constants</a></td></tr></table>
+<hr>
+
+
+<tt>[Rename]</tt> may be used to change the name of the constant
+currently displayed by the OpenCyc Web Interface.<p>
+
+When you click <tt>[Rename]</tt>, it prompts for a new name for the
+constant.  The new name must not be the name of an existing Cyc
+constant and it must conform to the naming conventions for Cyc
+constants.  When you click the "Rename" button, three operations are
+queued for execution.  The first operation performs the FI-RENAME
+operation and the second operation records the old name with an
+assertion using the <a href=/cycdoc/vocab/doc-vocab.html#oldConstantName>#$oldConstantName</a> predicate.  (This can be useful
+when other cyclists need to find a renamed constant but do not know
+its new name).  The last operation timestamps the assertion made by
+the second operation.<p>
+
+If the old name of the constant was "Jabberwock", the new name is
+"Alice", the cyclist is #$Natasha, and the cyc-server is
+"cyc-server", then the operations would look like this:<p>
+
+<pre>
+     ((:HP "(:HP "Natasha" 201285) "cyc-server" 19960315 
+       (FI-RENAME 
+       '(:HP "Jabberwock" 128728) '"Alice"))
+
+     ((:HP "Natasha" 201285) "cyc-server" 19960315 
+       (FI-ASSERT 
+       '(
+	 (:HP "oldConstantName" 762568) 
+	   (:HP "Alice" 128728) "Jabberwock") 
+       '(:HP "BaseKB" 273) ':DEFAULT))
+
+     ((:HP "Natasha" 201285) "cyc-server" 19960315 
+       (FI-TIMESTAMP-ASSERTION 
+       '(:HP "Natasha" 201285) '19960315))
+</pre>
+
+<hr>
+<a href=/cycdoc/course/editing-the-kb-module.html>
+<img src=/cycdoc/img/cyc-arrow-up.gif border=0 alt=[Up] ></a><a href=/cycdoc/course/creating-similar-constants.html>
+<img src=/cycdoc/img/cyc-arrow-left.gif border=0 alt=[Back] ></a><hr>
+Last Update: 10/26/1998<br>
+</html>
